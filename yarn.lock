@@ -1236,9 +1236,9 @@
   "version" "1.0.2"
 
 "ws@^7.4.3":
-  "integrity" "sha512-Qm8k8ojNQIMx7S+Zp8u/uHOx7Qazv3Yv4q68MiWWWOJhiwG5W3x7iqmRtJo8xxrciZUY4vRxUTJCKuRnF28ZZw=="
-  "resolved" "https://registry.npmjs.org/ws/-/ws-7.4.4.tgz"
-  "version" "7.4.4"
+  "integrity" "sha512-YmhHDO4MzaDLB+M9ym/mDA5z0naX8j7SIlT8f8z+I0VtzsRbekxEutHSme7NPS2qE8StCYQNUnfWdXta/Yu85A=="
+  "resolved" "https://registry.npmjs.org/ws/-/ws-7.4.6.tgz"
+  "version" "7.4.6"
 
 "xmlhttprequest@1.8.0":
   "integrity" "sha1-Z/4HXFwk/vOfnWX197f+dRcZaPw="
