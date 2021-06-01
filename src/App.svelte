@@ -4,9 +4,11 @@
   import { fireStart } from "./lib/init-firebase";
   import Carousel from "svelte-carousel";
   import fullDataGeneration from "./betting-sites-data-generator";
+  import mainDataSports from "./get-sportbooks-data";
 
   fireStart;
-  let logoResult = [];
+
+  /*  let logoResult = [];
 
   async function getLocalTeamLogo() {
     const gamePath = `fixtures/2021-05-26/16465927/localTeam/`;
@@ -16,11 +18,12 @@
       logoResult = snap.val();
     });
   }
+  getLocalTeamLogo();*/
 
-  getLocalTeamLogo();
+  console.log(mainDataSports());
 </script>
 
-<Carousel let:loaded dots={false}>
+<!--  <Carousel let:loaded dots={false}>
   <div class="mainDivStyle">
     <div class="boxStyle">
       <img src={logoResult.logo_path} alt="Team Logo" />
@@ -30,7 +33,19 @@
       <p>Sapateiro</p>
     </div>
   </div>
-</Carousel>
+</Carousel>-->
+
+<div>
+  {#await mainDataSports()}
+    <p>loading</p>
+  {:then items}
+    {#each items as item}
+      <li>{item.title}. {item.review_link}</li>
+    {/each}
+  {:catch error}
+    <p style="color: red">{error.message}</p>
+  {/await}
+</div>
 
 <!-- Button to generate betting site data to Firebase-->
 <div class="btnDiv">
