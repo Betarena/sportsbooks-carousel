@@ -1,5 +1,5 @@
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35731/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 var app = (function () {
     'use strict';
 
@@ -19854,25 +19854,93 @@ var app = (function () {
 
     let myFirebase = firebase$1.database().ref();
 
-    // Get a reference to the recommendations object of your Firebase.
-    // Note: this doesn't exist yet. But when we write to our Firebase using
-    // this reference, it will create this object for us!
-    let bettingSitesData = myFirebase.child("betting_sites_carrousel/pt/");
+    // Push all our sportsbooks information, we will use update to avoid generating a new ID
 
-    // Push our first betting site data, we will use update to avoid generating a new ID
-    const generateData = () => bettingSitesData.update({
-        betano: {
-        "title": "",
-        "image": "",
-        "review_link": "",
-        "stars": "",
-        "bonus": "",
-        "bonus_description": "",
-        "bonus_code": "",
-        "register_link": "",
-        "information": "",
+    const fullDataGeneration = () => { 
+
+        // SPORTSBOOKS COUNTRIES PATH
+
+    let bettingSitesData = myFirebase.child("sportsbooks_carrousel/en/");
+    let bettingSitesDataPt = myFirebase.child("sportsbooks_carrousel/pt/");
+    myFirebase.child("sportsbooks_carrousel/br/");
+    myFirebase.child("sportsbooks_carrousel/co/");
+
+    const generateDataDefault = () => bettingSitesData.update({
+        "bet365": {
+        "title": "Bet365",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
+        "review_link": "https://www.betarena.com/bet365/",
+        "stars": "5",
+        "bonus": "+ €50",
+        "bonus_description": "Up to €50 in Bet Credits",
+        "bonus_code": "No code required",
+        "register_link": "https://qg9t2.app.goo.gl/bet365_general",
+        "information": "Open an account with Bet365 today and bet on a huge range of markets with the world’s favourite online sports betting company.",
+    },
+        "1xbet": {
+        "title": "1xBet",
+        "image": "https://dev.betarena.com/wp-content/uploads/2021/04/Frame-96-1.png",
+        "review_link": "https://www.betarena.com/1xbet-bookmaker-review/",
+        "stars": "4",
+        "bonus": "+ €100",
+        "bonus_description": "100% Bonus up to €100",
+        "bonus_code": "No code required",
+        "register_link": "http://refpa.top/L?tag=d_47346m_2778c_&site=47346&ad=2778",
+        "information": "With its wide range of matches and events for betting, the 1xBet promises to conquer an increasingly more prominent space in the sports betting market. Open an account and start winning!",
+    },
+    "Betfair": {
+        "title": "Betfair",
+        "image": "https://dev.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
+        "review_link": "https://www.betarena.com/betfair-bookmaker-review/",
+        "stars": "4",
+        "bonus": "+ €20",
+        "bonus_description": "Place your first bet on Betfair Exchange of at least €20 and if you don't win, we'll refund you €20",
+        "bonus_code": "No code required",
+        "register_link": "https://qg9t2.app.goo.gl/bet365_general",
+        "information": "Register on Betfair! With more than 20 years in the business, the sportsbook is already more than established.",
+    },
+    "22Bet": {
+        "title": "22Bet",
+        "image": "https://dev.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
+        "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
+        "stars": "4",
+        "bonus": "+ €100",
+        "bonus_description": "100% Bonus up to €100",
+        "bonus_code": "No code required",
+        "register_link": "https://qg9t2.app.goo.gl/22betdefault",
+        "information": "With some exciting features, 22bet is one more bookmaker with a great reputation in the sports betting market. Register now!",
+    },
+    "Betboro": {
+        "title": "Betboro",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Betboro_logo_2.svg",
+        "review_link": "https://www.betarena.com/betboro-bookmaker-review/",
+        "stars": "4",
+        "bonus": "+ €100",
+        "bonus_description": "100% Bonus up to €100",
+        "bonus_code": "No code required",
+        "register_link": "https://promotions.bboro.com/pt/exclusivo-betarena-100?btag=37980",
+        "information": "Although it is still little known by the general public, Betboro is a growing bookmaker globally. Open an account now!",
     }
     });
+
+    const generateDataPt = () => bettingSitesDataPt.update({
+        "betano": {
+        "title": "Betano",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/06/betano_icon2.svg",
+        "review_link": "https://apostas.betarena.com/betano/",
+        "stars": "5",
+        "bonus": "+ €50",
+        "bonus_description": "Bónus de 100% no primeiro depósito",
+        "bonus_code": "Sem código",
+        "register_link": "https://wlstoiximan.adsrv.eacdn.com/C.ashx?btag=a_1863b_289c_&affid=825&siteid=1863&adid=289&c=sportsbooks-carousel",
+        "information": "Ao contrário de casas como o Placard de apostas, a Betano entra no mercado com um dos melhores bónus dos sites de apostas em Portugal.",
+    }
+    });
+
+    generateDataDefault();
+    generateDataPt();
+
+    };
 
     /* src/App.svelte generated by Svelte v3.35.0 */
     const file = "src/App.svelte";
@@ -19903,15 +19971,15 @@ var app = (function () {
     			p1.textContent = "Sapateiro";
     			if (img.src !== (img_src_value = /*logoResult*/ ctx[0].logo_path)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Team Logo");
-    			add_location(img, file, 25, 6, 650);
-    			add_location(p0, file, 26, 6, 707);
-    			attr_dev(div0, "class", "boxStyle svelte-4vzyyv");
-    			add_location(div0, file, 24, 4, 621);
-    			add_location(p1, file, 29, 6, 764);
-    			attr_dev(div1, "class", "boxStyle svelte-4vzyyv");
-    			add_location(div1, file, 28, 4, 735);
-    			attr_dev(div2, "class", "mainDivStyle svelte-4vzyyv");
-    			add_location(div2, file, 23, 2, 590);
+    			add_location(img, file, 25, 6, 656);
+    			add_location(p0, file, 26, 6, 713);
+    			attr_dev(div0, "class", "boxStyle svelte-i1hcjo");
+    			add_location(div0, file, 24, 4, 627);
+    			add_location(p1, file, 29, 6, 770);
+    			attr_dev(div1, "class", "boxStyle svelte-i1hcjo");
+    			add_location(div1, file, 28, 4, 741);
+    			attr_dev(div2, "class", "mainDivStyle svelte-i1hcjo");
+    			add_location(div2, file, 23, 2, 596);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -19946,7 +20014,12 @@ var app = (function () {
 
     function create_fragment(ctx) {
     	let carousel;
+    	let t0;
+    	let div;
+    	let button;
     	let current;
+    	let mounted;
+    	let dispose;
 
     	carousel = new Carousel({
     			props: {
@@ -19966,13 +20039,29 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			create_component(carousel.$$.fragment);
+    			t0 = space();
+    			div = element("div");
+    			button = element("button");
+    			button.textContent = "Generate Sportsbooks";
+    			attr_dev(button, "class", "btnWeb svelte-i1hcjo");
+    			add_location(button, file, 36, 2, 900);
+    			attr_dev(div, "class", "btnDiv svelte-i1hcjo");
+    			add_location(div, file, 35, 0, 877);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			mount_component(carousel, target, anchor);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, button);
     			current = true;
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", fullDataGeneration, false, false, false);
+    				mounted = true;
+    			}
     		},
     		p: function update(ctx, [dirty]) {
     			const carousel_changes = {};
@@ -19994,6 +20083,10 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			destroy_component(carousel, detaching);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(div);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -20034,7 +20127,7 @@ var app = (function () {
     		firebase: firebase$1,
     		fireStart,
     		Carousel,
-    		generateData,
+    		fullDataGeneration,
     		logoResult,
     		getLocalTeamLogo
     	});

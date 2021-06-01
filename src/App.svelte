@@ -3,7 +3,7 @@
   import "firebase/firebase-auth";
   import { fireStart } from "./lib/init-firebase";
   import Carousel from "svelte-carousel";
-  import generateData from "./betting-sites-data-generator";
+  import fullDataGeneration from "./betting-sites-data-generator";
 
   fireStart;
   let logoResult = [];
@@ -32,9 +32,13 @@
   </div>
 </Carousel>
 
-<!-- Button to generate betting site data to Firebase <div>
-  <button on:click={generateData}>Generate Betting Sites Data</button>
-</div> -->
+<!-- Button to generate betting site data to Firebase-->
+<div class="btnDiv">
+  <button class="btnWeb" on:click={fullDataGeneration}
+    >Generate Sportsbooks</button
+  >
+</div>
+
 <style>
   .boxStyle {
     width: 358px;
@@ -44,8 +48,20 @@
     border-radius: 16px;
   }
 
+  .btnWeb {
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+
   .mainDivStyle {
     display: flex;
     background-color: transparent;
+  }
+
+  .btnDiv {
+    width: 100%;
+    text-align: center;
+    margin-top: 200px;
   }
 </style>
