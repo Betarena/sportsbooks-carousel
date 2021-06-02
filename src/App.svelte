@@ -35,23 +35,24 @@
   </div>
 </Carousel>-->
 
-<div>
-  {#await portsBoiksResult then value}
-    <p>the value is {value}</p>
+<!-- <div>
+  {#await portsBoiksResult then val}
+    function returned: {val.title}
   {/await}
-</div>
+</div>-->
 
-<!--<div>
-  {#await mainDataSports()}
+<div>
+  {#await portsBoiksResult}
     <p>loading</p>
   {:then items}
-    {#each items as item}
-      <li>{item.title}. {item.review_link}</li>
+    {#each portsBoiksResult as item}
+      <li>{item.title}</li>
+      <li>{item.bonus}</li>
     {/each}
   {:catch error}
     <p style="color: red">{error.message}</p>
   {/await}
-</div>-->
+</div>
 
 <!-- Button to generate betting site data to Firebase-->
 <div class="btnDiv">

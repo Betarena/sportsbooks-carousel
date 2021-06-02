@@ -6,11 +6,11 @@ fireStart;
 
 const mainDataSports = async () => {
 
-const sportsBooksPath = `sportsbooks_carrousel/`;
+const sportsBooksPath = `sportsbooks_carrousel/en/`;
 
 const dbRef = firebase.database().ref(sportsBooksPath);
 
-dbRef.child("pt").child("betano").get().then((snapshot) => {
+return dbRef.child("1xbet").get().then((snapshot) => {
   if (snapshot.exists()) {
     console.log(snapshot.val());
     return snapshot.val();
