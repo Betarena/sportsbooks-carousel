@@ -12,6 +12,7 @@ const dbRef = firebase.database().ref(sportsBooksPath);
 
 dbRef.child("pt").child("betano").get().then((snapshot) => {
   if (snapshot.exists()) {
+    console.log(snapshot.val());
     return snapshot.val();
   } else {
     console.log("No data available");

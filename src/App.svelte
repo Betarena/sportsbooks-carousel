@@ -36,14 +36,8 @@
 </Carousel>-->
 
 <div>
-  {#await portsBoiksResult}
-    <p>loading</p>
-  {:then items}
-    {#each items as item}
-      <li>{item.title}. {item.review_link}</li>
-    {/each}
-  {:catch error}
-    <p style="color: red">{error.message}</p>
+  {#await portsBoiksResult then value}
+    <p>the value is {value}</p>
   {/await}
 </div>
 
