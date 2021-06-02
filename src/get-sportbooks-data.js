@@ -4,29 +4,39 @@ import { fireStart } from "./lib/init-firebase";
 
 fireStart;
 
-let portsBooksResult = [];
+const mainDataSports = async () => {
 
-const mainDataSports = () => {
+const sportsBooksPath = `sportsbooks_carrousel/`;
 
-    const sportsBooksPath = `sportsbooks_carrousel`;
+const dbRef = firebase.database().ref(sportsBooksPath);
 
-    firebase.database().ref(sportsBooksPath)
-    .orderBy("id", "asc")
-    .onSnapshot(snapData => {
-        portsBooksResult = snapData.docs;
-    });
-
-/* async function getSportsBooksData() {
-  const sportsBooksPath = `sportsbooks_carrousel/`;
-  let ref = firebase.database().ref(sportsBooksPath);
-  ref.on("value", (snap) => {
-    snap.val();
-    portsBooksResult = snap.val();
-  });
-}
-getSportsBooksData();*/
+dbRef.child("pt").child("betano").get().then((snapshot) => {
+  if (snapshot.exists()) {
+    return snapshot.val();
+  } else {
+    console.log("No data available");
+    return null;
+  }
+}).catch((error) => {
+  console.error(error);
+});
 
 }
 
 export default mainDataSports;
 
+
+
+
+    /* const sportsBooksPath = `sportsbooks_carrousel/`;
+
+    async function getSportsBooksData() {
+  let ref = firebase.database().ref(sportsBooksPath);
+  ref.on("value", (snap) => {
+    snap.val();
+    portsBooksResult = snap.val();
+    // console.log(portsBooksResult);
+    return portsBooksResult;
+  });
+}
+getSportsBooksData(); */

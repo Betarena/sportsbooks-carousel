@@ -20,7 +20,7 @@
   }
   getLocalTeamLogo();*/
 
-  console.log(mainDataSports());
+  let portsBoiksResult = mainDataSports();
 </script>
 
 <!--  <Carousel let:loaded dots={false}>
@@ -36,7 +36,7 @@
 </Carousel>-->
 
 <div>
-  {#await mainDataSports()}
+  {#await portsBoiksResult}
     <p>loading</p>
   {:then items}
     {#each items as item}
@@ -46,6 +46,18 @@
     <p style="color: red">{error.message}</p>
   {/await}
 </div>
+
+<!--<div>
+  {#await mainDataSports()}
+    <p>loading</p>
+  {:then items}
+    {#each items as item}
+      <li>{item.title}. {item.review_link}</li>
+    {/each}
+  {:catch error}
+    <p style="color: red">{error.message}</p>
+  {/await}
+</div>-->
 
 <!-- Button to generate betting site data to Firebase-->
 <div class="btnDiv">
