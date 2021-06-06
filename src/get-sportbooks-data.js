@@ -6,14 +6,16 @@ fireStart;
 
 const mainDataSports = async () => {
 
-const sportsBooksPath = `sportsbooks_carrousel/en/`;
+const sportsBooksPath = `sportsbooks_carrousel/`;
 
 const dbRef = firebase.database().ref(sportsBooksPath);
 
-return dbRef.child("1xbet").get().then((snapshot) => {
+return dbRef.child("en").get().then((snapshot) => {
   if (snapshot.exists()) {
-    console.log(snapshot.val());
-    return snapshot.val();
+    let infoSportsResult = snapshot.val();
+    let infoSportsResultArr = Object.values(infoSportsResult);
+    console.log(infoSportsResultArr);
+    return infoSportsResultArr;
   } else {
     console.log("No data available");
     return null;

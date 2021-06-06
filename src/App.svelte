@@ -39,15 +39,20 @@
   {#await portsBoiksResult then val}
     function returned: {val.title}
   {/await}
+
+      {#each Object.keys(items) as item}
+      <li>{item.title}</li>
+      <li>{item.bonus}</li>
+    {/each}
 </div>-->
 
 <div>
   {#await portsBoiksResult}
     <p>loading</p>
   {:then items}
-    {#each portsBoiksResult as item}
+    {#each items as item}
       <li>{item.title}</li>
-      <li>{item.bonus}</li>
+      <li>{item.stars}</li>
     {/each}
   {:catch error}
     <p style="color: red">{error.message}</p>

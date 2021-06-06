@@ -20027,14 +20027,16 @@ var app = (function () {
 
     const mainDataSports = async () => {
 
-    const sportsBooksPath = `sportsbooks_carrousel/en/`;
+    const sportsBooksPath = `sportsbooks_carrousel/`;
 
     const dbRef = firebase$1.database().ref(sportsBooksPath);
 
-    return dbRef.child("1xbet").get().then((snapshot) => {
+    return dbRef.child("en").get().then((snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
-        return snapshot.val();
+        let infoSportsResult = snapshot.val();
+        let infoSportsResultArr = Object.values(infoSportsResult);
+        console.log(infoSportsResultArr);
+        return infoSportsResultArr;
       } else {
         console.log("No data available");
         return null;
@@ -20070,7 +20072,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (52:2) {:catch error}
+    // (57:2) {:catch error}
     function create_catch_block(ctx) {
     	let p;
     	let t_value = /*error*/ ctx[5].message + "";
@@ -20081,7 +20083,7 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			set_style(p, "color", "red");
-    			add_location(p, file, 52, 4, 1233);
+    			add_location(p, file, 57, 4, 1332);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -20097,17 +20099,17 @@ var app = (function () {
     		block,
     		id: create_catch_block.name,
     		type: "catch",
-    		source: "(52:2) {:catch error}",
+    		source: "(57:2) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (47:2) {:then items}
+    // (52:2) {:then items}
     function create_then_block(ctx) {
     	let each_1_anchor;
-    	let each_value = /*portsBoiksResult*/ ctx[0];
+    	let each_value = /*items*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -20132,7 +20134,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*portsBoiksResult*/ 1) {
-    				each_value = /*portsBoiksResult*/ ctx[0];
+    				each_value = /*items*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
 
@@ -20165,21 +20167,21 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(47:2) {:then items}",
+    		source: "(52:2) {:then items}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (48:4) {#each portsBoiksResult as item}
+    // (53:4) {#each items as item}
     function create_each_block(ctx) {
     	let li0;
     	let t0_value = /*item*/ ctx[2].title + "";
     	let t0;
     	let t1;
     	let li1;
-    	let t2_value = /*item*/ ctx[2].bonus + "";
+    	let t2_value = /*item*/ ctx[2].stars + "";
     	let t2;
 
     	const block = {
@@ -20189,8 +20191,8 @@ var app = (function () {
     			t1 = space();
     			li1 = element("li");
     			t2 = text(t2_value);
-    			add_location(li0, file, 48, 6, 1150);
-    			add_location(li1, file, 49, 6, 1178);
+    			add_location(li0, file, 53, 6, 1249);
+    			add_location(li1, file, 54, 6, 1277);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -20211,14 +20213,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(48:4) {#each portsBoiksResult as item}",
+    		source: "(53:4) {#each items as item}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (45:27)      <p>loading</p>   {:then items}
+    // (50:27)      <p>loading</p>   {:then items}
     function create_pending_block(ctx) {
     	let p;
 
@@ -20226,7 +20228,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "loading";
-    			add_location(p, file, 45, 4, 1076);
+    			add_location(p, file, 50, 4, 1186);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -20241,7 +20243,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(45:27)      <p>loading</p>   {:then items}",
+    		source: "(50:27)      <p>loading</p>   {:then items}",
     		ctx
     	});
 
@@ -20278,11 +20280,11 @@ var app = (function () {
     			div1 = element("div");
     			button = element("button");
     			button.textContent = "Generate Sportsbooks";
-    			add_location(div0, file, 43, 0, 1038);
+    			add_location(div0, file, 48, 0, 1148);
     			attr_dev(button, "class", "btnWeb svelte-i1hcjo");
-    			add_location(button, file, 58, 2, 1374);
+    			add_location(button, file, 63, 2, 1473);
     			attr_dev(div1, "class", "btnDiv svelte-i1hcjo");
-    			add_location(div1, file, 57, 0, 1351);
+    			add_location(div1, file, 62, 0, 1450);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
