@@ -1,5 +1,5 @@
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 var app = (function () {
     'use strict';
 
@@ -10,9 +10,6 @@ var app = (function () {
         for (const k in src)
             tar[k] = src[k];
         return tar;
-    }
-    function is_promise(value) {
-        return value && typeof value === 'object' && typeof value.then === 'function';
     }
     function add_location(element, file, line, column, char) {
         element.__svelte_meta = {
@@ -135,12 +132,6 @@ var app = (function () {
     }
     function detach(node) {
         node.parentNode.removeChild(node);
-    }
-    function destroy_each(iterations, detaching) {
-        for (let i = 0; i < iterations.length; i += 1) {
-            if (iterations[i])
-                iterations[i].d(detaching);
-        }
     }
     function element(name) {
         return document.createElement(name);
@@ -320,77 +311,6 @@ var app = (function () {
                 }
             });
             block.o(local);
-        }
-    }
-
-    function handle_promise(promise, info) {
-        const token = info.token = {};
-        function update(type, index, key, value) {
-            if (info.token !== token)
-                return;
-            info.resolved = value;
-            let child_ctx = info.ctx;
-            if (key !== undefined) {
-                child_ctx = child_ctx.slice();
-                child_ctx[key] = value;
-            }
-            const block = type && (info.current = type)(child_ctx);
-            let needs_flush = false;
-            if (info.block) {
-                if (info.blocks) {
-                    info.blocks.forEach((block, i) => {
-                        if (i !== index && block) {
-                            group_outros();
-                            transition_out(block, 1, 1, () => {
-                                if (info.blocks[i] === block) {
-                                    info.blocks[i] = null;
-                                }
-                            });
-                            check_outros();
-                        }
-                    });
-                }
-                else {
-                    info.block.d(1);
-                }
-                block.c();
-                transition_in(block, 1);
-                block.m(info.mount(), info.anchor);
-                needs_flush = true;
-            }
-            info.block = block;
-            if (info.blocks)
-                info.blocks[index] = block;
-            if (needs_flush) {
-                flush();
-            }
-        }
-        if (is_promise(promise)) {
-            const current_component = get_current_component();
-            promise.then(value => {
-                set_current_component(current_component);
-                update(info.then, 1, info.value, value);
-                set_current_component(null);
-            }, error => {
-                set_current_component(current_component);
-                update(info.catch, 2, info.error, error);
-                set_current_component(null);
-                if (!info.hasCatch) {
-                    throw error;
-                }
-            });
-            // if we previously had a then/catch block, destroy it
-            if (info.current !== info.pending) {
-                update(info.pending, 0);
-                return true;
-            }
-        }
-        else {
-            if (info.current !== info.then) {
-                update(info.then, 1, info.value, promise);
-                return true;
-            }
-            info.resolved = promise;
         }
     }
     function outro_and_destroy_block(block, lookup) {
@@ -20069,143 +19989,150 @@ var app = (function () {
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
     	child_ctx[2] = list[i];
+    	child_ctx[4] = i;
     	return child_ctx;
     }
 
-    // (57:2) {:catch error}
-    function create_catch_block(ctx) {
-    	let p;
-    	let t_value = /*error*/ ctx[5].message + "";
-    	let t;
+    function get_each_context_1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[5] = list[i].color;
+    	child_ctx[6] = list[i].text;
+    	return child_ctx;
+    }
+
+    // (34:6) {#each colorsChunk as { color, text }
+    function create_each_block_1(key_1, ctx) {
+    	let first;
+    	let color;
+    	let current;
+
+    	color = new Color({
+    			props: {
+    				color: /*color*/ ctx[5],
+    				text: /*text*/ ctx[6]
+    			},
+    			$$inline: true
+    		});
 
     	const block = {
+    		key: key_1,
+    		first: null,
     		c: function create() {
-    			p = element("p");
-    			t = text(t_value);
-    			set_style(p, "color", "red");
-    			add_location(p, file, 57, 4, 1332);
+    			first = empty();
+    			create_component(color.$$.fragment);
+    			this.first = first;
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    			append_dev(p, t);
+    			insert_dev(target, first, anchor);
+    			mount_component(color, target, anchor);
+    			current = true;
     		},
-    		p: noop$1,
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(color.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(color.$$.fragment, local);
+    			current = false;
+    		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
+    			if (detaching) detach_dev(first);
+    			destroy_component(color, detaching);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_catch_block.name,
-    		type: "catch",
-    		source: "(57:2) {:catch error}",
+    		id: create_each_block_1.name,
+    		type: "each",
+    		source: "(34:6) {#each colorsChunk as { color, text }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:2) {:then items}
-    function create_then_block(ctx) {
-    	let each_1_anchor;
-    	let each_value = /*items*/ ctx[1];
-    	validate_each_argument(each_value);
+    // (32:2) {#each _.chunk(colors, 3) as colorsChunk, chunkIndex (chunkIndex)}
+    function create_each_block(key_1, ctx) {
+    	let div;
     	let each_blocks = [];
+    	let each_1_lookup = new Map();
+    	let t;
+    	let current;
+    	let each_value_1 = /*colorsChunk*/ ctx[2];
+    	validate_each_argument(each_value_1);
+    	const get_key = ctx => /*color*/ ctx[5];
+    	validate_each_keys(ctx, each_value_1, get_each_context_1, get_key);
 
-    	for (let i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		let child_ctx = get_each_context_1(ctx, each_value_1, i);
+    		let key = get_key(child_ctx);
+    		each_1_lookup.set(key, each_blocks[i] = create_each_block_1(key, child_ctx));
     	}
 
     	const block = {
+    		key: key_1,
+    		first: null,
     		c: function create() {
+    			div = element("div");
+
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			each_1_anchor = empty();
+    			t = space();
+    			set_style(div, "display", "flex");
+    			add_location(div, file, 32, 4, 891);
+    			this.first = div;
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(target, anchor);
+    				each_blocks[i].m(div, null);
     			}
 
-    			insert_dev(target, each_1_anchor, anchor);
+    			append_dev(div, t);
+    			current = true;
     		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*portsBoiksResult*/ 1) {
-    				each_value = /*items*/ ctx[1];
-    				validate_each_argument(each_value);
-    				let i;
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
 
-    				for (i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context(ctx, each_value, i);
-
-    					if (each_blocks[i]) {
-    						each_blocks[i].p(child_ctx, dirty);
-    					} else {
-    						each_blocks[i] = create_each_block(child_ctx);
-    						each_blocks[i].c();
-    						each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
-    					}
-    				}
-
-    				for (; i < each_blocks.length; i += 1) {
-    					each_blocks[i].d(1);
-    				}
-
-    				each_blocks.length = each_value.length;
+    			if (dirty & /*_, colors*/ 1) {
+    				each_value_1 = /*colorsChunk*/ ctx[2];
+    				validate_each_argument(each_value_1);
+    				group_outros();
+    				validate_each_keys(ctx, each_value_1, get_each_context_1, get_key);
+    				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value_1, each_1_lookup, div, outro_and_destroy_block, create_each_block_1, t, get_each_context_1);
+    				check_outros();
     			}
     		},
-    		d: function destroy(detaching) {
-    			destroy_each(each_blocks, detaching);
-    			if (detaching) detach_dev(each_1_anchor);
-    		}
-    	};
+    		i: function intro(local) {
+    			if (current) return;
 
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_then_block.name,
-    		type: "then",
-    		source: "(52:2) {:then items}",
-    		ctx
-    	});
+    			for (let i = 0; i < each_value_1.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
 
-    	return block;
-    }
-
-    // (53:4) {#each items as item}
-    function create_each_block(ctx) {
-    	let li0;
-    	let t0_value = /*item*/ ctx[2].title + "";
-    	let t0;
-    	let t1;
-    	let li1;
-    	let t2_value = /*item*/ ctx[2].stars + "";
-    	let t2;
-
-    	const block = {
-    		c: function create() {
-    			li0 = element("li");
-    			t0 = text(t0_value);
-    			t1 = space();
-    			li1 = element("li");
-    			t2 = text(t2_value);
-    			add_location(li0, file, 53, 6, 1249);
-    			add_location(li1, file, 54, 6, 1277);
+    			current = true;
     		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, li0, anchor);
-    			append_dev(li0, t0);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, li1, anchor);
-    			append_dev(li1, t2);
+    		o: function outro(local) {
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
     		},
-    		p: noop$1,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(li0);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(li1);
+    			if (detaching) detach_dev(div);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].d();
+    			}
     		}
     	};
 
@@ -20213,37 +20140,98 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(53:4) {#each items as item}",
+    		source: "(32:2) {#each _.chunk(colors, 3) as colorsChunk, chunkIndex (chunkIndex)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (50:27)      <p>loading</p>   {:then items}
-    function create_pending_block(ctx) {
-    	let p;
+    // (30:0) <Carousel>
+    function create_default_slot(ctx) {
+    	let t0_value = (/*colors*/ ctx[0] = "test") + "";
+    	let t0;
+    	let t1;
+    	let each_blocks = [];
+    	let each_1_lookup = new Map();
+    	let each_1_anchor;
+    	let current;
+    	let each_value = _.chunk(/*colors*/ ctx[0], 3);
+    	validate_each_argument(each_value);
+    	const get_key = ctx => /*chunkIndex*/ ctx[4];
+    	validate_each_keys(ctx, each_value, get_each_context, get_key);
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		let child_ctx = get_each_context(ctx, each_value, i);
+    		let key = get_key(child_ctx);
+    		each_1_lookup.set(key, each_blocks[i] = create_each_block(key, child_ctx));
+    	}
 
     	const block = {
     		c: function create() {
-    			p = element("p");
-    			p.textContent = "loading";
-    			add_location(p, file, 50, 4, 1186);
+    			t0 = text(t0_value);
+    			t1 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			each_1_anchor = empty();
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, t1, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(target, anchor);
+    			}
+
+    			insert_dev(target, each_1_anchor, anchor);
+    			current = true;
     		},
-    		p: noop$1,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*_, colors*/ 1) {
+    				each_value = _.chunk(/*colors*/ ctx[0], 3);
+    				validate_each_argument(each_value);
+    				group_outros();
+    				validate_each_keys(ctx, each_value, get_each_context, get_key);
+    				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, each_1_anchor.parentNode, outro_and_destroy_block, create_each_block, each_1_anchor, get_each_context);
+    				check_outros();
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(t1);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].d(detaching);
+    			}
+
+    			if (detaching) detach_dev(each_1_anchor);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_pending_block.name,
-    		type: "pending",
-    		source: "(50:27)      <p>loading</p>   {:then items}",
+    		id: create_default_slot.name,
+    		type: "slot",
+    		source: "(30:0) <Carousel>",
     		ctx
     	});
 
@@ -20251,78 +20239,48 @@ var app = (function () {
     }
 
     function create_fragment(ctx) {
-    	let div0;
-    	let t0;
-    	let div1;
-    	let button;
-    	let mounted;
-    	let dispose;
+    	let carousel;
+    	let current;
 
-    	let info = {
-    		ctx,
-    		current: null,
-    		token: null,
-    		hasCatch: true,
-    		pending: create_pending_block,
-    		then: create_then_block,
-    		catch: create_catch_block,
-    		value: 1,
-    		error: 5
-    	};
-
-    	handle_promise(/*portsBoiksResult*/ ctx[0], info);
+    	carousel = new Carousel({
+    			props: {
+    				$$slots: { default: [create_default_slot] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
 
     	const block = {
     		c: function create() {
-    			div0 = element("div");
-    			info.block.c();
-    			t0 = space();
-    			div1 = element("div");
-    			button = element("button");
-    			button.textContent = "Generate Sportsbooks";
-    			add_location(div0, file, 48, 0, 1148);
-    			attr_dev(button, "class", "btnWeb svelte-i1hcjo");
-    			add_location(button, file, 63, 2, 1473);
-    			attr_dev(div1, "class", "btnDiv svelte-i1hcjo");
-    			add_location(div1, file, 62, 0, 1450);
+    			create_component(carousel.$$.fragment);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div0, anchor);
-    			info.block.m(div0, info.anchor = null);
-    			info.mount = () => div0;
-    			info.anchor = null;
-    			insert_dev(target, t0, anchor);
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, button);
-
-    			if (!mounted) {
-    				dispose = listen_dev(button, "click", fullDataGeneration, false, false, false);
-    				mounted = true;
-    			}
+    			mount_component(carousel, target, anchor);
+    			current = true;
     		},
-    		p: function update(new_ctx, [dirty]) {
-    			ctx = new_ctx;
+    		p: function update(ctx, [dirty]) {
+    			const carousel_changes = {};
 
-    			{
-    				const child_ctx = ctx.slice();
-    				child_ctx[1] = child_ctx[5] = info.resolved;
-    				info.block.p(child_ctx, dirty);
+    			if (dirty & /*$$scope*/ 512) {
+    				carousel_changes.$$scope = { dirty, ctx };
     			}
+
+    			carousel.$set(carousel_changes);
     		},
-    		i: noop$1,
-    		o: noop$1,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(carousel.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(carousel.$$.fragment, local);
+    			current = false;
+    		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div0);
-    			info.block.d();
-    			info.token = null;
-    			info = null;
-    			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(div1);
-    			mounted = false;
-    			dispose();
+    			destroy_component(carousel, detaching);
     		}
     	};
 
@@ -20340,20 +20298,8 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
-
-    	/*let logoResult = [];
-
-    async function getLocalTeamLogo() {
-      const gamePath = `fixtures/2021-05-26/16465927/localTeam/`;
-      let ref = firebase.database().ref(gamePath);
-      ref.on("value", (snap) => {
-        snap.val();
-        logoResult = snap.val();
-      });
-    }
-    getLocalTeamLogo();*/
     	let portsBoiksResult = mainDataSports();
-
+    	let colors = "test";
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -20366,18 +20312,20 @@ var app = (function () {
     		Carousel,
     		fullDataGeneration,
     		mainDataSports,
-    		portsBoiksResult
+    		portsBoiksResult,
+    		colors
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("portsBoiksResult" in $$props) $$invalidate(0, portsBoiksResult = $$props.portsBoiksResult);
+    		if ("portsBoiksResult" in $$props) portsBoiksResult = $$props.portsBoiksResult;
+    		if ("colors" in $$props) $$invalidate(0, colors = $$props.colors);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [portsBoiksResult];
+    	return [colors];
     }
 
     class App extends SvelteComponentDev {

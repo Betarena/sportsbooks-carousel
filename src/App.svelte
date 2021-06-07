@@ -8,20 +8,35 @@
 
   fireStart;
 
-  /*  let logoResult = [];
-
-  async function getLocalTeamLogo() {
-    const gamePath = `fixtures/2021-05-26/16465927/localTeam/`;
-    let ref = firebase.database().ref(gamePath);
-    ref.on("value", (snap) => {
-      snap.val();
-      logoResult = snap.val();
-    });
-  }
-  getLocalTeamLogo();*/
-
   let portsBoiksResult = mainDataSports();
+  let colors = "test";
 </script>
+
+<!--  <Carousel let:loaded dots={false} let:pagesCount>
+  {#await portsBoiksResult then items}
+    {#each items as item}
+      <div class="mainDivStyle">
+        <div class="boxStyle">
+          <img src={item.image} alt="Team Logo" />
+          <p>{item.title}</p>
+        </div>
+      </div>
+    {/each}
+  {:catch error}
+    <p style="color: red">{error.message}</p>
+  {/await}
+</Carousel>-->
+
+<Carousel>
+  {(colors = "test")}
+  {#each _.chunk(colors, 3) as colorsChunk, chunkIndex (chunkIndex)}
+    <div style="display: flex;">
+      {#each colorsChunk as { color, text } (color)}
+        <Color {color} {text} />
+      {/each}
+    </div>
+  {/each}
+</Carousel>
 
 <!--  <Carousel let:loaded dots={false}>
   <div class="mainDivStyle">
@@ -35,18 +50,7 @@
   </div>
 </Carousel>-->
 
-<!-- <div>
-  {#await portsBoiksResult then val}
-    function returned: {val.title}
-  {/await}
-
-      {#each Object.keys(items) as item}
-      <li>{item.title}</li>
-      <li>{item.bonus}</li>
-    {/each}
-</div>-->
-
-<div>
+<!--  <div>
   {#await portsBoiksResult}
     <p>loading</p>
   {:then items}
@@ -57,15 +61,14 @@
   {:catch error}
     <p style="color: red">{error.message}</p>
   {/await}
-</div>
+</div>-->
 
-<!-- Button to generate betting site data to Firebase-->
+<!-- Button to generate betting site data to Firebase
 <div class="btnDiv">
   <button class="btnWeb" on:click={fullDataGeneration}
     >Generate Sportsbooks</button
   >
-</div>
-
+</div>-->
 <style>
   .boxStyle {
     width: 358px;
