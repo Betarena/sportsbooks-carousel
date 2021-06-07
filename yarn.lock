@@ -23,6 +23,13 @@
     "chalk" "^2.0.0"
     "js-tokens" "^4.0.0"
 
+"@beyonk/svelte-carousel@^2.8.0":
+  "integrity" "sha512-kWObh9XqI7tfzltySmTZ0/ULE5MjLqd0jhsGhr+GnVfIkCOGwTHwQxzheLjC1dkBk0Z4wucLxBwUeSxqtGF9Ww=="
+  "resolved" "https://registry.npmjs.org/@beyonk/svelte-carousel/-/svelte-carousel-2.8.0.tgz"
+  "version" "2.8.0"
+  dependencies:
+    "siema" "^1.5.1"
+
 "@firebase/analytics-types@0.4.0":
   "integrity" "sha512-Jj2xW+8+8XPfWGkv9HPv/uR+Qrmq37NPYT352wf7MvE9LrstpLVmFg3LqG6MCRr5miLAom5sen2gZ+iOhVDeRA=="
   "resolved" "https://registry.npmjs.org/@firebase/analytics-types/-/analytics-types-0.4.0.tgz"
@@ -1110,6 +1117,11 @@
   dependencies:
     "randombytes" "^2.1.0"
 
+"siema@^1.5.1":
+  "integrity" "sha1-7/MSt36DQPpNgdXQU+u+uRE/+Ig="
+  "resolved" "https://registry.npmjs.org/siema/-/siema-1.5.1.tgz"
+  "version" "1.5.1"
+
 "sirv-cli@^1.0.0":
   "integrity" "sha512-L8NILoRSBd38VcfFcERYCaVCnWPBLo9G6u/a37UJ8Ysv4DfjizMbFBcM+SswNnndJienhR6qy8KFuAEaeL4g8Q=="
   "resolved" "https://registry.npmjs.org/sirv-cli/-/sirv-cli-1.0.11.tgz"
@@ -1174,6 +1186,11 @@
   "integrity" "sha512-KTNhSb25yPT9MPPGfTuYfMw5G5uywkxSnCOwhWcrtO88y2L43XEjvu6sHoMwKJzsx8ivI4w/iayf8ov2VUhjNQ=="
   "resolved" "https://registry.npmjs.org/svelte-carousel/-/svelte-carousel-1.0.6.tgz"
   "version" "1.0.6"
+
+"svelte-feather-icons@^3.3.0":
+  "integrity" "sha512-9zlgrWK34YXDjvYgvjHG0HFhol5FrapK0VEiZEUN0m2iUpifqMefLojBhAxB+zSh7lK3TohvIJBoqhFTZtgljA=="
+  "resolved" "https://registry.npmjs.org/svelte-feather-icons/-/svelte-feather-icons-3.3.0.tgz"
+  "version" "3.3.0"
 
 "svelte@^3.0.0":
   "integrity" "sha512-gknlZkR2sXheu/X+B7dDImwANVvK1R0QGQLd8CNIfxxGPeXBmePnxfzb6fWwTQRsYQG7lYkZXvpXJvxvpsoB7g=="
