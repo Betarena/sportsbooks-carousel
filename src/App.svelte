@@ -12,9 +12,9 @@
 
   let sportsBooksResult = mainDataSports();
 
-  let carousels = [
+  let carousel = [
     {
-      perPage: { 320: 1, 768: 3 },
+      perPage: { 320: 1, 768: 5 },
       dots: false,
     },
   ];
@@ -23,15 +23,19 @@
   }
 </script>
 
-<div class="demo">
+<div class="mainDivCarousel">
   {#await sportsBooksResult then items}
-    <Carousel on:change={changed}>
+    <Carousel bind:this={carousel} on:change={changed}>
       <span class="control" slot="left-control">
         <ChevronLeftIcon />
       </span>
       {#each items as item}
-        <div class="slide-content">
-          <p>{item.title}</p>
+        <div class="mainDivStyle">
+          <div class="boxStyle">
+            <img src={item.image} alt="Team Logo" />
+            <h3>{item.title}</h3>
+            <h5>Read Full Review</h5>
+          </div>
         </div>
       {/each}
       <span class="control" slot="right-control">
@@ -45,57 +49,17 @@
   <br />
 </div>
 
-<!--  <Carousel let:loaded dots={false} let:pagesCount>
-  {#await portsBoiksResult then items}
-    {#each items as item}
-      <div class="mainDivStyle">
-        <div class="boxStyle">
-          <img src={item.image} alt="Team Logo" />
-          <p>{item.title}</p>
-        </div>
-      </div>
-    {/each}
-  {:catch error}
-    <p style="color: red">{error.message}</p>
-  {/await}
-</Carousel>-->
-
-<!--  <Carousel let:loaded dots={false}>
-  <div class="mainDivStyle">
-    <div class="boxStyle">
-      <img src={logoResult.logo_path} alt="Team Logo" />
-      <p>teste</p>
-    </div>
-    <div class="boxStyle">
-      <p>Sapateiro</p>
-    </div>
-  </div>
-</Carousel>-->
-
-<!--  <div>
-  {#await portsBoiksResult}
-    <p>loading</p>
-  {:then items}
-    {#each items as item}
-      <li>{item.title}</li>
-      <li>{item.stars}</li>
-    {/each}
-  {:catch error}
-    <p style="color: red">{error.message}</p>
-  {/await}
-</div>-->
-
-<!-- Button to generate betting site data to Firebase
+<!-- Button to generate betting site data to Firebase-->
 <div class="btnDiv">
   <button class="btnWeb" on:click={fullDataGeneration}
     >Generate Sportsbooks</button
   >
-</div>-->
+</div>
+
 <style>
   .boxStyle {
     width: 358px;
     height: 112px;
-    margin-left: 22px;
     background-color: #4c4c4c;
     border-radius: 16px;
   }
@@ -108,6 +72,7 @@
 
   .mainDivStyle {
     display: flex;
+    flex-direction: column;
     background-color: transparent;
   }
 
@@ -117,10 +82,10 @@
     margin-top: 200px;
   }
 
-  .demo {
+  .mainDivCarousel {
     margin: 0 auto;
-    height: 230px;
-    width: 60vw;
+    height: 112px;
+    width: 80vw;
   }
 
   .control :global(svg) {
@@ -129,23 +94,5 @@
     color: #fff;
     border: 2px solid #fff;
     border-radius: 32px;
-  }
-
-  .slide-content {
-    border: 1px solid #eee;
-    display: flex;
-    flex-direction: column;
-    height: 230px;
-    background-color: beige;
-  }
-
-  .slide-content header {
-    flex: 1;
-    background-size: cover;
-  }
-
-  .slide-content section {
-    height: 40px;
-    padding: 12px;
   }
 </style>

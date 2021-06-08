@@ -31,7 +31,7 @@ const generateDataDefault = () => bettingSitesData.update({
 },
     "1xbet": {
     "title": "1xBet",
-    "image": "https://dev.betarena.com/wp-content/uploads/2021/04/Frame-96-1.png",
+    "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
     "review_link": "https://www.betarena.com/1xbet-bookmaker-review/",
     "stars": "4",
     "bonus": "+ €100",
@@ -42,7 +42,7 @@ const generateDataDefault = () => bettingSitesData.update({
 },
 "Betfair": {
     "title": "Betfair",
-    "image": "https://dev.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
+    "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
     "review_link": "https://www.betarena.com/betfair-bookmaker-review/",
     "stars": "4",
     "bonus": "+ €20",
@@ -53,7 +53,7 @@ const generateDataDefault = () => bettingSitesData.update({
 },
 "22Bet": {
     "title": "22Bet",
-    "image": "https://dev.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
+    "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
     "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
     "stars": "4",
     "bonus": "+ €100",

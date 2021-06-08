@@ -18868,7 +18868,7 @@ var app = (function () {
     },
         "1xbet": {
         "title": "1xBet",
-        "image": "https://dev.betarena.com/wp-content/uploads/2021/04/Frame-96-1.png",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
         "review_link": "https://www.betarena.com/1xbet-bookmaker-review/",
         "stars": "4",
         "bonus": "+ €100",
@@ -18879,7 +18879,7 @@ var app = (function () {
     },
     "Betfair": {
         "title": "Betfair",
-        "image": "https://dev.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
         "review_link": "https://www.betarena.com/betfair-bookmaker-review/",
         "stars": "4",
         "bonus": "+ €20",
@@ -18890,7 +18890,7 @@ var app = (function () {
     },
     "22Bet": {
         "title": "22Bet",
-        "image": "https://dev.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
         "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
         "stars": "4",
         "bonus": "+ €100",
@@ -18976,14 +18976,14 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[3] = list[i];
+    	child_ctx[4] = list[i];
     	return child_ctx;
     }
 
-    // (41:2) {:catch error}
+    // (45:2) {:catch error}
     function create_catch_block(ctx) {
     	let p;
-    	let t_value = /*error*/ ctx[6].message + "";
+    	let t_value = /*error*/ ctx[7].message + "";
     	let t;
 
     	const block = {
@@ -18991,7 +18991,7 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			set_style(p, "color", "red");
-    			add_location(p, file, 41, 4, 1103);
+    			add_location(p, file, 45, 4, 1278);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -19009,60 +19009,60 @@ var app = (function () {
     		block,
     		id: create_catch_block.name,
     		type: "catch",
-    		source: "(41:2) {:catch error}",
+    		source: "(45:2) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (27:39)      <Carousel on:change={changed}
+    // (27:39)      <Carousel bind:this={carousel}
     function create_then_block(ctx) {
-    	let carousel;
+    	let carousel_1;
     	let current;
 
-    	carousel = new Carousel({
-    			props: {
-    				$$slots: {
-    					"right-control": [create_right_control_slot],
-    					"left-control": [create_left_control_slot],
-    					default: [create_default_slot]
-    				},
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
+    	let carousel_1_props = {
+    		$$slots: {
+    			"right-control": [create_right_control_slot],
+    			"left-control": [create_left_control_slot],
+    			default: [create_default_slot]
+    		},
+    		$$scope: { ctx }
+    	};
 
-    	carousel.$on("change", changed);
+    	carousel_1 = new Carousel({ props: carousel_1_props, $$inline: true });
+    	/*carousel_1_binding*/ ctx[2](carousel_1);
+    	carousel_1.$on("change", changed);
 
     	const block = {
     		c: function create() {
-    			create_component(carousel.$$.fragment);
+    			create_component(carousel_1.$$.fragment);
     		},
     		m: function mount(target, anchor) {
-    			mount_component(carousel, target, anchor);
+    			mount_component(carousel_1, target, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			const carousel_changes = {};
+    			const carousel_1_changes = {};
 
-    			if (dirty & /*$$scope*/ 128) {
-    				carousel_changes.$$scope = { dirty, ctx };
+    			if (dirty & /*$$scope*/ 256) {
+    				carousel_1_changes.$$scope = { dirty, ctx };
     			}
 
-    			carousel.$set(carousel_changes);
+    			carousel_1.$set(carousel_1_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(carousel.$$.fragment, local);
+    			transition_in(carousel_1.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(carousel.$$.fragment, local);
+    			transition_out(carousel_1.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			destroy_component(carousel, detaching);
+    			/*carousel_1_binding*/ ctx[2](null);
+    			destroy_component(carousel_1, detaching);
     		}
     	};
 
@@ -19070,7 +19070,7 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(27:39)      <Carousel on:change={changed}",
+    		source: "(27:39)      <Carousel bind:this={carousel}",
     		ctx
     	});
 
@@ -19079,31 +19079,54 @@ var app = (function () {
 
     // (32:6) {#each items as item}
     function create_each_block(ctx) {
-    	let div;
-    	let p;
-    	let t0_value = /*item*/ ctx[3].title + "";
+    	let div1;
+    	let div0;
+    	let img;
+    	let img_src_value;
     	let t0;
+    	let h3;
+    	let t1_value = /*item*/ ctx[4].title + "";
     	let t1;
+    	let t2;
+    	let h5;
+    	let t4;
 
     	const block = {
     		c: function create() {
-    			div = element("div");
-    			p = element("p");
-    			t0 = text(t0_value);
-    			t1 = space();
-    			add_location(p, file, 33, 10, 924);
-    			attr_dev(div, "class", "slide-content svelte-jggfp9");
-    			add_location(div, file, 32, 8, 886);
+    			div1 = element("div");
+    			div0 = element("div");
+    			img = element("img");
+    			t0 = space();
+    			h3 = element("h3");
+    			t1 = text(t1_value);
+    			t2 = space();
+    			h5 = element("h5");
+    			h5.textContent = "Read Full Review";
+    			t4 = space();
+    			if (img.src !== (img_src_value = /*item*/ ctx[4].image)) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "Team Logo");
+    			add_location(img, file, 34, 12, 989);
+    			add_location(h3, file, 35, 12, 1042);
+    			add_location(h5, file, 36, 12, 1076);
+    			attr_dev(div0, "class", "boxStyle svelte-1mgu0jo");
+    			add_location(div0, file, 33, 10, 954);
+    			attr_dev(div1, "class", "mainDivStyle svelte-1mgu0jo");
+    			add_location(div1, file, 32, 8, 917);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, p);
-    			append_dev(p, t0);
-    			append_dev(div, t1);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+    			append_dev(div0, img);
+    			append_dev(div0, t0);
+    			append_dev(div0, h3);
+    			append_dev(h3, t1);
+    			append_dev(div0, t2);
+    			append_dev(div0, h5);
+    			append_dev(div1, t4);
     		},
     		p: noop$1,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div1);
     		}
     	};
 
@@ -19118,10 +19141,10 @@ var app = (function () {
     	return block;
     }
 
-    // (28:4) <Carousel on:change={changed}>
+    // (28:4) <Carousel bind:this={carousel} on:change={changed}>
     function create_default_slot(ctx) {
     	let each_1_anchor;
-    	let each_value = /*items*/ ctx[2];
+    	let each_value = /*items*/ ctx[3];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -19145,8 +19168,8 @@ var app = (function () {
     			insert_dev(target, each_1_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*sportsBooksResult*/ 1) {
-    				each_value = /*items*/ ctx[2];
+    			if (dirty & /*sportsBooksResult*/ 2) {
+    				each_value = /*items*/ ctx[3];
     				validate_each_argument(each_value);
     				let i;
 
@@ -19179,7 +19202,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(28:4) <Carousel on:change={changed}>",
+    		source: "(28:4) <Carousel bind:this={carousel} on:change={changed}>",
     		ctx
     	});
 
@@ -19197,9 +19220,9 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			create_component(chevronlefticon.$$.fragment);
-    			attr_dev(span, "class", "control svelte-jggfp9");
+    			attr_dev(span, "class", "control svelte-1mgu0jo");
     			attr_dev(span, "slot", "left-control");
-    			add_location(span, file, 28, 6, 765);
+    			add_location(span, file, 28, 6, 796);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -19232,7 +19255,7 @@ var app = (function () {
     	return block;
     }
 
-    // (37:6) 
+    // (41:6) 
     function create_right_control_slot(ctx) {
     	let span;
     	let chevronrighticon;
@@ -19243,9 +19266,9 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			create_component(chevronrighticon.$$.fragment);
-    			attr_dev(span, "class", "control svelte-jggfp9");
+    			attr_dev(span, "class", "control svelte-1mgu0jo");
     			attr_dev(span, "slot", "right-control");
-    			add_location(span, file, 36, 6, 979);
+    			add_location(span, file, 40, 6, 1154);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -19271,7 +19294,7 @@ var app = (function () {
     		block,
     		id: create_right_control_slot.name,
     		type: "slot",
-    		source: "(37:6) ",
+    		source: "(41:6) ",
     		ctx
     	});
 
@@ -19301,12 +19324,17 @@ var app = (function () {
     }
 
     function create_fragment(ctx) {
-    	let div;
+    	let div0;
     	let t0;
     	let br0;
     	let t1;
     	let br1;
+    	let t2;
+    	let div1;
+    	let button;
     	let current;
+    	let mounted;
+    	let dispose;
 
     	let info = {
     		ctx,
@@ -19316,46 +19344,62 @@ var app = (function () {
     		pending: create_pending_block,
     		then: create_then_block,
     		catch: create_catch_block,
-    		value: 2,
-    		error: 6,
+    		value: 3,
+    		error: 7,
     		blocks: [,,,]
     	};
 
-    	handle_promise(/*sportsBooksResult*/ ctx[0], info);
+    	handle_promise(/*sportsBooksResult*/ ctx[1], info);
 
     	const block = {
     		c: function create() {
-    			div = element("div");
+    			div0 = element("div");
     			info.block.c();
     			t0 = space();
     			br0 = element("br");
     			t1 = space();
     			br1 = element("br");
-    			add_location(br0, file, 43, 2, 1158);
-    			add_location(br1, file, 44, 2, 1167);
-    			attr_dev(div, "class", "demo svelte-jggfp9");
-    			add_location(div, file, 25, 0, 665);
+    			t2 = space();
+    			div1 = element("div");
+    			button = element("button");
+    			button.textContent = "Generate Sportsbooks";
+    			add_location(br0, file, 47, 2, 1333);
+    			add_location(br1, file, 48, 2, 1342);
+    			attr_dev(div0, "class", "mainDivCarousel svelte-1mgu0jo");
+    			add_location(div0, file, 25, 0, 664);
+    			attr_dev(button, "class", "btnWeb svelte-1mgu0jo");
+    			add_location(button, file, 53, 2, 1437);
+    			attr_dev(div1, "class", "btnDiv svelte-1mgu0jo");
+    			add_location(div1, file, 52, 0, 1414);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			info.block.m(div, info.anchor = null);
-    			info.mount = () => div;
+    			insert_dev(target, div0, anchor);
+    			info.block.m(div0, info.anchor = null);
+    			info.mount = () => div0;
     			info.anchor = t0;
-    			append_dev(div, t0);
-    			append_dev(div, br0);
-    			append_dev(div, t1);
-    			append_dev(div, br1);
+    			append_dev(div0, t0);
+    			append_dev(div0, br0);
+    			append_dev(div0, t1);
+    			append_dev(div0, br1);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, button);
     			current = true;
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", fullDataGeneration, false, false, false);
+    				mounted = true;
+    			}
     		},
     		p: function update(new_ctx, [dirty]) {
     			ctx = new_ctx;
 
     			{
     				const child_ctx = ctx.slice();
-    				child_ctx[2] = child_ctx[6] = info.resolved;
+    				child_ctx[3] = child_ctx[7] = info.resolved;
     				info.block.p(child_ctx, dirty);
     			}
     		},
@@ -19373,10 +19417,14 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div0);
     			info.block.d();
     			info.token = null;
     			info = null;
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(div1);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -19399,12 +19447,19 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
     	let sportsBooksResult = mainDataSports();
-    	let carousels = [{ perPage: { 320: 1, 768: 3 }, dots: false }];
+    	let carousel = [{ perPage: { 320: 1, 768: 5 }, dots: false }];
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn(`<App> was created with unknown prop '${key}'`);
     	});
+
+    	function carousel_1_binding($$value) {
+    		binding_callbacks[$$value ? "unshift" : "push"](() => {
+    			carousel = $$value;
+    			$$invalidate(0, carousel);
+    		});
+    	}
 
     	$$self.$capture_state = () => ({
     		firebase: firebase$1,
@@ -19415,20 +19470,20 @@ var app = (function () {
     		fullDataGeneration,
     		mainDataSports,
     		sportsBooksResult,
-    		carousels,
+    		carousel,
     		changed
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("sportsBooksResult" in $$props) $$invalidate(0, sportsBooksResult = $$props.sportsBooksResult);
-    		if ("carousels" in $$props) carousels = $$props.carousels;
+    		if ("sportsBooksResult" in $$props) $$invalidate(1, sportsBooksResult = $$props.sportsBooksResult);
+    		if ("carousel" in $$props) $$invalidate(0, carousel = $$props.carousel);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [sportsBooksResult];
+    	return [carousel, sportsBooksResult, carousel_1_binding];
     }
 
     class App extends SvelteComponentDev {
