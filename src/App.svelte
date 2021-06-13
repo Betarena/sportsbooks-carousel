@@ -7,6 +7,9 @@
   import { ChevronLeftIcon, ChevronRightIcon } from "svelte-feather-icons";
   import fullDataGeneration from "./betting-sites-data-generator";
   import mainDataSports from "./get-sportbooks-data";
+  import StarRating from "svelte-stars-rating";
+  import Dropdown from "svelte-atoms/Dropdown.svelte";
+  import Button from "svelte-atoms/Button.svelte";
 
   fireStart;
 
@@ -32,10 +35,15 @@
       {#each items as item}
         <div class="mainDivStyle">
           <div class="boxStyle">
+            <Dropdown>
+              <Button type="filled" status="primary">{item.bonus}</Button>
+              <div slot="dropdown" class="content">Some dropdown content</div>
+            </Dropdown>
             <img src={item.image} alt="Team Logo" />
             <h3>{item.title}</h3>
             <h5>Read Full Review</h5>
           </div>
+          <StarRating rating={item.stars} />
         </div>
       {/each}
       <span class="control" slot="right-control">
@@ -57,6 +65,10 @@
 </div>
 
 <style>
+  .content {
+    padding: 8px;
+  }
+
   .boxStyle {
     width: 358px;
     height: 112px;
