@@ -19235,7 +19235,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (119:4) {#each stars as star}
+    // (99:4) {#each stars as star}
     function create_each_block$2(ctx) {
     	let svg;
     	let polygon;
@@ -19266,35 +19266,35 @@ var app = (function () {
     			stop3 = svg_element("stop");
     			attr_dev(polygon, "points", /*getStarPoints*/ ctx[4]());
     			set_style(polygon, "fill-rule", "nonzero");
-    			add_location(polygon, file$7, 123, 8, 3065);
+    			add_location(polygon, file$7, 104, 8, 2777);
     			attr_dev(stop0, "id", "stop1");
     			attr_dev(stop0, "offset", stop0_offset_value = /*star*/ ctx[11].percent);
     			attr_dev(stop0, "stop-opacity", "1");
     			attr_dev(stop0, "stop-color", stop0_stop_color_value = /*getFullFillColor*/ ctx[5](/*star*/ ctx[11]));
-    			add_location(stop0, file$7, 126, 12, 3207);
+    			add_location(stop0, file$7, 107, 12, 2919);
     			attr_dev(stop1, "id", "stop2");
     			attr_dev(stop1, "offset", stop1_offset_value = /*star*/ ctx[11].percent);
     			attr_dev(stop1, "stop-opacity", "0");
     			attr_dev(stop1, "stop-color", stop1_stop_color_value = /*getFullFillColor*/ ctx[5](/*star*/ ctx[11]));
-    			add_location(stop1, file$7, 131, 12, 3370);
+    			add_location(stop1, file$7, 113, 12, 3094);
     			attr_dev(stop2, "id", "stop3");
     			attr_dev(stop2, "offset", stop2_offset_value = /*star*/ ctx[11].percent);
     			attr_dev(stop2, "stop-opacity", "1");
     			attr_dev(stop2, "stop-color", stop2_stop_color_value = /*style*/ ctx[2].styleEmptyStarColor);
-    			add_location(stop2, file$7, 136, 12, 3533);
+    			add_location(stop2, file$7, 119, 12, 3269);
     			attr_dev(stop3, "id", "stop4");
     			attr_dev(stop3, "offset", "100%");
     			attr_dev(stop3, "stop-opacity", "1");
     			attr_dev(stop3, ":stop-color", stop3__stop_color_value = /*style*/ ctx[2].styleEmptyStarColor);
-    			add_location(stop3, file$7, 141, 12, 3699);
+    			add_location(stop3, file$7, 125, 12, 3447);
     			attr_dev(linearGradient, "id", linearGradient_id_value = "gradient" + /*star*/ ctx[11].raw);
-    			add_location(linearGradient, file$7, 125, 10, 3154);
-    			add_location(defs, file$7, 124, 8, 3137);
+    			add_location(linearGradient, file$7, 106, 10, 2866);
+    			add_location(defs, file$7, 105, 8, 2849);
     			attr_dev(svg, "class", "star-svg");
     			set_style(svg, "fill", "url(#gradient" + /*star*/ ctx[11].raw + ")");
     			set_style(svg, "height", /*style*/ ctx[2].styleStarWidth);
     			set_style(svg, "width", /*style*/ ctx[2].styleStarWidth);
-    			add_location(svg, file$7, 119, 6, 2911);
+    			add_location(svg, file$7, 99, 6, 2616);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, svg, anchor);
@@ -19360,14 +19360,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(119:4) {#each stars as star}",
+    		source: "(99:4) {#each stars as star}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (151:4) {#if isIndicatorActive}
+    // (136:4) {#if isIndicatorActive}
     function create_if_block$2(ctx) {
     	let div;
     	let t;
@@ -19376,8 +19376,8 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			t = text(/*rating*/ ctx[0]);
-    			attr_dev(div, "class", "indicator svelte-p3zdxf");
-    			add_location(div, file$7, 151, 6, 3949);
+    			attr_dev(div, "class", "indicator svelte-nw3mp2");
+    			add_location(div, file$7, 136, 6, 3709);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -19395,7 +19395,7 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(151:4) {#if isIndicatorActive}",
+    		source: "(136:4) {#if isIndicatorActive}",
     		ctx
     	});
 
@@ -19427,10 +19427,10 @@ var app = (function () {
 
     			t = space();
     			if (if_block) if_block.c();
-    			attr_dev(div0, "class", "star-rating svelte-p3zdxf");
-    			add_location(div0, file$7, 117, 2, 2853);
-    			attr_dev(div1, "class", "star-container svelte-p3zdxf");
-    			add_location(div1, file$7, 116, 0, 2822);
+    			attr_dev(div0, "class", "star-rating svelte-nw3mp2");
+    			add_location(div0, file$7, 97, 2, 2558);
+    			attr_dev(div1, "class", "star-container svelte-nw3mp2");
+    			add_location(div1, file$7, 96, 0, 2527);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -21590,14 +21590,14 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[4] = list[i];
+    	child_ctx[5] = list[i];
     	return child_ctx;
     }
 
-    // (53:2) {:catch error}
+    // (65:2) {:catch error}
     function create_catch_block(ctx) {
     	let p;
-    	let t_value = /*error*/ ctx[7].message + "";
+    	let t_value = /*error*/ ctx[8].message + "";
     	let t;
 
     	const block = {
@@ -21605,7 +21605,7 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			set_style(p, "color", "red");
-    			add_location(p, file, 53, 4, 1678);
+    			add_location(p, file, 65, 4, 1985);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -21623,14 +21623,14 @@ var app = (function () {
     		block,
     		id: create_catch_block.name,
     		type: "catch",
-    		source: "(53:2) {:catch error}",
+    		source: "(65:2) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (30:39)      <Carousel bind:this={carousel}
+    // (36:39)      <Carousel bind:this={carousel}
     function create_then_block(ctx) {
     	let carousel_1;
     	let current;
@@ -21645,7 +21645,7 @@ var app = (function () {
     	};
 
     	carousel_1 = new Carousel({ props: carousel_1_props, $$inline: true });
-    	/*carousel_1_binding*/ ctx[2](carousel_1);
+    	/*carousel_1_binding*/ ctx[3](carousel_1);
     	carousel_1.$on("change", changed);
 
     	const block = {
@@ -21659,7 +21659,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const carousel_1_changes = {};
 
-    			if (dirty & /*$$scope*/ 256) {
+    			if (dirty & /*$$scope*/ 512) {
     				carousel_1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -21675,7 +21675,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			/*carousel_1_binding*/ ctx[2](null);
+    			/*carousel_1_binding*/ ctx[3](null);
     			destroy_component(carousel_1, detaching);
     		}
     	};
@@ -21684,16 +21684,16 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(30:39)      <Carousel bind:this={carousel}",
+    		source: "(36:39)      <Carousel bind:this={carousel}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (39:14) <Button type="filled" status="primary">
+    // (55:14) <Button type="filled" status="primary">
     function create_default_slot_2(ctx) {
-    	let t_value = /*item*/ ctx[4].bonus + "";
+    	let t_value = /*item*/ ctx[5].bonus + "";
     	let t;
 
     	const block = {
@@ -21713,14 +21713,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(39:14) <Button type=\\\"filled\\\" status=\\\"primary\\\">",
+    		source: "(55:14) <Button type=\\\"filled\\\" status=\\\"primary\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (38:12) <Dropdown>
+    // (54:12) <Dropdown>
     function create_default_slot_1(ctx) {
     	let button;
     	let current;
@@ -21746,7 +21746,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 256) {
+    			if (dirty & /*$$scope*/ 512) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -21770,14 +21770,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(38:12) <Dropdown>",
+    		source: "(54:12) <Dropdown>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (40:14) 
+    // (56:14) 
     function create_dropdown_slot(ctx) {
     	let div;
 
@@ -21786,8 +21786,8 @@ var app = (function () {
     			div = element("div");
     			div.textContent = "Some dropdown content";
     			attr_dev(div, "slot", "dropdown");
-    			attr_dev(div, "class", "content svelte-1yd1jg5");
-    			add_location(div, file, 39, 14, 1243);
+    			attr_dev(div, "class", "content svelte-6gom2u");
+    			add_location(div, file, 55, 14, 1720);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -21801,31 +21801,41 @@ var app = (function () {
     		block,
     		id: create_dropdown_slot.name,
     		type: "slot",
-    		source: "(40:14) ",
+    		source: "(56:14) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (35:6) {#each items as item}
+    // (41:6) {#each items as item}
     function create_each_block(ctx) {
+    	let div2;
     	let div1;
-    	let div0;
-    	let dropdown;
-    	let t0;
     	let img;
     	let img_src_value;
-    	let t1;
+    	let t0;
     	let h3;
-    	let t2_value = /*item*/ ctx[4].title + "";
+    	let t1_value = /*item*/ ctx[5].title + "";
+    	let t1;
     	let t2;
+    	let div0;
+    	let starrating;
     	let t3;
     	let h5;
     	let t5;
-    	let starrating;
+    	let dropdown;
     	let t6;
     	let current;
+
+    	starrating = new Star_rating({
+    			props: {
+    				rating: /*item*/ ctx[5].stars,
+    				isIndicatorActive: false,
+    				style: /*style*/ ctx[2]
+    			},
+    			$$inline: true
+    		});
 
     	dropdown = new Dropdown({
     			props: {
@@ -21838,57 +21848,58 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	starrating = new Star_rating({
-    			props: { rating: /*item*/ ctx[4].stars },
-    			$$inline: true
-    		});
-
     	const block = {
     		c: function create() {
+    			div2 = element("div");
     			div1 = element("div");
-    			div0 = element("div");
-    			create_component(dropdown.$$.fragment);
-    			t0 = space();
     			img = element("img");
-    			t1 = space();
+    			t0 = space();
     			h3 = element("h3");
-    			t2 = text(t2_value);
+    			t1 = text(t1_value);
+    			t2 = space();
+    			div0 = element("div");
+    			create_component(starrating.$$.fragment);
     			t3 = space();
     			h5 = element("h5");
     			h5.textContent = "Read Full Review";
     			t5 = space();
-    			create_component(starrating.$$.fragment);
+    			create_component(dropdown.$$.fragment);
     			t6 = space();
-    			if (img.src !== (img_src_value = /*item*/ ctx[4].image)) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "class", "imgMain svelte-6gom2u");
+    			if (img.src !== (img_src_value = /*item*/ ctx[5].image)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Team Logo");
-    			add_location(img, file, 41, 12, 1344);
-    			add_location(h3, file, 42, 12, 1397);
-    			add_location(h5, file, 43, 12, 1431);
-    			attr_dev(div0, "class", "boxStyle svelte-1yd1jg5");
-    			add_location(div0, file, 36, 10, 1108);
-    			attr_dev(div1, "class", "mainDivStyle svelte-1yd1jg5");
-    			add_location(div1, file, 35, 8, 1071);
+    			add_location(img, file, 43, 12, 1259);
+    			attr_dev(h3, "class", "titleSports svelte-6gom2u");
+    			add_location(h3, file, 44, 12, 1328);
+    			attr_dev(div0, "class", "starStyle svelte-6gom2u");
+    			add_location(div0, file, 45, 12, 1382);
+    			add_location(h5, file, 52, 12, 1582);
+    			attr_dev(div1, "class", "boxStyle svelte-6gom2u");
+    			add_location(div1, file, 42, 10, 1224);
+    			attr_dev(div2, "class", "mainDivStyle svelte-6gom2u");
+    			add_location(div2, file, 41, 8, 1187);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div1, anchor);
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div1);
+    			append_dev(div1, img);
+    			append_dev(div1, t0);
+    			append_dev(div1, h3);
+    			append_dev(h3, t1);
+    			append_dev(div1, t2);
     			append_dev(div1, div0);
-    			mount_component(dropdown, div0, null);
-    			append_dev(div0, t0);
-    			append_dev(div0, img);
-    			append_dev(div0, t1);
-    			append_dev(div0, h3);
-    			append_dev(h3, t2);
-    			append_dev(div0, t3);
-    			append_dev(div0, h5);
+    			mount_component(starrating, div0, null);
+    			append_dev(div1, t3);
+    			append_dev(div1, h5);
     			append_dev(div1, t5);
-    			mount_component(starrating, div1, null);
-    			append_dev(div1, t6);
+    			mount_component(dropdown, div1, null);
+    			append_dev(div2, t6);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
     			const dropdown_changes = {};
 
-    			if (dirty & /*$$scope*/ 256) {
+    			if (dirty & /*$$scope*/ 512) {
     				dropdown_changes.$$scope = { dirty, ctx };
     			}
 
@@ -21896,19 +21907,19 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(dropdown.$$.fragment, local);
     			transition_in(starrating.$$.fragment, local);
+    			transition_in(dropdown.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(dropdown.$$.fragment, local);
     			transition_out(starrating.$$.fragment, local);
+    			transition_out(dropdown.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div1);
-    			destroy_component(dropdown);
+    			if (detaching) detach_dev(div2);
     			destroy_component(starrating);
+    			destroy_component(dropdown);
     		}
     	};
 
@@ -21916,18 +21927,18 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(35:6) {#each items as item}",
+    		source: "(41:6) {#each items as item}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (31:4) <Carousel bind:this={carousel} on:change={changed}>
+    // (37:4) <Carousel bind:this={carousel} on:change={changed}>
     function create_default_slot(ctx) {
     	let each_1_anchor;
     	let current;
-    	let each_value = /*items*/ ctx[3];
+    	let each_value = /*items*/ ctx[4];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -21956,8 +21967,8 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*sportsBooksResult*/ 2) {
-    				each_value = /*items*/ ctx[3];
+    			if (dirty & /*sportsBooksResult, style*/ 6) {
+    				each_value = /*items*/ ctx[4];
     				validate_each_argument(each_value);
     				let i;
 
@@ -22012,14 +22023,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(31:4) <Carousel bind:this={carousel} on:change={changed}>",
+    		source: "(37:4) <Carousel bind:this={carousel} on:change={changed}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (32:6) 
+    // (38:6) 
     function create_left_control_slot(ctx) {
     	let span;
     	let chevronlefticon;
@@ -22030,9 +22041,9 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			create_component(chevronlefticon.$$.fragment);
-    			attr_dev(span, "class", "control svelte-1yd1jg5");
+    			attr_dev(span, "class", "control svelte-6gom2u");
     			attr_dev(span, "slot", "left-control");
-    			add_location(span, file, 31, 6, 950);
+    			add_location(span, file, 37, 6, 1066);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -22058,14 +22069,14 @@ var app = (function () {
     		block,
     		id: create_left_control_slot.name,
     		type: "slot",
-    		source: "(32:6) ",
+    		source: "(38:6) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (49:6) 
+    // (61:6) 
     function create_right_control_slot(ctx) {
     	let span;
     	let chevronrighticon;
@@ -22076,9 +22087,9 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			create_component(chevronrighticon.$$.fragment);
-    			attr_dev(span, "class", "control svelte-1yd1jg5");
+    			attr_dev(span, "class", "control svelte-6gom2u");
     			attr_dev(span, "slot", "right-control");
-    			add_location(span, file, 48, 6, 1554);
+    			add_location(span, file, 60, 6, 1861);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -22104,7 +22115,7 @@ var app = (function () {
     		block,
     		id: create_right_control_slot.name,
     		type: "slot",
-    		source: "(49:6) ",
+    		source: "(61:6) ",
     		ctx
     	});
 
@@ -22154,8 +22165,8 @@ var app = (function () {
     		pending: create_pending_block,
     		then: create_then_block,
     		catch: create_catch_block,
-    		value: 3,
-    		error: 7,
+    		value: 4,
+    		error: 8,
     		blocks: [,,,]
     	};
 
@@ -22173,14 +22184,14 @@ var app = (function () {
     			div1 = element("div");
     			button = element("button");
     			button.textContent = "Generate Sportsbooks";
-    			add_location(br0, file, 55, 2, 1733);
-    			add_location(br1, file, 56, 2, 1742);
-    			attr_dev(div0, "class", "mainDivCarousel svelte-1yd1jg5");
-    			add_location(div0, file, 28, 0, 818);
-    			attr_dev(button, "class", "btnWeb svelte-1yd1jg5");
-    			add_location(button, file, 61, 2, 1837);
-    			attr_dev(div1, "class", "btnDiv svelte-1yd1jg5");
-    			add_location(div1, file, 60, 0, 1814);
+    			add_location(br0, file, 67, 2, 2040);
+    			add_location(br1, file, 68, 2, 2049);
+    			attr_dev(div0, "class", "mainDivCarousel svelte-6gom2u");
+    			add_location(div0, file, 34, 0, 934);
+    			attr_dev(button, "class", "btnWeb svelte-6gom2u");
+    			add_location(button, file, 73, 2, 2144);
+    			attr_dev(div1, "class", "btnDiv svelte-6gom2u");
+    			add_location(div1, file, 72, 0, 2121);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -22209,7 +22220,7 @@ var app = (function () {
 
     			{
     				const child_ctx = ctx.slice();
-    				child_ctx[3] = child_ctx[7] = info.resolved;
+    				child_ctx[4] = child_ctx[8] = info.resolved;
     				info.block.p(child_ctx, dirty);
     			}
     		},
@@ -22258,6 +22269,13 @@ var app = (function () {
     	validate_slots("App", slots, []);
     	let sportsBooksResult = mainDataSports();
     	let carousel = [{ perPage: { 320: 1, 768: 5 }, dots: false }];
+
+    	let style = {
+    		styleStarWidth: 12,
+    		styleEmptyStarColor: "#fffff",
+    		styleFullStarColor: "#FFB904"
+    	};
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -22284,19 +22302,21 @@ var app = (function () {
     		Button,
     		sportsBooksResult,
     		carousel,
-    		changed
+    		changed,
+    		style
     	});
 
     	$$self.$inject_state = $$props => {
     		if ("sportsBooksResult" in $$props) $$invalidate(1, sportsBooksResult = $$props.sportsBooksResult);
     		if ("carousel" in $$props) $$invalidate(0, carousel = $$props.carousel);
+    		if ("style" in $$props) $$invalidate(2, style = $$props.style);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [carousel, sportsBooksResult, carousel_1_binding];
+    	return [carousel, sportsBooksResult, style, carousel_1_binding];
     }
 
     class App extends SvelteComponentDev {
@@ -22313,11 +22333,13 @@ var app = (function () {
     	}
     }
 
-    const app = new App({
+    new App({
     	target: document.body,
-    });
+      });
 
-    return app;
+    var app$1 = app;
+
+    return app$1;
 
 }());
 //# sourceMappingURL=bundle.js.map

@@ -1,7 +1,7 @@
 import App from './App.svelte';
 
-const app = new App({
+const starRatingStyle = new App({
 	target: document.body,
-});
+  });
 
 export default app;

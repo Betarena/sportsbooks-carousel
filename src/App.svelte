@@ -24,6 +24,12 @@
   function changed(event) {
     console.log(event.detail.currentSlide);
   }
+
+  let style = {
+    styleStarWidth: 12,
+    styleEmptyStarColor: "#fffff",
+    styleFullStarColor: "#FFB904",
+  };
 </script>
 
 <div class="mainDivCarousel">
@@ -35,15 +41,21 @@
       {#each items as item}
         <div class="mainDivStyle">
           <div class="boxStyle">
+            <img class="imgMain" src={item.image} alt="Team Logo" />
+            <h3 class="titleSports">{item.title}</h3>
+            <div class="starStyle">
+              <StarRating
+                rating={item.stars}
+                isIndicatorActive={false}
+                {style}
+              />
+            </div>
+            <h5>Read Full Review</h5>
             <Dropdown>
               <Button type="filled" status="primary">{item.bonus}</Button>
               <div slot="dropdown" class="content">Some dropdown content</div>
             </Dropdown>
-            <img src={item.image} alt="Team Logo" />
-            <h3>{item.title}</h3>
-            <h5>Read Full Review</h5>
           </div>
-          <StarRating rating={item.stars} />
         </div>
       {/each}
       <span class="control" slot="right-control">
@@ -74,6 +86,31 @@
     height: 112px;
     background-color: #4c4c4c;
     border-radius: 16px;
+  }
+
+  .imgMain {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    left: 20px;
+    top: 20px;
+
+    background: #000000;
+    border-radius: 8px;
+  }
+
+  .titleSports {
+    position: relative;
+    margin-top: -53px;
+    width: 58px;
+    height: 27px;
+    left: 108px;
+    color: #fff;
+  }
+
+  .starStyle {
+    margin-top: -18px;
+    margin-left: 108px;
   }
 
   .btnWeb {
