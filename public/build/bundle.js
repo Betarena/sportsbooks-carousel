@@ -1,5 +1,5 @@
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35735/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 var app = (function () {
     'use strict';
 
@@ -18041,7 +18041,7 @@ var app = (function () {
     const get_left_control_slot_changes = dirty => ({});
     const get_left_control_slot_context = ctx => ({});
 
-    // (6:1) {#if controls}
+    // (100:2) {#if controls}
     function create_if_block_1$1(ctx) {
     	let button0;
     	let t;
@@ -18061,12 +18061,12 @@ var app = (function () {
     			t = space();
     			button1 = element("button");
     			if (right_control_slot) right_control_slot.c();
-    			attr_dev(button0, "class", "left svelte-1ppqxio");
+    			attr_dev(button0, "class", "left svelte-1utdnvr");
     			attr_dev(button0, "aria-label", "left");
-    			add_location(button0, file$a, 6, 1, 105);
-    			attr_dev(button1, "class", "right svelte-1ppqxio");
+    			add_location(button0, file$a, 100, 4, 2204);
+    			attr_dev(button1, "class", "right svelte-1utdnvr");
     			attr_dev(button1, "aria-label", "right");
-    			add_location(button1, file$a, 9, 1, 209);
+    			add_location(button1, file$a, 103, 4, 2313);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button0, anchor);
@@ -18132,14 +18132,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(6:1) {#if controls}",
+    		source: "(100:2) {#if controls}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (14:4) {#if dots}
+    // (108:2) {#if dots}
     function create_if_block$3(ctx) {
     	let ul;
     	let each_value = { length: /*totalDots*/ ctx[9] };
@@ -18158,8 +18158,8 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(ul, "class", "svelte-1ppqxio");
-    			add_location(ul, file$a, 14, 1, 339);
+    			attr_dev(ul, "class", "svelte-1utdnvr");
+    			add_location(ul, file$a, 108, 4, 2447);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -18203,14 +18203,14 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(14:4) {#if dots}",
+    		source: "(108:2) {#if dots}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (16:2) {#each {length: totalDots} as _, i}
+    // (110:6) {#each { length: totalDots } as _, i}
     function create_each_block$3(ctx) {
     	let li;
     	let li_class_value;
@@ -18227,9 +18227,9 @@ var app = (function () {
 
     			attr_dev(li, "class", li_class_value = "" + (null_to_empty(/*isDotActive*/ ctx[2](/*currentIndex*/ ctx[7], /*i*/ ctx[33])
     			? "active"
-    			: "") + " svelte-1ppqxio"));
+    			: "") + " svelte-1utdnvr"));
 
-    			add_location(li, file$a, 16, 2, 384);
+    			add_location(li, file$a, 110, 8, 2504);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -18244,7 +18244,7 @@ var app = (function () {
 
     			if (dirty[0] & /*currentIndex*/ 128 && li_class_value !== (li_class_value = "" + (null_to_empty(/*isDotActive*/ ctx[2](/*currentIndex*/ ctx[7], /*i*/ ctx[33])
     			? "active"
-    			: "") + " svelte-1ppqxio"))) {
+    			: "") + " svelte-1utdnvr"))) {
     				attr_dev(li, "class", li_class_value);
     			}
     		},
@@ -18259,7 +18259,7 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(16:2) {#each {length: totalDots} as _, i}",
+    		source: "(110:6) {#each { length: totalDots } as _, i}",
     		ctx
     	});
 
@@ -18287,9 +18287,9 @@ var app = (function () {
     			t1 = space();
     			if (if_block1) if_block1.c();
     			attr_dev(div0, "class", "slides");
-    			add_location(div0, file$a, 2, 1, 25);
-    			attr_dev(div1, "class", "carousel svelte-1ppqxio");
-    			add_location(div1, file$a, 1, 0, 1);
+    			add_location(div0, file$a, 96, 2, 2122);
+    			attr_dev(div1, "class", "carousel svelte-1utdnvr");
+    			add_location(div1, file$a, 95, 0, 2097);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -19712,7 +19712,7 @@ var app = (function () {
     const get_dropdown_slot_changes = dirty => ({});
     const get_dropdown_slot_context = ctx => ({});
 
-    // (55:4) {#if isOpen}
+    // (56:4) {#if isOpen}
     function create_if_block$1(ctx) {
     	let div1;
     	let div0;
@@ -19735,10 +19735,10 @@ var app = (function () {
     			? `max-height:${/*maxHeight*/ ctx[5]}px; `
     			: "");
 
-    			add_location(div0, file$6, 59, 8, 1613);
+    			add_location(div0, file$6, 61, 8, 1621);
     			attr_dev(div1, "style", div1_style_value = `top:${/*dropdownTop*/ ctx[7]}; left:${/*dropdownLeft*/ ctx[8]}`);
-    			attr_dev(div1, "class", "aa-dropdown svelte-1gxwesc");
-    			add_location(div1, file$6, 55, 6, 1461);
+    			attr_dev(div1, "class", "aa-dropdown svelte-by4bxu");
+    			add_location(div1, file$6, 56, 6, 1462);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -19822,7 +19822,7 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(55:4) {#if isOpen}",
+    		source: "(56:4) {#if isOpen}",
     		ctx
     	});
 
@@ -19851,9 +19851,9 @@ var app = (function () {
     			div0 = element("div");
     			if (if_block) if_block.c();
     			t1 = space();
-    			attr_dev(div0, "class", "dropdownContainer svelte-1gxwesc");
-    			add_location(div0, file$6, 53, 2, 1406);
-    			attr_dev(div1, "class", div1_class_value = "" + (null_to_empty(`host ${/*$$props*/ ctx[11].class || ""}`) + " svelte-1gxwesc"));
+    			attr_dev(div0, "class", "dropdownContainer svelte-by4bxu");
+    			add_location(div0, file$6, 54, 2, 1407);
+    			attr_dev(div1, "class", div1_class_value = "" + (null_to_empty(`host ${/*$$props*/ ctx[11].class || ""}`) + " svelte-by4bxu"));
     			add_location(div1, file$6, 48, 0, 1281);
     		},
     		l: function claim(nodes) {
@@ -19913,7 +19913,7 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (!current || dirty & /*$$props*/ 2048 && div1_class_value !== (div1_class_value = "" + (null_to_empty(`host ${/*$$props*/ ctx[11].class || ""}`) + " svelte-1gxwesc"))) {
+    			if (!current || dirty & /*$$props*/ 2048 && div1_class_value !== (div1_class_value = "" + (null_to_empty(`host ${/*$$props*/ ctx[11].class || ""}`) + " svelte-by4bxu"))) {
     				attr_dev(div1, "class", div1_class_value);
     			}
     		},
@@ -21590,14 +21590,14 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[5] = list[i];
+    	child_ctx[3] = list[i];
     	return child_ctx;
     }
 
-    // (65:2) {:catch error}
+    // (81:2) {:catch error}
     function create_catch_block(ctx) {
     	let p;
-    	let t_value = /*error*/ ctx[8].message + "";
+    	let t_value = /*error*/ ctx[6].message + "";
     	let t;
 
     	const block = {
@@ -21605,7 +21605,7 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			set_style(p, "color", "red");
-    			add_location(p, file, 65, 4, 1985);
+    			add_location(p, file, 81, 4, 2616);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -21623,60 +21623,63 @@ var app = (function () {
     		block,
     		id: create_catch_block.name,
     		type: "catch",
-    		source: "(65:2) {:catch error}",
+    		source: "(81:2) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (36:39)      <Carousel bind:this={carousel}
+    // (30:39)      <Carousel       dots={false}
     function create_then_block(ctx) {
-    	let carousel_1;
+    	let carousel;
     	let current;
 
-    	let carousel_1_props = {
-    		$$slots: {
-    			"right-control": [create_right_control_slot],
-    			"left-control": [create_left_control_slot],
-    			default: [create_default_slot]
-    		},
-    		$$scope: { ctx }
-    	};
+    	carousel = new Carousel({
+    			props: {
+    				dots: false,
+    				draggable: false,
+    				perPage: { 1378: 4, 500: 2 },
+    				$$slots: {
+    					"right-control": [create_right_control_slot],
+    					"left-control": [create_left_control_slot],
+    					default: [create_default_slot]
+    				},
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
 
-    	carousel_1 = new Carousel({ props: carousel_1_props, $$inline: true });
-    	/*carousel_1_binding*/ ctx[3](carousel_1);
-    	carousel_1.$on("change", changed);
+    	carousel.$on("change", changed);
 
     	const block = {
     		c: function create() {
-    			create_component(carousel_1.$$.fragment);
+    			create_component(carousel.$$.fragment);
     		},
     		m: function mount(target, anchor) {
-    			mount_component(carousel_1, target, anchor);
+    			mount_component(carousel, target, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			const carousel_1_changes = {};
+    			const carousel_changes = {};
 
-    			if (dirty & /*$$scope*/ 512) {
-    				carousel_1_changes.$$scope = { dirty, ctx };
+    			if (dirty & /*$$scope*/ 128) {
+    				carousel_changes.$$scope = { dirty, ctx };
     			}
 
-    			carousel_1.$set(carousel_1_changes);
+    			carousel.$set(carousel_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(carousel_1.$$.fragment, local);
+    			transition_in(carousel.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(carousel_1.$$.fragment, local);
+    			transition_out(carousel.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			/*carousel_1_binding*/ ctx[3](null);
-    			destroy_component(carousel_1, detaching);
+    			destroy_component(carousel, detaching);
     		}
     	};
 
@@ -21684,16 +21687,16 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(36:39)      <Carousel bind:this={carousel}",
+    		source: "(30:39)      <Carousel       dots={false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (55:14) <Button type="filled" status="primary">
+    // (61:16) <Button type="filled" status="primary">
     function create_default_slot_2(ctx) {
-    	let t_value = /*item*/ ctx[5].bonus + "";
+    	let t_value = /*item*/ ctx[3].bonus + "";
     	let t;
 
     	const block = {
@@ -21713,14 +21716,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(55:14) <Button type=\\\"filled\\\" status=\\\"primary\\\">",
+    		source: "(61:16) <Button type=\\\"filled\\\" status=\\\"primary\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (54:12) <Dropdown>
+    // (60:14) <Dropdown>
     function create_default_slot_1(ctx) {
     	let button;
     	let current;
@@ -21746,7 +21749,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 512) {
+    			if (dirty & /*$$scope*/ 128) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -21770,30 +21773,79 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(54:12) <Dropdown>",
+    		source: "(60:14) <Dropdown>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (56:14) 
+    // (62:16) 
     function create_dropdown_slot(ctx) {
-    	let div;
+    	let div4;
+    	let div0;
+    	let t0_value = /*item*/ ctx[3].bonus_description + "";
+    	let t0;
+    	let t1;
+    	let div1;
+    	let t2_value = /*item*/ ctx[3].bonus_code + "";
+    	let t2;
+    	let t3;
+    	let div2;
+    	let a;
+    	let button;
+    	let t5;
+    	let div3;
+    	let t6_value = /*item*/ ctx[3].information + "";
+    	let t6;
 
     	const block = {
     		c: function create() {
-    			div = element("div");
-    			div.textContent = "Some dropdown content";
-    			attr_dev(div, "slot", "dropdown");
-    			attr_dev(div, "class", "content svelte-6gom2u");
-    			add_location(div, file, 55, 14, 1720);
+    			div4 = element("div");
+    			div0 = element("div");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			div1 = element("div");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			div2 = element("div");
+    			a = element("a");
+    			button = element("button");
+    			button.textContent = "Register";
+    			t5 = space();
+    			div3 = element("div");
+    			t6 = text(t6_value);
+    			add_location(div0, file, 62, 18, 2031);
+    			add_location(div1, file, 63, 18, 2085);
+    			attr_dev(button, "class", "btnWebRegister svelte-16u8m5i");
+    			add_location(button, file, 66, 22, 2225);
+    			attr_dev(a, "href", /*item*/ ctx[3].register_link);
+    			add_location(a, file, 65, 20, 2173);
+    			attr_dev(div2, "class", "btnDiv svelte-16u8m5i");
+    			add_location(div2, file, 64, 18, 2132);
+    			add_location(div3, file, 69, 18, 2342);
+    			attr_dev(div4, "slot", "dropdown");
+    			attr_dev(div4, "class", "content svelte-16u8m5i");
+    			add_location(div4, file, 61, 16, 1975);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, div0);
+    			append_dev(div0, t0);
+    			append_dev(div4, t1);
+    			append_dev(div4, div1);
+    			append_dev(div1, t2);
+    			append_dev(div4, t3);
+    			append_dev(div4, div2);
+    			append_dev(div2, a);
+    			append_dev(a, button);
+    			append_dev(div4, t5);
+    			append_dev(div4, div3);
+    			append_dev(div3, t6);
     		},
+    		p: noop$1,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div4);
     		}
     	};
 
@@ -21801,38 +21853,42 @@ var app = (function () {
     		block,
     		id: create_dropdown_slot.name,
     		type: "slot",
-    		source: "(56:14) ",
+    		source: "(62:16) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (41:6) {#each items as item}
+    // (40:6) {#each items as item}
     function create_each_block(ctx) {
+    	let div3;
     	let div2;
-    	let div1;
+    	let a0;
     	let img;
     	let img_src_value;
     	let t0;
+    	let a1;
     	let h3;
-    	let t1_value = /*item*/ ctx[5].title + "";
+    	let t1_value = /*item*/ ctx[3].title + "";
     	let t1;
     	let t2;
     	let div0;
     	let starrating;
     	let t3;
+    	let a2;
     	let h5;
     	let t5;
+    	let div1;
     	let dropdown;
     	let t6;
     	let current;
 
     	starrating = new Star_rating({
     			props: {
-    				rating: /*item*/ ctx[5].stars,
+    				rating: /*item*/ ctx[3].stars,
     				isIndicatorActive: false,
-    				style: /*style*/ ctx[2]
+    				style: /*style*/ ctx[1]
     			},
     			$$inline: true
     		});
@@ -21850,56 +21906,74 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			div3 = element("div");
     			div2 = element("div");
-    			div1 = element("div");
+    			a0 = element("a");
     			img = element("img");
     			t0 = space();
+    			a1 = element("a");
     			h3 = element("h3");
     			t1 = text(t1_value);
     			t2 = space();
     			div0 = element("div");
     			create_component(starrating.$$.fragment);
     			t3 = space();
+    			a2 = element("a");
     			h5 = element("h5");
-    			h5.textContent = "Read Full Review";
+    			h5.textContent = "Read Full Review >";
     			t5 = space();
+    			div1 = element("div");
     			create_component(dropdown.$$.fragment);
     			t6 = space();
-    			attr_dev(img, "class", "imgMain svelte-6gom2u");
-    			if (img.src !== (img_src_value = /*item*/ ctx[5].image)) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "Team Logo");
-    			add_location(img, file, 43, 12, 1259);
-    			attr_dev(h3, "class", "titleSports svelte-6gom2u");
-    			add_location(h3, file, 44, 12, 1328);
-    			attr_dev(div0, "class", "starStyle svelte-6gom2u");
-    			add_location(div0, file, 45, 12, 1382);
-    			add_location(h5, file, 52, 12, 1582);
-    			attr_dev(div1, "class", "boxStyle svelte-6gom2u");
-    			add_location(div1, file, 42, 10, 1224);
-    			attr_dev(div2, "class", "mainDivStyle svelte-6gom2u");
-    			add_location(div2, file, 41, 8, 1187);
+    			attr_dev(img, "class", "imgMain svelte-16u8m5i");
+    			if (img.src !== (img_src_value = /*item*/ ctx[3].image)) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "Betting site Logo");
+    			add_location(img, file, 43, 14, 1281);
+    			attr_dev(a0, "href", /*item*/ ctx[3].register_link);
+    			add_location(a0, file, 42, 12, 1237);
+    			attr_dev(h3, "class", "titleSports svelte-16u8m5i");
+    			add_location(h3, file, 46, 14, 1419);
+    			attr_dev(a1, "href", /*item*/ ctx[3].register_link);
+    			add_location(a1, file, 45, 12, 1375);
+    			attr_dev(div0, "class", "starStyle svelte-16u8m5i");
+    			add_location(div0, file, 48, 12, 1490);
+    			attr_dev(h5, "class", "reviewStyle svelte-16u8m5i");
+    			add_location(h5, file, 56, 14, 1756);
+    			attr_dev(a2, "class", "reviewStyleLink svelte-16u8m5i");
+    			attr_dev(a2, "href", /*item*/ ctx[3].review_link);
+    			add_location(a2, file, 55, 12, 1690);
+    			attr_dev(div1, "class", "dropStyle svelte-16u8m5i");
+    			add_location(div1, file, 58, 12, 1833);
+    			attr_dev(div2, "class", "boxStyle svelte-16u8m5i");
+    			add_location(div2, file, 41, 10, 1202);
+    			attr_dev(div3, "class", "mainDivStyle svelte-16u8m5i");
+    			add_location(div3, file, 40, 8, 1165);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div2, anchor);
-    			append_dev(div2, div1);
-    			append_dev(div1, img);
-    			append_dev(div1, t0);
-    			append_dev(div1, h3);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div2);
+    			append_dev(div2, a0);
+    			append_dev(a0, img);
+    			append_dev(div2, t0);
+    			append_dev(div2, a1);
+    			append_dev(a1, h3);
     			append_dev(h3, t1);
-    			append_dev(div1, t2);
-    			append_dev(div1, div0);
+    			append_dev(div2, t2);
+    			append_dev(div2, div0);
     			mount_component(starrating, div0, null);
-    			append_dev(div1, t3);
-    			append_dev(div1, h5);
-    			append_dev(div1, t5);
+    			append_dev(div2, t3);
+    			append_dev(div2, a2);
+    			append_dev(a2, h5);
+    			append_dev(div2, t5);
+    			append_dev(div2, div1);
     			mount_component(dropdown, div1, null);
-    			append_dev(div2, t6);
+    			append_dev(div3, t6);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
     			const dropdown_changes = {};
 
-    			if (dirty & /*$$scope*/ 512) {
+    			if (dirty & /*$$scope*/ 128) {
     				dropdown_changes.$$scope = { dirty, ctx };
     			}
 
@@ -21917,7 +21991,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div2);
+    			if (detaching) detach_dev(div3);
     			destroy_component(starrating);
     			destroy_component(dropdown);
     		}
@@ -21927,18 +22001,18 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(41:6) {#each items as item}",
+    		source: "(40:6) {#each items as item}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (37:4) <Carousel bind:this={carousel} on:change={changed}>
+    // (31:4) <Carousel       dots={false}       draggable={false}       perPage={{ 1378: 4, 500: 2 }}       on:change={changed}     >
     function create_default_slot(ctx) {
     	let each_1_anchor;
     	let current;
-    	let each_value = /*items*/ ctx[4];
+    	let each_value = /*items*/ ctx[2];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -21967,8 +22041,8 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*sportsBooksResult, style*/ 6) {
-    				each_value = /*items*/ ctx[4];
+    			if (dirty & /*sportsBooksResult, style*/ 3) {
+    				each_value = /*items*/ ctx[2];
     				validate_each_argument(each_value);
     				let i;
 
@@ -22023,14 +22097,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(37:4) <Carousel bind:this={carousel} on:change={changed}>",
+    		source: "(31:4) <Carousel       dots={false}       draggable={false}       perPage={{ 1378: 4, 500: 2 }}       on:change={changed}     >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (38:6) 
+    // (37:6) 
     function create_left_control_slot(ctx) {
     	let span;
     	let chevronlefticon;
@@ -22041,9 +22115,9 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			create_component(chevronlefticon.$$.fragment);
-    			attr_dev(span, "class", "control svelte-6gom2u");
+    			attr_dev(span, "class", "control svelte-16u8m5i");
     			attr_dev(span, "slot", "left-control");
-    			add_location(span, file, 37, 6, 1066);
+    			add_location(span, file, 36, 6, 1044);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -22069,14 +22143,14 @@ var app = (function () {
     		block,
     		id: create_left_control_slot.name,
     		type: "slot",
-    		source: "(38:6) ",
+    		source: "(37:6) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (61:6) 
+    // (77:6) 
     function create_right_control_slot(ctx) {
     	let span;
     	let chevronrighticon;
@@ -22087,9 +22161,9 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			create_component(chevronrighticon.$$.fragment);
-    			attr_dev(span, "class", "control svelte-6gom2u");
+    			attr_dev(span, "class", "control svelte-16u8m5i");
     			attr_dev(span, "slot", "right-control");
-    			add_location(span, file, 60, 6, 1861);
+    			add_location(span, file, 76, 6, 2492);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -22115,7 +22189,7 @@ var app = (function () {
     		block,
     		id: create_right_control_slot.name,
     		type: "slot",
-    		source: "(61:6) ",
+    		source: "(77:6) ",
     		ctx
     	});
 
@@ -22165,12 +22239,12 @@ var app = (function () {
     		pending: create_pending_block,
     		then: create_then_block,
     		catch: create_catch_block,
-    		value: 4,
-    		error: 8,
+    		value: 2,
+    		error: 6,
     		blocks: [,,,]
     	};
 
-    	handle_promise(/*sportsBooksResult*/ ctx[1], info);
+    	handle_promise(/*sportsBooksResult*/ ctx[0], info);
 
     	const block = {
     		c: function create() {
@@ -22184,14 +22258,14 @@ var app = (function () {
     			div1 = element("div");
     			button = element("button");
     			button.textContent = "Generate Sportsbooks";
-    			add_location(br0, file, 67, 2, 2040);
-    			add_location(br1, file, 68, 2, 2049);
-    			attr_dev(div0, "class", "mainDivCarousel svelte-6gom2u");
-    			add_location(div0, file, 34, 0, 934);
-    			attr_dev(button, "class", "btnWeb svelte-6gom2u");
-    			add_location(button, file, 73, 2, 2144);
-    			attr_dev(div1, "class", "btnDiv svelte-6gom2u");
-    			add_location(div1, file, 72, 0, 2121);
+    			add_location(br0, file, 83, 2, 2671);
+    			add_location(br1, file, 84, 2, 2680);
+    			attr_dev(div0, "class", "mainDivCarousel svelte-16u8m5i");
+    			add_location(div0, file, 28, 0, 843);
+    			attr_dev(button, "class", "btnWeb svelte-16u8m5i");
+    			add_location(button, file, 89, 2, 2775);
+    			attr_dev(div1, "class", "btnDiv svelte-16u8m5i");
+    			add_location(div1, file, 88, 0, 2752);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -22220,7 +22294,7 @@ var app = (function () {
 
     			{
     				const child_ctx = ctx.slice();
-    				child_ctx[4] = child_ctx[8] = info.resolved;
+    				child_ctx[2] = child_ctx[6] = info.resolved;
     				info.block.p(child_ctx, dirty);
     			}
     		},
@@ -22268,7 +22342,6 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
     	let sportsBooksResult = mainDataSports();
-    	let carousel = [{ perPage: { 320: 1, 768: 5 }, dots: false }];
 
     	let style = {
     		styleStarWidth: 12,
@@ -22282,13 +22355,6 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
-    	function carousel_1_binding($$value) {
-    		binding_callbacks[$$value ? "unshift" : "push"](() => {
-    			carousel = $$value;
-    			$$invalidate(0, carousel);
-    		});
-    	}
-
     	$$self.$capture_state = () => ({
     		firebase: firebase$1,
     		fireStart,
@@ -22301,22 +22367,20 @@ var app = (function () {
     		Dropdown,
     		Button,
     		sportsBooksResult,
-    		carousel,
     		changed,
     		style
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("sportsBooksResult" in $$props) $$invalidate(1, sportsBooksResult = $$props.sportsBooksResult);
-    		if ("carousel" in $$props) $$invalidate(0, carousel = $$props.carousel);
-    		if ("style" in $$props) $$invalidate(2, style = $$props.style);
+    		if ("sportsBooksResult" in $$props) $$invalidate(0, sportsBooksResult = $$props.sportsBooksResult);
+    		if ("style" in $$props) $$invalidate(1, style = $$props.style);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [carousel, sportsBooksResult, style, carousel_1_binding];
+    	return [sportsBooksResult, style];
     }
 
     class App extends SvelteComponentDev {

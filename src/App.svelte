@@ -15,12 +15,6 @@
 
   let sportsBooksResult = mainDataSports();
 
-  let carousel = [
-    {
-      perPage: { 320: 1, 768: 5 },
-      dots: false,
-    },
-  ];
   function changed(event) {
     console.log(event.detail.currentSlide);
   }
@@ -34,15 +28,24 @@
 
 <div class="mainDivCarousel">
   {#await sportsBooksResult then items}
-    <Carousel bind:this={carousel} on:change={changed}>
+    <Carousel
+      dots={false}
+      draggable={false}
+      perPage={{ 1378: 4, 500: 2 }}
+      on:change={changed}
+    >
       <span class="control" slot="left-control">
         <ChevronLeftIcon />
       </span>
       {#each items as item}
         <div class="mainDivStyle">
           <div class="boxStyle">
-            <img class="imgMain" src={item.image} alt="Team Logo" />
-            <h3 class="titleSports">{item.title}</h3>
+            <a href={item.register_link}>
+              <img class="imgMain" src={item.image} alt="Betting site Logo" />
+            </a>
+            <a href={item.register_link}>
+              <h3 class="titleSports">{item.title}</h3>
+            </a>
             <div class="starStyle">
               <StarRating
                 rating={item.stars}
@@ -50,11 +53,24 @@
                 {style}
               />
             </div>
-            <h5>Read Full Review</h5>
-            <Dropdown>
-              <Button type="filled" status="primary">{item.bonus}</Button>
-              <div slot="dropdown" class="content">Some dropdown content</div>
-            </Dropdown>
+            <a class="reviewStyleLink" href={item.review_link}>
+              <h5 class="reviewStyle">Read Full Review ></h5>
+            </a>
+            <div class="dropStyle">
+              <Dropdown>
+                <Button type="filled" status="primary">{item.bonus}</Button>
+                <div slot="dropdown" class="content">
+                  <div>{item.bonus_description}</div>
+                  <div>{item.bonus_code}</div>
+                  <div class="btnDiv">
+                    <a href={item.register_link}>
+                      <button class="btnWebRegister">Register</button>
+                    </a>
+                  </div>
+                  <div>{item.information}</div>
+                </div>
+              </Dropdown>
+            </div>
           </div>
         </div>
       {/each}
@@ -77,14 +93,21 @@
 </div>
 
 <style>
+  :global(body) {
+    background-color: #292929;
+    color: #0084f6;
+    transition: background-color 0.3s;
+  }
+
   .content {
     padding: 8px;
   }
 
   .boxStyle {
-    width: 358px;
+    width: 328px;
     height: 112px;
-    background-color: #4c4c4c;
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(50px);
     border-radius: 16px;
   }
 
@@ -113,16 +136,59 @@
     margin-left: 108px;
   }
 
+  .reviewStyleLink {
+    text-decoration: none;
+    color: #f5620f;
+  }
+
+  .reviewStyleLink:hover,
+  .reviewStyleLink:focus,
+  .reviewStyleLink:active {
+    text-decoration: none;
+    color: #f5620f;
+  }
+
+  .reviewStyle {
+    position: relative;
+    width: 126px;
+    height: 21px;
+    left: 108px;
+    margin-top: 10px;
+    color: #f5620f;
+    text-decoration: none;
+  }
+
+  .reviewStyle:hover,
+  .reviewStyle:focus,
+  .reviewStyle:active {
+    text-decoration: none;
+    color: #f5620f;
+  }
+
   .btnWeb {
     width: 200px;
     margin-top: 20px;
     margin-left: 40px;
   }
 
+  .btnWebRegister {
+    width: 200px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
   .mainDivStyle {
     display: flex;
+    max-width: 100%;
+    height: 800px;
     flex-direction: column;
     background-color: transparent;
+  }
+
+  .dropStyle {
+    position: relative;
+    margin-top: -112px;
+    margin-left: 190px;
   }
 
   .btnDiv {
@@ -133,15 +199,19 @@
 
   .mainDivCarousel {
     margin: 0 auto;
-    height: 112px;
+    height: 800px;
     width: 80vw;
   }
 
   .control :global(svg) {
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    border: 2px solid #fff;
-    border-radius: 32px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-width: 0px;
+    border: none;
+    left: 18%;
+    right: 0%;
+    top: 19%;
+    bottom: 0%;
   }
 </style>

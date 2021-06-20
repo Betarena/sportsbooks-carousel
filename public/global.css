@@ -39,3 +39,31 @@ line-height: 150%;
 /* black/black */
 color: #292929;
 }
+
+.h3{
+/* nav/18px */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 150%;
+
+/* black/black */
+
+color: #292929;
+}
+
+.h5{
+  /* nav/14px */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 150%;
+
+/* black/black */
+
+color: #292929;
+}
