@@ -43,7 +43,7 @@
             <a href={item.register_link}>
               <img class="imgMain" src={item.image} alt="Betting site Logo" />
             </a>
-            <a href={item.register_link}>
+            <a class="linkDeco" href={item.register_link}>
               <h3 class="titleSports">{item.title}</h3>
             </a>
             <div class="starStyle">
@@ -60,6 +60,15 @@
               <Dropdown>
                 <Button type="filled" status="primary">{item.bonus}</Button>
                 <div slot="dropdown" class="content">
+                  <div class="divLogoBetDrop">
+                    <a href={item.register_link}>
+                      <img
+                        class="imgSec"
+                        src={item.image}
+                        alt="Betting site Logo"
+                      />
+                    </a>
+                  </div>
                   <div>{item.bonus_description}</div>
                   <div>{item.bonus_code}</div>
                   <div class="btnDiv">
@@ -101,6 +110,12 @@
 
   .content {
     padding: 8px;
+    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
   }
 
   .boxStyle {
@@ -109,6 +124,7 @@
     background: rgba(255, 255, 255, 0.16);
     backdrop-filter: blur(50px);
     border-radius: 16px;
+    overflow: visible;
   }
 
   .imgMain {
@@ -122,12 +138,24 @@
     border-radius: 8px;
   }
 
+  .imgSec {
+    position: relative;
+    margin-top: -200px;
+    width: 72px;
+    height: 24px;
+    object-fit: cover;
+
+    background: #000000;
+    border-radius: 8px;
+  }
+
   .titleSports {
     position: relative;
     margin-top: -53px;
     width: 58px;
     height: 27px;
     left: 108px;
+    font-weight: 500;
     color: #fff;
   }
 
@@ -165,6 +193,10 @@
     color: #f5620f;
   }
 
+  .linkDeco {
+    text-decoration: none;
+  }
+
   .btnWeb {
     width: 200px;
     margin-top: 20px;
@@ -179,6 +211,7 @@
 
   .mainDivStyle {
     display: flex;
+    margin-top: 10px;
     max-width: 100%;
     height: 800px;
     flex-direction: column;
@@ -187,8 +220,14 @@
 
   .dropStyle {
     position: relative;
-    margin-top: -112px;
+    margin-top: -118px;
     margin-left: 190px;
+    border: none;
+    z-index: 10;
+  }
+
+  .divLogoBetDrop {
+    margin-top: -30px;
   }
 
   .btnDiv {

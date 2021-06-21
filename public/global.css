@@ -54,6 +54,22 @@ line-height: 150%;
 color: #292929;
 }
 
+.h4{
+/* nav/16px */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 200;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+
+/* black/black */
+
+color: #292929;
+}
+
 .h5{
   /* nav/14px */
 
