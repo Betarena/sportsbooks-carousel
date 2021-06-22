@@ -10,7 +10,6 @@
   import StarRating from "svelte-stars-rating";
   import Dropdown from "svelte-atoms/Dropdown.svelte";
   import Button from "svelte-atoms/Button.svelte";
-  import ContentLoader from "svelte-content-loader";
 
   fireStart;
 
@@ -28,12 +27,6 @@
 </script>
 
 <div class="mainDivCarousel">
-  <ContentLoader height={200} {...$$props}>
-    <circle cx="30" cy="30" r="30" />
-    <rect x="75" y="13" rx="4" ry="4" width="100" height="13" />
-    <rect x="75" y="37" rx="4" ry="4" width="50" height="8" />
-    <rect x="0" y="70" rx="5" ry="5" width="400" height="400" />
-  </ContentLoader>
   {#await sportsBooksResult then items}
     <Carousel
       dots={false}
@@ -97,8 +90,6 @@
   {:catch error}
     <p style="color: red">{error.message}</p>
   {/await}
-  <br />
-  <br />
 </div>
 
 <!-- Button to generate betting site data to Firebase-->
