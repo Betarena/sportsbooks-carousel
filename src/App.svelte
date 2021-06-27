@@ -8,8 +8,8 @@
   import fullDataGeneration from "./betting-sites-data-generator";
   import mainDataSports from "./get-sportbooks-data";
   import StarRating from "svelte-stars-rating";
-  import Dropdown from "svelte-atoms/Dropdown.svelte";
-  import Button from "svelte-atoms/Button.svelte";
+  import Dropdown from "./custom_modules/svelte-atoms/Dropdown.svelte";
+  import Button from "./custom_modules/svelte-atoms/Button.svelte";
 
   fireStart;
 
@@ -39,12 +39,41 @@
       </span>
       {#each items as item}
         <div class="mainDivStyle">
-          <div class="boxStyle">
-            <a href={item.register_link}>
-              <img class="imgMain" src={item.image} alt="Betting site Logo" />
+          <div class="boxStyle" />
+          <div class="dropStyle">
+            <Dropdown>
+              <Button type="filled" status="primary">{item.bonus}</Button>
+              <div slot="dropdown" class="content">
+                <div class="divLogoBetDrop">
+                  <a href={item.register_link}>
+                    <img
+                      class="imgSec"
+                      src={item.image}
+                      alt="Betting site Logo"
+                    />
+                  </a>
+                </div>
+                <div class="bonusDescription">{item.bonus_description}</div>
+                <div class="bonusCode">{item.bonus_code}</div>
+                <div class="btnDiv">
+                  <a href={item.register_link}>
+                    <button class="btnWebRegister">Register</button>
+                  </a>
+                </div>
+                <div class="bonusInfo">{item.information}</div>
+              </div>
+            </Dropdown>
+          </div>
+          <div class="boxContentGroup">
+            <a class="linkDeco" href={item.register_link}>
+              <div class="titleDivGroup">
+                <img class="imgMain" src={item.image} alt="Betting site Logo" />
+              </div>
             </a>
             <a class="linkDeco" href={item.register_link}>
-              <h3 class="titleSports">{item.title}</h3>
+              <div class="titleDivGroup">
+                <h3 class="titleSports">{item.title}</h3>
+              </div>
             </a>
             <div class="starStyle">
               <StarRating
@@ -53,33 +82,13 @@
                 {style}
               />
             </div>
-            <a class="reviewStyleLink" href={item.review_link}>
-              <h5 class="reviewStyle">Read Full Review ></h5>
-            </a>
-            <div class="dropStyle">
-              <Dropdown>
-                <Button type="filled" status="primary">{item.bonus}</Button>
-                <div slot="dropdown" class="content">
-                  <div class="divLogoBetDrop">
-                    <a href={item.register_link}>
-                      <img
-                        class="imgSec"
-                        src={item.image}
-                        alt="Betting site Logo"
-                      />
-                    </a>
-                  </div>
-                  <div class="bonusDescription">{item.bonus_description}</div>
-                  <div class="bonusCode">{item.bonus_code}</div>
-                  <div class="btnDiv">
-                    <a href={item.register_link}>
-                      <button class="btnWebRegister">Register</button>
-                    </a>
-                  </div>
-                  <div class="bonusInfo">{item.information}</div>
+            <section>
+              <a class="reviewStyleLink" href={item.review_link}>
+                <div class="reviewLinkDiv">
+                  <h5 class="reviewStyle">Read Full Review ></h5>
                 </div>
-              </Dropdown>
-            </div>
+              </a>
+            </section>
           </div>
         </div>
       {/each}
@@ -123,6 +132,11 @@
     backdrop-filter: blur(50px);
     border-radius: 16px;
     overflow: visible;
+    z-index: -2;
+  }
+
+  .boxContentGroup {
+    margin-top: -21px;
   }
 
   .imgMain {
@@ -131,6 +145,7 @@
     height: 72px;
     left: 20px;
     top: 20px;
+    z-index: -1;
 
     background: #000000;
     border-radius: 8px;
@@ -147,24 +162,33 @@
     border-radius: 8px;
   }
 
+  .titleDivGroup {
+    z-index: -10;
+  }
+
   .titleSports {
     position: relative;
     font-weight: 500;
     margin-top: -53px;
-    width: 58px;
+    width: 20px;
     height: 27px;
     left: 108px;
     color: #fff;
+    z-index: -1;
   }
 
   .starStyle {
     margin-top: -18px;
     margin-left: 108px;
+    height: 15px;
+    margin-bottom: -125px;
   }
 
   .reviewStyleLink {
     text-decoration: none;
     color: #f5620f;
+    height: 10px;
+    z-index: -2;
   }
 
   .reviewStyleLink:hover,
@@ -179,9 +203,10 @@
     width: 126px;
     height: 21px;
     left: 108px;
-    margin-top: 10px;
+    padding-top: 105px;
     color: #f5620f;
     text-decoration: none;
+    z-index: -1;
   }
 
   .reviewStyle:hover,
@@ -243,8 +268,7 @@
   }
 
   .dropStyle {
-    position: relative;
-    margin-top: -118px;
+    margin-top: -120px;
     margin-left: 190px;
     border: none;
     z-index: 10;
@@ -252,6 +276,7 @@
 
   .divLogoBetDrop {
     margin-top: -30px;
+    z-index: 10;
   }
 
   .bonusDescription {
@@ -303,6 +328,11 @@
     color: #cccccc;
   }
 
+  .reviewLinkDiv {
+    z-index: -2;
+    display: inline;
+  }
+
   .btnDiv {
     width: 100%;
     text-align: center;
@@ -312,7 +342,7 @@
   .mainDivCarousel {
     margin: 0 auto;
     height: 800px;
-    width: 80vw;
+    width: 1380px;
   }
 
   .control :global(svg) {
