@@ -60,18 +60,30 @@
   }
 
   .aa-button:hover {
-    background-color: #f77c42;
+    background-color: white;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.32);
   }
 
   .contentText {
     padding: 0 8px;
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
     color: white;
   }
+
+  .contentText:hover {
+    padding: 0 8px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #f5620f;
+  }
+
   .loading {
     padding: 6px 16px;
   }

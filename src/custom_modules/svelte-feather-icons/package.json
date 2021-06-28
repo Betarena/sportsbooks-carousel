@@ -1,0 +1,40 @@
+{
+  "name": "svelte-feather-icons",
+  "description": "Feather icons for Svelte (Completely based on vue-feather-icons by EGOIST)",
+  "version": "3.3.0",
+  "author": "dylanblokhuis <dylanblokhuis3@hotmail.com>",
+  "repository": {
+    "url": "dylanblokhuis/svelte-feather-icons",
+    "type": "git"
+  },
+  "svelte": "src/index.js",
+  "module": "index.mjs",
+  "main": "index.js",
+  "files": [
+    "src",
+    "index.mjs",
+    "index.js"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build:icons": "node build",
+    "build:dist": "rollup -c",
+    "build": "npm run build:icons && npm run build:dist",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "feather-icons": "4.25.0",
+    "fs-extra": "^8.1.0",
+    "pascal-case": "^3.1.1",
+    "path": "^0.12.7",
+    "rollup": "^1.29.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "latest",
+    "rollup-plugin-terser": "^5.2.0",
+    "svelte": "^3.18.0"
+  },
+  "keywords": [
+    "svelte",
+    "feather icons"
+  ]
+}

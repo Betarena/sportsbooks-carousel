@@ -36,12 +36,12 @@
       } else if (top + hostHeight + height < innerHeight) {
         dropdownTop = "calc(100% + 4px)";
       }
-
+      /*
       if (left + width > innerWidth) {
         dropdownLeft = `${innerWidth - left - width}px`;
       } else if (left + width < innerWidth) {
         dropdownLeft = "0px";
-      }
+      }*/
     }
   }
 </script>
@@ -79,14 +79,16 @@
     max-height: 0;
     overflow: visible;
   }
+
   .host {
     display: inline-block;
     position: relative;
   }
+
   .aa-dropdown {
     z-index: 10;
     position: absolute;
-    margin-top: -68px;
+    margin-top: 0px;
     margin-left: -150px;
     top: 100%;
     min-width: 100%;
@@ -95,12 +97,13 @@
     border-radius: 8px;
     box-shadow: 3px 3px 18px 0 rgba(54, 71, 79, 0.2);
     background-color: #4b4b4b;
-    overflow: auto;
+    overflow: visible;
     box-sizing: border-box;
   }
 
   .blackTopDrop {
     background-color: black;
     height: 40px;
+    border-radius: 8px 8px 0px 0px;
   }
 </style>

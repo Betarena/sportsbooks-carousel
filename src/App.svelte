@@ -4,7 +4,10 @@
   import { fireStart } from "./lib/init-firebase";
   // import Carousel from "svelte-carousel";
   import Carousel from "@beyonk/svelte-carousel";
-  import { ChevronLeftIcon, ChevronRightIcon } from "svelte-feather-icons";
+  import {
+    ChevronLeftIcon,
+    ChevronRightIcon,
+  } from "./custom_modules/svelte-feather-icons";
   import fullDataGeneration from "./betting-sites-data-generator";
   import mainDataSports from "./get-sportbooks-data";
   import StarRating from "svelte-stars-rating";
@@ -64,32 +67,28 @@
               </div>
             </Dropdown>
           </div>
-          <div class="boxContentGroup">
-            <a class="linkDeco" href={item.register_link}>
+          <a class="registerLink" href={item.register_link}>
+            <div class="boxContentGroup">
               <div class="titleDivGroup">
                 <img class="imgMain" src={item.image} alt="Betting site Logo" />
               </div>
-            </a>
-            <a class="linkDeco" href={item.register_link}>
               <div class="titleDivGroup">
                 <h3 class="titleSports">{item.title}</h3>
               </div>
-            </a>
-            <div class="starStyle">
-              <StarRating
-                rating={item.stars}
-                isIndicatorActive={false}
-                {style}
-              />
+              <div class="starStyle">
+                <StarRating
+                  rating={item.stars}
+                  isIndicatorActive={false}
+                  {style}
+                />
+              </div>
             </div>
-            <section>
+            <div>
               <a class="reviewStyleLink" href={item.review_link}>
-                <div class="reviewLinkDiv">
-                  <h5 class="reviewStyle">Read Full Review ></h5>
-                </div>
+                <h5 class="reviewStyle">Read Full Review ></h5>
               </a>
-            </section>
-          </div>
+            </div>
+          </a>
         </div>
       {/each}
       <span class="control" slot="right-control">
@@ -162,6 +161,10 @@
     border-radius: 8px;
   }
 
+  .registerLink {
+    text-decoration: none;
+  }
+
   .titleDivGroup {
     z-index: -10;
   }
@@ -193,6 +196,7 @@
 
   .reviewStyleLink:hover,
   .reviewStyleLink:focus,
+  .reviewStyleLink:link,
   .reviewStyleLink:active {
     text-decoration: none;
     color: #f5620f;
@@ -200,24 +204,21 @@
 
   .reviewStyle {
     position: relative;
+    margin-top: 130px;
     width: 126px;
-    height: 21px;
+    height: 10px;
     left: 108px;
-    padding-top: 105px;
     color: #f5620f;
     text-decoration: none;
-    z-index: -1;
+    z-index: -2;
   }
 
   .reviewStyle:hover,
   .reviewStyle:focus,
+  .reviewStyle:link,
   .reviewStyle:active {
     text-decoration: none;
     color: #f5620f;
-  }
-
-  .linkDeco {
-    text-decoration: none;
   }
 
   .btnWeb {
@@ -280,7 +281,8 @@
   }
 
   .bonusDescription {
-    margin-top: 30px;
+    margin-top: 20px;
+    padding: 4px;
     /* body/16px */
 
     font-family: "Roboto", sans-serif;
@@ -298,7 +300,7 @@
   }
 
   .bonusCode {
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -310,8 +312,9 @@
   }
 
   .bonusInfo {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 8px;
     /* body/12px */
 
     font-family: "Roboto", sans-serif;
@@ -326,11 +329,6 @@
     /* black/gray */
 
     color: #cccccc;
-  }
-
-  .reviewLinkDiv {
-    z-index: -2;
-    display: inline;
   }
 
   .btnDiv {
@@ -355,5 +353,37 @@
     right: 0%;
     top: 19%;
     bottom: 0%;
+  }
+
+  :global(.carousel .left) {
+    position: absolute !important;
+    width: 32px !important;
+    height: 32px !important;
+    margin-left: -1.2% !important;
+    margin-right: 0px !important;
+    top: 8% !important;
+    z-index: 8 !important;
+    margin-top: -20px !important;
+    border: none !important;
+    background: rgba(255, 255, 255, 0.6) !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    left: 0px !important;
+  }
+
+  :global(.carousel .right) {
+    position: absolute !important;
+    width: 32px !important;
+    height: 32px !important;
+    margin-left: 97.6% !important;
+    margin-right: 0px !important;
+    top: 8% !important;
+    z-index: 8 !important;
+    margin-top: -20px !important;
+    border: none !important;
+    background: rgba(255, 255, 255, 0.6) !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    left: 0px !important;
   }
 </style>
