@@ -27,19 +27,3 @@ return dbRef.child("en").get().then((snapshot) => {
 }
 
 export default mainDataSports;
-
-
-
-
-    /* const sportsBooksPath = `sportsbooks_carrousel/`;
-
-    async function getSportsBooksData() {
-  let ref = firebase.database().ref(sportsBooksPath);
-  ref.on("value", (snap) => {
-    snap.val();
-    portsBooksResult = snap.val();
-    // console.log(portsBooksResult);
-    return portsBooksResult;
-  });
-}
-getSportsBooksData(); */

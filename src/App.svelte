@@ -13,6 +13,7 @@
   import StarRating from "svelte-stars-rating";
   import Dropdown from "./custom_modules/svelte-atoms/Dropdown.svelte";
   import Button from "./custom_modules/svelte-atoms/Button.svelte";
+  import Geoip from "./geoip.svelte";
 
   fireStart;
 
@@ -35,6 +36,7 @@
       dots={false}
       draggable={false}
       perPage={{ 1378: 4, 500: 2 }}
+      startIndex={0}
       on:change={changed}
     >
       <span class="control" slot="left-control">
@@ -106,6 +108,8 @@
     >Generate Sportsbooks</button
   >
 </div>
+
+<Geoip />
 
 <style>
   :global(body) {
