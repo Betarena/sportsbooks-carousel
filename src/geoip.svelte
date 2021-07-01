@@ -9,7 +9,7 @@
       .then((out) => {
         let geoResult = out;
         let geoResultArr = Object.values(geoResult)[0];
-        console.log(geoResultArr);
+        // console.log(geoResultArr);
         return geoResultArr;
       })
       .catch((err) => {
