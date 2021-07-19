@@ -18827,7 +18827,7 @@ var app = (function () {
 
     let bettingSitesData = myFirebase.child("sportsbooks_carrousel/en/");
     let bettingSitesDataPt = myFirebase.child("sportsbooks_carrousel/pt/");
-    myFirebase.child("sportsbooks_carrousel/br/");
+    let bettingSitesDataBr = myFirebase.child("sportsbooks_carrousel/br/");
     myFirebase.child("sportsbooks_carrousel/co/");
 
     const generateDataDefault = () => bettingSitesData.update({
@@ -18900,54 +18900,101 @@ var app = (function () {
         "register_link": "https://wlstoiximan.adsrv.eacdn.com/C.ashx?btag=a_1863b_289c_&affid=825&siteid=1863&adid=289&c=sportsbooks-carousel",
         "information": "Ao contrário de casas como o Placard de apostas, a Betano entra no mercado com um dos melhores bónus dos sites de apostas em Portugal.",
     }
+
+    });
+
+    const generateDataBr = () => bettingSitesDataBr.update({
+        "Bet365": {
+        "title": "Bet365",
+        "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/Bet365_Apostas.png",
+        "review_link": "https://apostas.betarena.com/bet365-apostas-esportivas/",
+        "stars": "5",
+        "bonus": "+R$200",
+        "bonus_description": "Até 200 reais em bônus de apostas",
+        "bonus_code": "Sem código",
+        "register_link": "https://qg9t2.app.goo.gl/bet365_general",
+        "information": "Abra uma conta na Bet365 hoje e aposte em uma grande variedade de mercados com a empresa de apostas esportivas online favorita do mundo.",
+    },
+    "188bet": {
+        "title": "188bet",
+        "image": "https://apostas.betarena.com/wp-content/uploads/2021/07/188bet_logo.svg",
+        "review_link": "https://apostas.betarena.com/188bet-revisao-da-casa-de-apostas/",
+        "stars": "4",
+        "bonus": "+R$200",
+        "bonus_description": "Até 200 reais em bônus de apostas",
+        "bonus_code": "Sem código",
+        "register_link": "https://wl188bet.adsrv.eacdn.com/C.ashx?btag=a_7690b_846c_&affid=4191&siteid=7690&adid=846&c=apostasRightbar",
+        "information": "Abra uma conta na 188bet hoje! A casa de apostas com odds asiáticas, as melhores do mercado!",
+    },
+    "Betfair": {
+        "title": "Betfair",
+        "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betfair_Apostas.svg",
+        "review_link": "https://apostas.betarena.com/betfair-revisao-da-casa-de-apostas/",
+        "stars": "4",
+        "bonus": "+R$1200",
+        "bonus_description": "Bônus de 100% no primeiro depósito até R$1200",
+        "bonus_code": "Sem código",
+        "register_link": "http://ads.betfair.com/redirect.aspx?pid=2828099&bid=10183",
+        "information": "Com mais de 20 anos no ramo, a empresa já está mais do que estabelecida no mercado.",
+    },
+
     });
 
     generateDataDefault();
     generateDataPt();
+    generateDataBr();
 
     };
 
     const mainDataSports = async () => {
 
-      let url = "https://get.geojs.io/v1/ip/country.json";
+      const url = "https://get.geojs.io/v1/ip/country.json";
 
+      const ipInfo = async () => {
+            let response = await fetch(url);
+            let json = await response.json();
 
-            let langSportsCountry;
+            return json["country"];
+      };
 
-            const ipInfo = async () => {
-              let response = await fetch(url);
-              let json = await response.json();
+      let country = await ipInfo(); 
 
-              return json["country"]
-            };
-            
-            langSportsCountry = ipInfo();
-
-    const sportsBooksPath = `sportsbooks_carrousel/`;
-
-    const dbRef = firebase$1.database().ref(sportsBooksPath);
-
-    let country;
-
-    langSportsCountry.then((value) => {
-          country = value;
-          console.log(`country = ${country}`);
-    });
-
-    return dbRef.child(country).get().then((snapshot) => {
-      if (snapshot.exists()) {
-        let infoSportsResult = snapshot.val();
-        let infoSportsResultArr = Object.values(infoSportsResult);
-        console.log(infoSportsResultArr);
-        return infoSportsResultArr;
-      } else {
-        console.log("No data available");
-        return null;
+      function checkCountry () {
+        if (country === "US") {
+          country = "EN";
+        } else if (country === "PT") {
+          country = "PT";
+        }
+        else {
+          country = "EN";
+        } 
       }
-    }).catch((error) => {
-      console.error(error);
-    });
 
+    checkCountry();
+
+      console.log(`country = ${country}`);
+
+      const sportsBooksPath = `sportsbooks_carrousel/`;
+
+      const dbRef = firebase$1.database().ref(sportsBooksPath);
+
+      try {
+          const snapshot = await dbRef.child(country.toLowerCase()).get();
+
+          if (snapshot.exists()) {
+              let infoSportsResult = snapshot.val();
+              let infoSportsResultArr = Object.values(infoSportsResult);
+              console.log(infoSportsResultArr);
+
+              return infoSportsResultArr;
+          } else {
+              console.log("No data available");
+          }
+      } catch (error) {
+          console.error(error);
+      }
+
+      return [];
     };
 
     /* node_modules/svelte-stars-rating/star-rating.svelte generated by Svelte v3.38.2 */

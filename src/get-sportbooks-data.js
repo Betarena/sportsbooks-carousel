@@ -4,47 +4,55 @@ import { fireStart } from "./lib/init-firebase";
 
 const mainDataSports = async () => {
 
-  let url = "https://get.geojs.io/v1/ip/country.json";
+  const url = "https://get.geojs.io/v1/ip/country.json";
 
+  const ipInfo = async () => {
+        let response = await fetch(url);
+        let json = await response.json();
 
-        let langSportsCountry;
-
-        const ipInfo = async () => {
-          let response = await fetch(url)
-          let json = await response.json()
-
-          return json["country"]
-        };
-        
-        langSportsCountry = ipInfo();
+        return json["country"];
+  };
 
   fireStart;
 
-const sportsBooksPath = `sportsbooks_carrousel/`;
+  let country = await ipInfo(); 
 
-const dbRef = firebase.database().ref(sportsBooksPath);
-
-let country;
-
-langSportsCountry.then((value) => {
-      country = value;
-      console.log(`country = ${country}`);
-});
-
-return dbRef.child(country).get().then((snapshot) => {
-  if (snapshot.exists()) {
-    let infoSportsResult = snapshot.val();
-    let infoSportsResultArr = Object.values(infoSportsResult);
-    console.log(infoSportsResultArr);
-    return infoSportsResultArr;
-  } else {
-    console.log("No data available");
-    return null;
+  function checkCountry () {
+    if (country === "US") {
+      country = "EN";
+    } else if (country === "PT") {
+      country = "PT";
+    }
+    else if (country != "US", "BR", "PT", "CO") {
+      country = "EN";
+    } 
   }
-}).catch((error) => {
-  console.error(error);
-});
 
+checkCountry();
+
+  console.log(`country = ${country}`);
+
+  const sportsBooksPath = `sportsbooks_carrousel/`;
+
+  const dbRef = firebase.database().ref(sportsBooksPath);
+
+  try {
+      const snapshot = await dbRef.child(country.toLowerCase()).get();
+
+      if (snapshot.exists()) {
+          let infoSportsResult = snapshot.val();
+          let infoSportsResultArr = Object.values(infoSportsResult);
+          console.log(infoSportsResultArr);
+
+          return infoSportsResultArr;
+      } else {
+          console.log("No data available");
+      }
+  } catch (error) {
+      console.error(error);
+  }
+
+  return [];
 }
 
 export default mainDataSports;
