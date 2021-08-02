@@ -23,14 +23,23 @@ const mainDataSports = async () => {
     } else if (country === "PT") {
       country = "PT";
     }
-    else if (country != "US", "BR", "PT", "CO") {
+    else if (country === "BR") {
+      country = "BR";
+    }
+    else if (country === "PE", "ES") {
+      country = "ES";
+    }
+    else if (country != "US", "BR", "PT", "CO", "PE", "ES") {
       country = "EN";
     } 
   }
 
 checkCountry();
 
-  console.log(`country = ${country}`);
+country = "KE";
+
+
+console.log(`country = ${country}`);
 
   const sportsBooksPath = `sportsbooks_carrousel/`;
 
