@@ -18,6 +18,7 @@ let bettingSitesDataBr = myFirebase.child("sportsbooks_carrousel/br/");
 let bettingSitesDataEs = myFirebase.child("sportsbooks_carrousel/es/");
 let bettingSitesDataCo = myFirebase.child("sportsbooks_carrousel/co/");
 let bettingSitesDataKe = myFirebase.child("sportsbooks_carrousel/ke/");
+let bettingSitesDataMx = myFirebase.child("sportsbooks_carrousel/mx/");
 
 const generateDataDefault = () => bettingSitesData.update({
     "1 bet365": {
@@ -314,12 +315,93 @@ const generateDataKe = () => bettingSitesDataKe.update({
 },
 });
 
+const generateDataMx = () => bettingSitesDataMx.update({
+    "1 bet365": {
+    "title": "Bet365",
+    "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
+    "review_link": "https://www.betarena.com/bet365/",
+    "stars": "5",
+    "bonus": "+ €50",
+    "bonus_description": "Up to €50 in Bet Credits",
+    "bonus_code": "No se requiere código",
+    "register_link": "https://qg9t2.app.goo.gl/bet365_general",
+    "information": "Open an account with Bet365 today and bet on a huge range of markets with the world’s favourite online sports betting company.",
+},
+"2 Caliente": {
+    "title": "Caliente",
+    "image": "https://www.betarena.com/wp-content/uploads/2021/08/caliente.svg",
+    "review_link": "https://www.betarena.com/",
+    "stars": "4",
+    "bonus": "+ MXN $3K",
+    "bonus_description": "Up to €50 in Bet Credits",
+    "bonus_code": "No se requiere código",
+    "register_link": "https://qg9t2.app.goo.gl/caliente_mxl",
+    "information": "Abre una cuenta con Caliente hoy y apuesta en una amplia gama de mercados.",
+},
+"3 Betfair": {
+    "title": "Betfair",
+    "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
+    "review_link": "https://www.betarena.com/betfair-resena-de-la-casa-de-apuesta/",
+    "stars": "4",
+    "bonus": "+ MXN $2K",
+    "bonus_description": "OBTÉN HASTA $2000 MXN EN APUESTAS GRATIS",
+    "bonus_code": "No se requiere código",
+    "register_link": "https://ads.betfair.com/redirect.aspx?pid=2772614&bid=10187&redirectURL=http://www.betfair.com/",
+    "information": "¡Regístrate en Betfair! Con más de 20 años en el negocio, la empresa ya está más que establecida en el mercado.",
+},
+    "4 1xbet": {
+    "title": "1xBet",
+    "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
+    "review_link": "https://www.betarena.com/1xbet-resena-de-la-casa-de-apuestas/",
+    "stars": "4",
+    "bonus": "+ MXN $2.2K",
+    "bonus_description": "Bono de bienvenida con el primer deposito de hasta 2200 MXN",
+    "bonus_code": "No se requiere código",
+    "register_link": "http://refpa.top/L?tag=d_47346m_2778c_&site=47346&ad=2778",
+    "information": "Más de 400 000 usuarios apuestan online con 1xbet.com.",
+},
+"5 22Bet": {
+    "title": "22Bet",
+    "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
+    "review_link": "https://www.betarena.com/22bet-resena-de-la-casa-de-apuestas/",
+    "stars": "4",
+    "bonus": "+ MXN $2.5K",
+    "bonus_description": "Bono de bienvenida con el primer deposito de hasta 2500 MXN",
+    "bonus_code": "No se requiere código",
+    "register_link": "https://qg9t2.app.goo.gl/22betdefault",
+    "information": "22BET acepta todo tipo de apuestas – simples, combinadas, de sistema, en cadena y más.",
+},
+"6 Rivalo": {
+    "title": "Rivalo",
+    "image": "https://www.betarena.com/wp-content/uploads/2021/07/rivalo_logo.svg",
+    "review_link": "https://www.betarena.com/rivalo-revision-de-la-casa-de-apuestas/",
+    "stars": "4",
+    "bonus": "+ MXN $2K",
+    "bonus_description": "100% Bonus up to 2.000 MXN",
+    "bonus_code": "No se requiere código",
+    "register_link": "https://qg9t2.app.goo.gl/rivalo_mexico",
+    "information": "Abre una cuenta con Rivalo hoy y apuesta en una amplia gama de mercados.",
+},
+"7 Betway": {
+    "title": "Betway",
+    "image": "https://www.betarena.com/wp-content/uploads/2021/08/betway.svg",
+    "review_link": "https://www.betarena.com/",
+    "stars": "4",
+    "bonus": "+ MXN $3.5K",
+    "bonus_description": "$500 gratis y hasta $3,000 con tu 1er depósito",
+    "bonus_code": "No se requiere código",
+    "register_link": "https://qg9t2.app.goo.gl/betway_default",
+    "information": "Abre una cuenta con Betway hoy y apuesta en una amplia gama de mercados.",
+}
+});
+
 generateDataDefault();
 generateDataPt();
 generateDataBr();
 generateDataEs();
 generateDataCo();
 generateDataKe();
+generateDataMx();
 
 }
 
