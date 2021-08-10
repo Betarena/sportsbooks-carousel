@@ -19,6 +19,8 @@ let bettingSitesDataEs = myFirebase.child("sportsbooks_carrousel/es/");
 let bettingSitesDataCo = myFirebase.child("sportsbooks_carrousel/co/");
 let bettingSitesDataKe = myFirebase.child("sportsbooks_carrousel/ke/");
 let bettingSitesDataMx = myFirebase.child("sportsbooks_carrousel/mx/");
+let bettingSitesDataMz = myFirebase.child("sportsbooks_carrousel/mz/");
+
 
 const generateDataDefault = () => bettingSitesData.update({
     "1 bet365": {
@@ -427,6 +429,42 @@ const generateDataMx = () => bettingSitesDataMx.update({
 }
 });
 
+const generateDataMz = () => bettingSitesDataBr.update({
+"1 1xBet": {
+    "title": "1xBet",
+    "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/1xbet_Apostas.png",
+    "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
+    "stars": "5",
+    "bonus": "+ $100",
+    "bonus_description": "Bônus de 100% no primeiro depósito até $100",
+    "bonus_code": "Sem código",
+    "register_link": "https://refpa.top/L?tag=d_47346m_97c_BlogBR&site=47346&ad=97&r=bonus/rules/1st/",
+    "information": "Com sua ampla gama de jogos e eventos para apostas, a 1xBet promete conquistar um espaço cada vez mais proeminente. Abra uma conta!",
+},
+"2 22Bet": {
+    "title": "22Bet",
+    "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/22bet_Apostas.svg",
+    "review_link": "https://apostas.betarena.com/22bet-revisao-da-casa-de-apostas/",
+    "stars": "5",
+    "bonus": "+ R$600",
+    "bonus_description": "100% de bônus em depósitos até R$600",
+    "bonus_code": "Sem código",
+    "register_link": "https://qg9t2.app.goo.gl/22betdefault",
+    "information": "Com algumas características emocionantes, a 22bet é mais uma casa de apostas com uma boa reputação no mercado de apostas esportivas. Cadastre-se agora!",
+},
+"3 Betboro": {
+    "title": "Betboro",
+    "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betboro_Apostas.svg",
+    "review_link": "https://apostas.betarena.com/betboro-revisao-da-casa-de-apostas/",
+    "stars": "4",
+    "bonus": "+ R$500",
+    "bonus_description": "50% de bônus no primeiro depósito até R$500",
+    "bonus_code": "Sem código",
+    "register_link": "https://promotions.bboro.com/pt/exclusivo-betarena?btag=37980",
+    "information": "Embora ainda seja pouco conhecido pelo público em geral, a Betboro é uma das casas de apostas que mais crescem no mundo. Abra uma conta agora!",
+},
+});
+
 generateDataDefault();
 generateDataPt();
 generateDataBr();
@@ -434,6 +472,7 @@ generateDataEs();
 generateDataCo();
 generateDataKe();
 generateDataMx();
+generateDataMz();
 
 }
 
