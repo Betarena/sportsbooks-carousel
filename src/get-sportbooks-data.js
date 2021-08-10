@@ -36,7 +36,7 @@ const mainDataSports = async () => {
 
 checkCountry();
 
-country = "MX";
+country = "PT";
 
 
 console.log(`country = ${country}`);

@@ -18892,7 +18892,7 @@ var app = (function () {
     });
 
     const generateDataPt = () => bettingSitesDataPt.update({
-        "betano": {
+    "1 betano": {
         "title": "Betano",
         "image": "https://www.betarena.com/wp-content/uploads/2021/06/betano_icon2.svg",
         "review_link": "https://apostas.betarena.com/betano/",
@@ -18902,8 +18902,40 @@ var app = (function () {
         "bonus_code": "Sem código",
         "register_link": "https://wlstoiximan.adsrv.eacdn.com/C.ashx?btag=a_1863b_289c_&affid=825&siteid=1863&adid=289&c=sportsbooks-carousel",
         "information": "Ao contrário de casas como o Placard de apostas, a Betano entra no mercado com um dos melhores bónus dos sites de apostas em Portugal.",
+    },
+    "2 betclic": {
+        "title": "Betclic",
+        "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/betclic.svg",
+        "review_link": "https://apostas.betarena.com/betclic-apostas-desportivas/",
+        "stars": "4",
+        "bonus": "+ €50",
+        "bonus_description": "20 euros sem risco!",
+        "bonus_code": "Sem código",
+        "register_link": "https://www.betclic.pt/registar/step1?id=IAC8&z=a_656b_62c_sportsbook_carrousel&zone=a_656b_62c_sportsbook_carrousel&affid=455&siteid=656",
+        "information": "A Betclic foi das primeiras casas de apostas em Portugal, com muitos mercados disponíveis e a melhor aplicação móvel no mercado.",
+    },
+    "3 Betway": {
+        "title": "Betway",
+        "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/betway_icon.svg",
+        "review_link": "https://apostas.betarena.com/betway-apostas-desportivas/",
+        "stars": "3",
+        "bonus": "+ €100",
+        "bonus_description": "Bónus até 100€ euros",
+        "bonus_code": "Sem código",
+        "register_link": "https://qg9t2.app.goo.gl/betway_default",
+        "information": "Uma casa de apostas já tradicional e bem conhecida por toda a Europa.",
+    },
+    "4 ESC": {
+        "title": "ESC",
+        "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/esc.svg",
+        "review_link": "https://apostas.betarena.com",
+        "stars": "2",
+        "bonus": "+ €10",
+        "bonus_description": "Freebet de 10€ + Bónus 250€",
+        "bonus_code": "Sem código",
+        "register_link": "https://qg9t2.app.goo.gl/esc_default",
+        "information": "Uma casa de um operador tradicional que tenta mostrar o seu valor!",
     }
-
     });
 
     const generateDataBr = () => bettingSitesDataBr.update({
@@ -19120,7 +19152,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
         "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
         "stars": "5",
-        "bonus": "+ KSH 15K",
+        "bonus": "+ 15K",
         "bonus_description": "100% Bonus up to 15.000 KSH",
         "bonus_code": "No code required",
         "register_link": "https://qg9t2.app.goo.gl/22betdefault",
@@ -19134,19 +19166,19 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
         "review_link": "https://www.betarena.com/bet365/",
         "stars": "5",
-        "bonus": "+ €50",
-        "bonus_description": "Up to €50 in Bet Credits",
+        "bonus": "+ $1.5K",
+        "bonus_description": "Hasta $1500MXN en créditos de apuesta para nuevos clientes. Bet365 otorgará créditos de apuesta de la misma cantidad de tu ingreso. Las ganancias no incluyen el importe de los créditos de apuesta. Se aplican las condiciones, límites de tiempo y exclusiones.",
         "bonus_code": "No se requiere código",
         "register_link": "https://qg9t2.app.goo.gl/bet365_general",
-        "information": "Open an account with Bet365 today and bet on a huge range of markets with the world’s favourite online sports betting company.",
+        "information": "Abre una cuenta con Bet365 hoy y apuesta en una amplia gama de mercados con la compañía de apuestas deportivas en línea favorita del mundo.",
     },
     "2 Caliente": {
         "title": "Caliente",
         "image": "https://www.betarena.com/wp-content/uploads/2021/08/caliente.svg",
         "review_link": "https://www.betarena.com/",
         "stars": "4",
-        "bonus": "+ MXN $3K",
-        "bonus_description": "Up to €50 in Bet Credits",
+        "bonus": "+ $3K",
+        "bonus_description": "$3000MXN + $400MXN por registro",
         "bonus_code": "No se requiere código",
         "register_link": "https://qg9t2.app.goo.gl/caliente_mxl",
         "information": "Abre una cuenta con Caliente hoy y apuesta en una amplia gama de mercados.",
@@ -19156,7 +19188,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
         "review_link": "https://www.betarena.com/betfair-resena-de-la-casa-de-apuesta/",
         "stars": "4",
-        "bonus": "+ MXN $2K",
+        "bonus": "+ $2K",
         "bonus_description": "OBTÉN HASTA $2000 MXN EN APUESTAS GRATIS",
         "bonus_code": "No se requiere código",
         "register_link": "https://ads.betfair.com/redirect.aspx?pid=2772614&bid=10187&redirectURL=http://www.betfair.com/",
@@ -19167,7 +19199,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
         "review_link": "https://www.betarena.com/1xbet-resena-de-la-casa-de-apuestas/",
         "stars": "4",
-        "bonus": "+ MXN $2.2K",
+        "bonus": "+ $2.2K",
         "bonus_description": "Bono de bienvenida con el primer deposito de hasta 2200 MXN",
         "bonus_code": "No se requiere código",
         "register_link": "http://refpa.top/L?tag=d_47346m_2778c_&site=47346&ad=2778",
@@ -19178,7 +19210,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
         "review_link": "https://www.betarena.com/22bet-resena-de-la-casa-de-apuestas/",
         "stars": "4",
-        "bonus": "+ MXN $2.5K",
+        "bonus": "+ $2.5K",
         "bonus_description": "Bono de bienvenida con el primer deposito de hasta 2500 MXN",
         "bonus_code": "No se requiere código",
         "register_link": "https://qg9t2.app.goo.gl/22betdefault",
@@ -19189,8 +19221,8 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/07/rivalo_logo.svg",
         "review_link": "https://www.betarena.com/rivalo-revision-de-la-casa-de-apuestas/",
         "stars": "4",
-        "bonus": "+ MXN $2K",
-        "bonus_description": "100% Bonus up to 2.000 MXN",
+        "bonus": "+ $2K",
+        "bonus_description": "100% Bonus - 2.000 MXN",
         "bonus_code": "No se requiere código",
         "register_link": "https://qg9t2.app.goo.gl/rivalo_mexico",
         "information": "Abre una cuenta con Rivalo hoy y apuesta en una amplia gama de mercados.",
@@ -19200,7 +19232,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/08/betway.svg",
         "review_link": "https://www.betarena.com/",
         "stars": "4",
-        "bonus": "+ MXN $3.5K",
+        "bonus": "+ $3.5K",
         "bonus_description": "$500 gratis y hasta $3,000 con tu 1er depósito",
         "bonus_code": "No se requiere código",
         "register_link": "https://qg9t2.app.goo.gl/betway_default",
@@ -19247,7 +19279,7 @@ var app = (function () {
 
     checkCountry();
 
-    country = "MX";
+    country = "PT";
 
 
     console.log(`country = ${country}`);
