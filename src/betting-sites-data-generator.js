@@ -582,7 +582,6 @@ generateDataMx();
 generateDataMz();
 generateDataAo();
 generateDataUs();
-
 }
 
     export default fullDataGeneration;
