@@ -467,14 +467,14 @@ const generateDataMz = () => bettingSitesDataMz.update({
 },
 "4 Megapari": {
     "title": "Megapari",
-    "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betboro_Apostas.svg",
-    "review_link": "https://apostas.betarena.com/betboro-revisao-da-casa-de-apostas/",
+    "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/megapari.svg",
+    "review_link": "https://apostas.betarena.com/",
     "stars": "4",
     "bonus": "+ $100",
-    "bonus_description": "100% de bônus no primeiro depósito até R$100",
+    "bonus_description": "100% de bônus no primeiro depósito até $100",
     "bonus_code": "Sem código",
-    "register_link": "https://promotions.bboro.com/pt/exclusivo-betarena?btag=37980",
-    "information": "Embora ainda seja pouco conhecido pelo público em geral, a Betboro é uma das casas de apostas que mais crescem no mundo. Abra uma conta agora!",
+    "register_link": "https://qg9t2.app.goo.gl/megapari",
+    "information": "A principal vantagem da nossa empresa de apostas é oferecer uma oportunidade única de colocar apostas AO VIVO.",
 }
 });
 
@@ -514,14 +514,14 @@ const generateDataAo = () => bettingSitesDataAo.update({
     },
     "4 Megapari": {
         "title": "Megapari",
-        "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betboro_Apostas.svg",
-        "review_link": "https://apostas.betarena.com/betboro-revisao-da-casa-de-apostas/",
+        "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/megapari.svg",
+        "review_link": "https://apostas.betarena.com/",
         "stars": "4",
         "bonus": "+ $100",
-        "bonus_description": "100% de bônus no primeiro depósito até R$100",
+        "bonus_description": "100% de bônus no primeiro depósito até $100",
         "bonus_code": "Sem código",
-        "register_link": "https://promotions.bboro.com/pt/exclusivo-betarena?btag=37980",
-        "information": "Embora ainda seja pouco conhecido pelo público em geral, a Betboro é uma das casas de apostas que mais crescem no mundo. Abra uma conta agora!",
+        "register_link": "https://qg9t2.app.goo.gl/megapari",
+        "information": "A principal vantagem da nossa empresa de apostas é oferecer uma oportunidade única de colocar apostas AO VIVO.",
     }
     });
 
@@ -540,7 +540,7 @@ const generateDataAo = () => bettingSitesDataAo.update({
         "2 GT Bets": {
             "title": "GT Bets",
             "image": "https://www.betarena.com/wp-content/uploads/2021/08/gtbets.svg",
-            "review_link": "https://www.betaerna.com",
+            "review_link": "https://www.betarena.com",
             "stars": "5",
             "bonus": "+ $750",
             "bonus_description": "1st Dep 100% up to $500 - 2nd Dep 100% up to $250",
@@ -553,22 +553,22 @@ const generateDataAo = () => bettingSitesDataAo.update({
             "image": "https://www.betarena.com/wp-content/uploads/2021/08/betus.svg",
             "review_link": "https://www.betarena.com",
             "stars": "5",
-            "bonus": "+ €100",
-            "bonus_description": "100% de bônus no primeiro depósito até €100",
+            "bonus": "+ $3000",
+            "bonus_description": "125% Sign-Up Bonus up to $3,125 on your first deposit.",
             "bonus_code": "Sem código",
-            "register_link": "https://promotions.bboro.com/pt/exclusivo-betarena?btag=37980",
-            "information": "Embora ainda seja pouco conhecido pelo público em geral, a Betboro é uma das casas de apostas que mais crescem no mundo. Abra uma conta agora!",
+            "register_link": "https://qg9t2.app.goo.gl/betus",
+            "information": "America´s favorite sportsbook",
         },
         "4 Fanduel": {
             "title": "Fanduel",
-            "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betboro_Apostas.svg",
-            "review_link": "https://apostas.betarena.com/betboro-revisao-da-casa-de-apostas/",
+            "image": "https://www.betarena.com/wp-content/uploads/2021/08/fanduel.svg",
+            "review_link": "https://www.betarena.com",
             "stars": "4",
-            "bonus": "+ $100",
-            "bonus_description": "100% de bônus no primeiro depósito até R$100",
+            "bonus": "+ $1000",
+            "bonus_description": "If your first bet loses, you will receive a refund in site credit, up to $1000",
             "bonus_code": "Sem código",
-            "register_link": "https://promotions.bboro.com/pt/exclusivo-betarena?btag=37980",
-            "information": "Embora ainda seja pouco conhecido pelo público em geral, a Betboro é uma das casas de apostas que mais crescem no mundo. Abra uma conta agora!",
+            "register_link": "https://qg9t2.app.goo.gl/bovadageneral",
+            "information": "The #1 regulated online betting platform in the United States",
         }
         });
 
