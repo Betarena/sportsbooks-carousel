@@ -24,6 +24,8 @@ let bettingSitesDataAo = myFirebase.child("sportsbooks_carrousel/ao/");
 let bettingSitesDataUs = myFirebase.child("sportsbooks_carrousel/us/");
 
 
+// let extraData = myFirebase.child("featured_betting_sites/ch/");
+
 const generateDataDefault = () => bettingSitesData.update({
     "1 bet365": {
     "title": "Bet365",
@@ -572,6 +574,12 @@ const generateDataAo = () => bettingSitesDataAo.update({
         }
         });
 
+    /*    const generateExtaData = () => extraData.update({
+            "ch": {
+                "title": "ch",
+            }
+            }); */
+
 generateDataDefault();
 generateDataPt();
 generateDataBr();
@@ -582,6 +590,8 @@ generateDataMx();
 generateDataMz();
 generateDataAo();
 generateDataUs();
+
+// generateExtaData();
 }
 
     export default fullDataGeneration;
