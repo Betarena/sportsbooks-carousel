@@ -47,12 +47,12 @@
     "@firebase/util" "0.3.4"
     "tslib" "^1.11.1"
 
-"@firebase/app-types@0.6.1":
+"@firebase/app-types@0.6.1", "@firebase/app-types@0.x":
   "integrity" "sha512-L/ZnJRAq7F++utfuoTKX4CLBG5YR7tFO3PLzG1/oXXKEezJ0kRL3CMRoueBEmTCzVb/6SIs2Qlaw++uDgi5Xyg=="
   "resolved" "https://registry.npmjs.org/@firebase/app-types/-/app-types-0.6.1.tgz"
   "version" "0.6.1"
 
-"@firebase/app@0.6.15":
+"@firebase/app@0.6.15", "@firebase/app@0.x":
   "integrity" "sha512-VfULP09cci4xk+iAU6CB2CUNU/vbpAOoUleDdspXFphV9Yw36anb8RjaHGcN1DRR7LNb7vznNJXHk8FJhC8VWQ=="
   "resolved" "https://registry.npmjs.org/@firebase/app/-/app-0.6.15.tgz"
   "version" "0.6.15"
@@ -242,7 +242,7 @@
     "@firebase/util" "0.3.4"
     "tslib" "^1.11.1"
 
-"@firebase/util@0.3.4":
+"@firebase/util@0.3.4", "@firebase/util@0.x":
   "integrity" "sha512-VwjJUE2Vgr2UMfH63ZtIX9Hd7x+6gayi6RUXaTqEYxSbf/JmehLmAEYSuxS/NckfzAXWeGnKclvnXVibDgpjQQ=="
   "resolved" "https://registry.npmjs.org/@firebase/util/-/util-0.3.4.tgz"
   "version" "0.3.4"
@@ -626,7 +626,7 @@
   dependencies:
     "to-regex-range" "^5.0.1"
 
-"firebase@^8.2.10":
+"firebase@^8.2.10", "firebase@>=8.0.0":
   "integrity" "sha512-fGDrVWEDbFf4uaRhOMmbLf4CfW3D98GsMsbnvfd/5lPw5wTpUUcVjHyhXxcB+qfu66WeNW5kEKlEKLJmQXTkYw=="
   "resolved" "https://registry.npmjs.org/firebase/-/firebase-8.2.10.tgz"
   "version" "8.2.10"
@@ -999,9 +999,9 @@
   "version" "1.0.1"
 
 "path-parse@^1.0.6":
-  "integrity" "sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw=="
-  "resolved" "https://registry.npmjs.org/path-parse/-/path-parse-1.0.6.tgz"
-  "version" "1.0.6"
+  "integrity" "sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw=="
+  "resolved" "https://registry.npmjs.org/path-parse/-/path-parse-1.0.7.tgz"
+  "version" "1.0.7"
 
 "picomatch@^2.0.4", "picomatch@^2.2.1", "picomatch@^2.2.2":
   "integrity" "sha512-q0M/9eZHzmr0AulXyPwNfZjtwZ/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt2DHu0re+V2ZHIpMkuWg=="
@@ -1098,7 +1098,7 @@
   dependencies:
     "estree-walker" "^0.6.1"
 
-"rollup@^2.3.4":
+"rollup@^1.20.0||^2.0.0", "rollup@^2.0.0", "rollup@^2.3.4", "rollup@^2.30.0", "rollup@>=2.0.0", "rollup@1 || 2":
   "integrity" "sha512-WiOGAPbXoHu+TOz6hyYUxIksOwsY/21TRWoO593jgYt8mvYafYqQl+axaA8y1z2HFazNUUrsMSjahV2A6/2R9A=="
   "resolved" "https://registry.npmjs.org/rollup/-/rollup-2.40.0.tgz"
   "version" "2.40.0"
@@ -1112,7 +1112,7 @@
   dependencies:
     "tslib" "^1.11.1"
 
-"rxjs@^6.6.6":
+"rxjs@^6.6.6", "rxjs@6.x.x":
   "integrity" "sha512-/oTwee4N4iWzAMAL9xdGKjkEHmIwupR3oXbQjCKywF1BeFohswF3vZdogbmEF6pZkOsXTzWkrZszrWpQTByYVg=="
   "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-6.6.6.tgz"
   "version" "6.6.6"
@@ -1262,7 +1262,7 @@
   "resolved" "https://registry.npmjs.org/svelte-stars-rating/-/svelte-stars-rating-1.0.3.tgz"
   "version" "1.0.3"
 
-"svelte@^3.0.0", "svelte@^3.38.2", "svelte@>=3.19.0", "svelte@>3.0.0":
+"svelte@^3.0.0", "svelte@^3.38.2", "svelte@>=3.19.0", "svelte@>=3.5.0", "svelte@>3.0.0":
   "integrity" "sha512-q5Dq0/QHh4BLJyEVWGe7Cej5NWs040LWjMbicBGZ+3qpFWJ1YObRmUDZKbbovddLC9WW7THTj3kYbTOFmU9fbg=="
   "resolved" "https://registry.npmjs.org/svelte/-/svelte-3.38.2.tgz"
   "version" "3.38.2"

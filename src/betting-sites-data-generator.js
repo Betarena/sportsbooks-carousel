@@ -22,7 +22,8 @@ let bettingSitesDataMx = myFirebase.child("sportsbooks_carrousel/mx/");
 let bettingSitesDataMz = myFirebase.child("sportsbooks_carrousel/mz/");
 let bettingSitesDataAo = myFirebase.child("sportsbooks_carrousel/ao/");
 let bettingSitesDataUs = myFirebase.child("sportsbooks_carrousel/us/");
-
+let bettingSitesDataUk = myFirebase.child("sportsbooks_carrousel/uk/");
+let bettingSitesDataIn = myFirebase.child("sportsbooks_carrousel/in/");
 
 // let extraData = myFirebase.child("featured_betting_sites/ch/");
 
@@ -38,7 +39,7 @@ const generateDataDefault = () => bettingSitesData.update({
     "register_link": "https://qg9t2.app.goo.gl/bet365_general",
     "information": "Open an account with Bet365 today and bet on a huge range of markets with the world’s favourite online sports betting company.",
 },
-    "1xbet": {
+    "2 1xbet": {
     "title": "1xBet",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
     "review_link": "https://www.betarena.com/1xbet-bookmaker-review/",
@@ -49,7 +50,7 @@ const generateDataDefault = () => bettingSitesData.update({
     "register_link": "http://refpa.top/L?tag=d_47346m_2778c_&site=47346&ad=2778",
     "information": "With its wide range of matches and events for betting, the 1xBet promises to conquer an increasingly more prominent space in the sports betting market. Open an account and start winning!",
 },
-"Betfair": {
+"3 Betfair": {
     "title": "Betfair",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
     "review_link": "https://www.betarena.com/betfair-bookmaker-review/",
@@ -57,10 +58,10 @@ const generateDataDefault = () => bettingSitesData.update({
     "bonus": "+ €20",
     "bonus_description": "Place your first bet on Betfair Exchange of at least €20 and if you don't win, we'll refund you €20",
     "bonus_code": "No code required",
-    "register_link": "https://qg9t2.app.goo.gl/bet365_general",
+    "register_link": "https://qg9t2.app.goo.gl/betfair_uk",
     "information": "Register on Betfair! With more than 20 years in the business, the sportsbook is already more than established.",
 },
-"22Bet": {
+"4 22Bet": {
     "title": "22Bet",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
     "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
@@ -71,7 +72,7 @@ const generateDataDefault = () => bettingSitesData.update({
     "register_link": "https://qg9t2.app.goo.gl/22betdefault",
     "information": "With some exciting features, 22bet is one more bookmaker with a great reputation in the sports betting market. Register now!",
 },
-"Betboro": {
+"5 Betboro": {
     "title": "Betboro",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Betboro_logo_2.svg",
     "review_link": "https://www.betarena.com/betboro-bookmaker-review/",
@@ -574,6 +575,100 @@ const generateDataAo = () => bettingSitesDataAo.update({
         }
         });
 
+        const generateDataUk = () => bettingSitesDataUk.update({
+            "1 Bet365": {
+                "title": "Bet365",
+                "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
+                "review_link": "https://www.betarena.com/bet365/",
+                "stars": "5",
+                "bonus": "+£100",
+                "bonus_description": "Up to £100 in Bet Credits",
+                "bonus_code": "No code required",
+                "register_link": "https://qg9t2.app.goo.gl/bet365_general",
+                "information": "Open an account with bet365 today and bet on a huge range of markets with the world’s favourite online sports betting company.",
+            },
+            "2 Betfair": {
+                "title": "Betfair",
+                "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
+                "review_link": "https://www.betarena.com/betfair-bookmaker-review/",
+                "stars": "5",
+                "bonus": "£100",
+                "bonus_description": "Get up to £100 in free bets",
+                "bonus_code": "No code required",
+                "register_link": "https://qg9t2.app.goo.gl/betfair_uk",
+                "information": "Register on Betfair! With more than 20 years in the business, the sportsbook is already more than established.",
+            },
+            "3 10bet": {
+                "title": "10bet",
+                "image": "https://www.betarena.com/wp-content/uploads/2021/09/10bet_carrousel.svg",
+                "review_link": "https://www.betarena.com/10bet-bookmaker-review/",
+                "stars": "4",
+                "bonus": "£50",
+                "bonus_description": "£50 on your first deposit with a £15 min.",
+                "bonus_code": "No code required",
+                "register_link": "https://qg9t2.app.goo.gl/10bet_bonus",
+                "information": "10bet bookmaker offers thousands of live betting markets, with in-play betting available as the action takes place on major sports like football, tennis, golf, darts and American sports.",
+            },
+            "4 Betway": {
+                "title": "Betway",
+                "image": "https://www.betarena.com/wp-content/uploads/2021/08/betway.svg",
+                "review_link": "https://www.betarena.com/",
+                "stars": "4",
+                "bonus": "£10",
+                "bonus_description": "Get £10 in Free Bets",
+                "bonus_code": "No code required",
+                "register_link": "https://qg9t2.app.goo.gl/betway_default",
+                "information": "Betway Football Betting a simple but extensive and competitive range of football markets on the Betway online betting website",
+            }
+            });
+
+            const generateDataIn = () => bettingSitesDataIn.update({
+                "1 Bet365": {
+                    "title": "Bet365",
+                    "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
+                    "review_link": "https://www.betarena.com/bet365/",
+                    "stars": "5",
+                    "bonus": "+₹4k",
+                    "bonus_description": "Up To ₹4,000 in Bet Credits",
+                    "bonus_code": "No code required",
+                    "register_link": "https://qg9t2.app.goo.gl/bet365_general",
+                    "information": "Open an account with bet365 today and bet on a huge range of markets with the world’s favourite online sports betting company.",
+                },
+                "2 1xbet": {
+                    "title": "1xBet",
+                    "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
+                    "review_link": "https://www.betarena.com/1xbet-bookmaker-review/",
+                    "stars": "5",
+                    "bonus": "+₹10k",
+                    "bonus_description": "100% Up To ₹10,000",
+                    "bonus_code": "No code required",
+                    "register_link": "http://refpa.top/L?tag=d_47346m_2778c_&site=47346&ad=2778",
+                    "information": "With its wide range of matches and events for betting, the 1xBet promises to conquer an increasingly more prominent space in the sports betting market. Open an account and start winning!",
+                },
+                "4 22Bet": {
+                    "title": "22Bet",
+                    "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
+                    "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
+                    "stars": "5",
+                    "bonus": "+₹10k",
+                    "bonus_description": "100% Up To ₹10,000",
+                    "bonus_code": "No code required",
+                    "register_link": "https://qg9t2.app.goo.gl/22betdefault",
+                    "information": "With some exciting features, 22bet is one more bookmaker with a great reputation in the sports betting market. Register now!",
+                },
+                "4 Betway": {
+                    "title": "Betway",
+                    "image": "https://www.betarena.com/wp-content/uploads/2021/08/betway.svg",
+                    "review_link": "https://www.betarena.com/",
+                    "stars": "4",
+                    "bonus": "+₹2.5k",
+                    "bonus_description": "100% Up To ₹2,500",
+                    "bonus_code": "No code required",
+                    "register_link": "https://qg9t2.app.goo.gl/betway_default",
+                    "information": "Betway Football Betting a simple but extensive and competitive range of football markets on the Betway online betting website",
+                }
+                });
+
     /*    const generateExtaData = () => extraData.update({
             "ch": {
                 "title": "ch",
@@ -590,6 +685,8 @@ generateDataMx();
 generateDataMz();
 generateDataAo();
 generateDataUs();
+generateDataUk();
+generateDataIn();
 
 // generateExtaData();
 }
