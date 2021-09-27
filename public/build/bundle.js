@@ -18825,18 +18825,19 @@ var app = (function () {
 
         // SPORTSBOOKS COUNTRIES PATH
 
-    let bettingSitesData = myFirebase.child("sportsbooks_carrousel/en/");
-    let bettingSitesDataPt = myFirebase.child("sportsbooks_carrousel/pt/");
-    let bettingSitesDataBr = myFirebase.child("sportsbooks_carrousel/br/");
-    let bettingSitesDataEs = myFirebase.child("sportsbooks_carrousel/es/");
-    let bettingSitesDataCo = myFirebase.child("sportsbooks_carrousel/co/");
-    let bettingSitesDataKe = myFirebase.child("sportsbooks_carrousel/ke/");
-    let bettingSitesDataMx = myFirebase.child("sportsbooks_carrousel/mx/");
-    let bettingSitesDataMz = myFirebase.child("sportsbooks_carrousel/mz/");
-    let bettingSitesDataAo = myFirebase.child("sportsbooks_carrousel/ao/");
-    let bettingSitesDataUs = myFirebase.child("sportsbooks_carrousel/us/");
-    let bettingSitesDataUk = myFirebase.child("sportsbooks_carrousel/uk/");
-    let bettingSitesDataIn = myFirebase.child("sportsbooks_carrousel/in/");
+    let bettingSitesData = myFirebase.child("sportsbook_details/en/");
+    let bettingSitesDataPt = myFirebase.child("sportsbook_details/pt/");
+    let bettingSitesDataBr = myFirebase.child("sportsbook_details/br/");
+    let bettingSitesDataEs = myFirebase.child("sportsbook_details/es/");
+    let bettingSitesDataCo = myFirebase.child("sportsbook_details/co/");
+    let bettingSitesDataKe = myFirebase.child("sportsbook_details/ke/");
+    let bettingSitesDataMx = myFirebase.child("sportsbook_details/mx/");
+    let bettingSitesDataMz = myFirebase.child("sportsbook_details/mz/");
+    let bettingSitesDataAo = myFirebase.child("sportsbook_details/ao/");
+    let bettingSitesDataUs = myFirebase.child("sportsbook_details/us/");
+    let bettingSitesDataUk = myFirebase.child("sportsbook_details/uk/");
+    let bettingSitesDataIn = myFirebase.child("sportsbook_details/in/");
+    let bettingSitesDataSg = myFirebase.child("sportsbook_details/sg/");
 
     // let extraData = myFirebase.child("featured_betting_sites/ch/");
 
@@ -18846,7 +18847,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
         "review_link": "https://www.betarena.com/bet365/",
         "stars": "5",
-        "bonus": "+ €50",
+        "bonus": "+€50",
         "bonus_description": "Up to €50 in Bet Credits",
         "bonus_code": "No code required",
         "register_link": "https://qg9t2.app.goo.gl/bet365_general",
@@ -18857,7 +18858,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
         "review_link": "https://www.betarena.com/1xbet-bookmaker-review/",
         "stars": "4",
-        "bonus": "+ €100",
+        "bonus": "+€100",
         "bonus_description": "100% Bonus up to €100",
         "bonus_code": "No code required",
         "register_link": "http://refpa.top/L?tag=d_47346m_2778c_&site=47346&ad=2778",
@@ -18868,7 +18869,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
         "review_link": "https://www.betarena.com/betfair-bookmaker-review/",
         "stars": "4",
-        "bonus": "+ €20",
+        "bonus": "+€20",
         "bonus_description": "Place your first bet on Betfair Exchange of at least €20 and if you don't win, we'll refund you €20",
         "bonus_code": "No code required",
         "register_link": "https://qg9t2.app.goo.gl/betfair_uk",
@@ -18879,7 +18880,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
         "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
         "stars": "4",
-        "bonus": "+ €100",
+        "bonus": "+€100",
         "bonus_description": "100% Bonus up to €100",
         "bonus_code": "No code required",
         "register_link": "https://qg9t2.app.goo.gl/22betdefault",
@@ -18890,7 +18891,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Betboro_logo_2.svg",
         "review_link": "https://www.betarena.com/betboro-bookmaker-review/",
         "stars": "4",
-        "bonus": "+ €100",
+        "bonus": "+€100",
         "bonus_description": "100% Bonus up to €100",
         "bonus_code": "No code required",
         "register_link": "https://promotions.bboro.com/pt/exclusivo-betarena-100?btag=37980",
@@ -18904,7 +18905,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/06/betano_icon2.svg",
         "review_link": "https://apostas.betarena.com/betano/",
         "stars": "5",
-        "bonus": "+ €50",
+        "bonus": "+€50",
         "bonus_description": "Bónus de 100% no primeiro depósito",
         "bonus_code": "Sem código",
         "register_link": "https://wlstoiximan.adsrv.eacdn.com/C.ashx?btag=a_1863b_289c_&affid=825&siteid=1863&adid=289&c=sportsbooks-carousel",
@@ -18915,7 +18916,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/betclic.svg",
         "review_link": "https://apostas.betarena.com/betclic-apostas-desportivas/",
         "stars": "4",
-        "bonus": "+ €50",
+        "bonus": "+€50",
         "bonus_description": "20 euros sem risco!",
         "bonus_code": "Sem código",
         "register_link": "https://www.betclic.pt/registar/step1?id=IAC8&z=a_656b_62c_sportsbook_carrousel&zone=a_656b_62c_sportsbook_carrousel&affid=455&siteid=656",
@@ -18926,7 +18927,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/betway_icon.svg",
         "review_link": "https://apostas.betarena.com/betway-apostas-desportivas/",
         "stars": "3",
-        "bonus": "+ €100",
+        "bonus": "+€100",
         "bonus_description": "Bónus até 100€ euros",
         "bonus_code": "Sem código",
         "register_link": "https://qg9t2.app.goo.gl/betway_default",
@@ -18937,7 +18938,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/esc.svg",
         "review_link": "https://apostas.betarena.com",
         "stars": "2",
-        "bonus": "+ €10",
+        "bonus": "+€10",
         "bonus_description": "Freebet de 10€ + Bónus 250€",
         "bonus_code": "Sem código",
         "register_link": "https://qg9t2.app.goo.gl/esc_default",
@@ -18951,7 +18952,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/Bet365_Apostas.png",
         "review_link": "https://apostas.betarena.com/bet365-apostas-esportivas/",
         "stars": "5",
-        "bonus": "+ R$200",
+        "bonus": "+R$200",
         "bonus_description": "Até 200 reais em bônus de apostas",
         "bonus_code": "Sem código",
         "register_link": "https://qg9t2.app.goo.gl/bet365_general",
@@ -18962,7 +18963,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/07/188bet_logo.svg",
         "review_link": "https://apostas.betarena.com/188bet-revisao-da-casa-de-apostas/",
         "stars": "4",
-        "bonus": "+ R$200",
+        "bonus": "+R$200",
         "bonus_description": "Até 200 reais em bônus de apostas",
         "bonus_code": "Sem código",
         "register_link": "https://wl188bet.adsrv.eacdn.com/C.ashx?btag=a_7690b_846c_&affid=4191&siteid=7690&adid=846&c=apostasRightbar",
@@ -18973,7 +18974,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betfair_Apostas.svg",
         "review_link": "https://apostas.betarena.com/betfair-revisao-da-casa-de-apostas/",
         "stars": "4",
-        "bonus": "+ R$1200",
+        "bonus": "+R$1200",
         "bonus_description": "Bônus de 100% no primeiro depósito até R$1200",
         "bonus_code": "Sem código",
         "register_link": "http://ads.betfair.com/redirect.aspx?pid=2828099&bid=10183",
@@ -18984,7 +18985,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/07/rivalo_logo.svg",
         "review_link": "https://apostas.betarena.com/rivalo-revisao-da-casa-de-apostas/",
         "stars": "4",
-        "bonus": "+ R$300",
+        "bonus": "+R$300",
         "bonus_description": "Até 300 reais em bônus de apostas",
         "bonus_code": "Sem código",
         "register_link": "http://ads.betfair.com/redirect.aspx?pid=2828099&bid=10183",
@@ -18995,7 +18996,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/1xbet_Apostas.png",
         "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
         "stars": "4",
-        "bonus": "+ R$1200",
+        "bonus": "+R$1200",
         "bonus_description": "Bônus de 100% no primeiro depósito até R$1200",
         "bonus_code": "Sem código",
         "register_link": "https://refpa.top/L?tag=d_47346m_97c_BlogBR&site=47346&ad=97&r=bonus/rules/1st/",
@@ -19006,7 +19007,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/22bet_Apostas.svg",
         "review_link": "https://apostas.betarena.com/22bet-revisao-da-casa-de-apostas/",
         "stars": "4",
-        "bonus": "+ R$600",
+        "bonus": "+R$600",
         "bonus_description": "100% de bônus em depósitos até R$600",
         "bonus_code": "Sem código",
         "register_link": "https://qg9t2.app.goo.gl/22betdefault",
@@ -19017,7 +19018,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betboro_Apostas.svg",
         "review_link": "https://apostas.betarena.com/betboro-revisao-da-casa-de-apostas/",
         "stars": "4",
-        "bonus": "+ R$500",
+        "bonus": "+R$500",
         "bonus_description": "50% de bônus no primeiro depósito até R$500",
         "bonus_code": "Sem código",
         "register_link": "https://promotions.bboro.com/pt/exclusivo-betarena?btag=37980",
@@ -19031,7 +19032,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
         "review_link": "https://www.betarena.com/apuestas-deportivas-bet-365-review-2020/",
         "stars": "5",
-        "bonus": "+ $50",
+        "bonus": "+$50",
         "bonus_description": "Hasta 50 $ en créditos de apuesta",
         "bonus_code": "No se requiere código",
         "register_link": "https://qg9t2.app.goo.gl/bet365_general",
@@ -19042,7 +19043,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
         "review_link": "https://www.betarena.com/1xbet-resena-de-la-casa-de-apuestas/",
         "stars": "4",
-        "bonus": "+ $100",
+        "bonus": "+$100",
         "bonus_description": "Bono del 100% hasta 100$",
         "bonus_code": "No se requiere código",
         "register_link": "http://refpa.top/L?tag=d_47346m_2778c_&site=47346&ad=2778",
@@ -19053,7 +19054,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
         "review_link": "https://www.betarena.com/betfair-resena-de-la-casa-de-apuesta/",
         "stars": "4",
-        "bonus": "+ $20",
+        "bonus": "+$20",
         "bonus_description": "Realiza tu primera apuesta en Betfair de al menos 20$ y, si no ganas, te reembolsaremos 20$",
         "bonus_code": "No se requiere código",
         "register_link": "https://ads.betfair.com/redirect.aspx?pid=2772614&bid=10187&redirectURL=http://www.betfair.com/",
@@ -19064,7 +19065,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
         "review_link": "https://www.betarena.com/22bet-resena-de-la-casa-de-apuestas/",
         "stars": "4",
-        "bonus": "+ $100",
+        "bonus": "+$100",
         "bonus_description": "Bono del 100% hasta 100$",
         "bonus_code": "No se requiere código",
         "register_link": "https://qg9t2.app.goo.gl/22betdefault",
@@ -19073,24 +19074,24 @@ var app = (function () {
     });
 
     const generateDataCo = () => bettingSitesDataCo.update({
-        "1 Rivalo": {
-            "title": "Rivalo",
-            "image": "https://www.betarena.com/wp-content/uploads/2021/07/rivalo_logo.svg",
-            "review_link": "https://www.betarena.com/rivalo-revision-de-la-casa-de-apuestas/",
-            "stars": "5",
-            "bonus": "+ $200K",
-            "bonus_description": "Bono de $200.000",
-            "bonus_code": "No se requiere código",
-            "register_link": "https://qg9t2.app.goo.gl/rivalo_bonus",
-            "information": "Abre una cuenta con Rivalo hoy y apuesta en una amplia gama de mercados.",
-        },
+    "1 Rivalo": {
+        "title": "Rivalo",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/07/rivalo_logo.svg",
+        "review_link": "https://www.betarena.com/rivalo-revision-de-la-casa-de-apuestas/",
+        "stars": "5",
+        "bonus": "+$200K",
+        "bonus_description": "Bono de $200.000",
+        "bonus_code": "No se requiere código",
+        "register_link": "https://qg9t2.app.goo.gl/rivalo_bonus",
+        "information": "Abre una cuenta con Rivalo hoy y apuesta en una amplia gama de mercados.",
+    },
 
-        "3 1xbet": {
+    "3 1xbet": {
         "title": "1xBet",
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
         "review_link": "https://www.betarena.com/1xbet-resena-de-la-casa-de-apuestas/",
         "stars": "4",
-        "bonus": "+ $100",
+        "bonus": "+$100",
         "bonus_description": "Bono del 100% hasta 100$",
         "bonus_code": "No se requiere código",
         "register_link": "http://refpa.top/L?tag=d_47346m_2778c_&site=47346&ad=2778",
@@ -19101,7 +19102,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
         "review_link": "https://www.betarena.com/betfair-resena-de-la-casa-de-apuesta/",
         "stars": "5",
-        "bonus": "+ $50K",
+        "bonus": "+$50K",
         "bonus_description": "Bono de $50.000",
         "bonus_code": "No se requiere código",
         "register_link": "https://ads.betfair.com/redirect.aspx?pid=2772614&bid=10187&redirectURL=http://www.betfair.com/",
@@ -19112,7 +19113,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
         "review_link": "https://www.betarena.com/22bet-resena-de-la-casa-de-apuestas/",
         "stars": "4",
-        "bonus": "+ $100",
+        "bonus": "+$100",
         "bonus_description": "Bono del 100% hasta 100$",
         "bonus_code": "No se requiere código",
         "register_link": "https://qg9t2.app.goo.gl/22betdefault",
@@ -19126,7 +19127,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
         "review_link": "https://www.betarena.com/bet365/",
         "stars": "5",
-        "bonus": "+ €50",
+        "bonus": "+€50",
         "bonus_description": "Up to €50 in Bet Credits",
         "bonus_code": "No code required",
         "register_link": "https://qg9t2.app.goo.gl/bet365_general",
@@ -19137,7 +19138,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
         "review_link": "https://www.betarena.com/1xbet-bookmaker-review/",
         "stars": "4",
-        "bonus": "+ €100",
+        "bonus": "+€100",
         "bonus_description": "100% Bonus up to €100",
         "bonus_code": "No code required",
         "register_link": "http://refpa.top/L?tag=d_47346m_2778c_&site=47346&ad=2778",
@@ -19148,7 +19149,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
         "review_link": "https://www.betarena.com/betfair-bookmaker-review/",
         "stars": "4",
-        "bonus": "+ €20",
+        "bonus": "+€20",
         "bonus_description": "Place your first bet on Betfair Exchange of at least €20 and if you don't win, we'll refund you €20",
         "bonus_code": "No code required",
         "register_link": "https://qg9t2.app.goo.gl/bet365_general",
@@ -19159,7 +19160,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
         "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
         "stars": "5",
-        "bonus": "+ 15K",
+        "bonus": "+15K",
         "bonus_description": "100% Bonus up to 15.000 KSH",
         "bonus_code": "No code required",
         "register_link": "https://qg9t2.app.goo.gl/22betdefault",
@@ -19173,7 +19174,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
         "review_link": "https://www.betarena.com/bet365/",
         "stars": "5",
-        "bonus": "+ $1.5K",
+        "bonus": "+$1.5K",
         "bonus_description": "Hasta $1500MXN en créditos de apuesta para nuevos clientes. Bet365 otorgará créditos de apuesta de la misma cantidad de tu ingreso. Las ganancias no incluyen el importe de los créditos de apuesta. Se aplican las condiciones, límites de tiempo y exclusiones.",
         "bonus_code": "No se requiere código",
         "register_link": "https://qg9t2.app.goo.gl/bet365_general",
@@ -19184,7 +19185,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/08/caliente.svg",
         "review_link": "https://www.betarena.com/",
         "stars": "4",
-        "bonus": "+ $3K",
+        "bonus": "+$3K",
         "bonus_description": "$3000MXN + $400MXN por registro",
         "bonus_code": "No se requiere código",
         "register_link": "https://qg9t2.app.goo.gl/caliente_mxl",
@@ -19195,7 +19196,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
         "review_link": "https://www.betarena.com/betfair-resena-de-la-casa-de-apuesta/",
         "stars": "4",
-        "bonus": "+ $2K",
+        "bonus": "+$2K",
         "bonus_description": "OBTÉN HASTA $2000 MXN EN APUESTAS GRATIS",
         "bonus_code": "No se requiere código",
         "register_link": "https://ads.betfair.com/redirect.aspx?pid=2772614&bid=10187&redirectURL=http://www.betfair.com/",
@@ -19206,7 +19207,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
         "review_link": "https://www.betarena.com/1xbet-resena-de-la-casa-de-apuestas/",
         "stars": "4",
-        "bonus": "+ $2.2K",
+        "bonus": "+$2.2K",
         "bonus_description": "Bono de bienvenida con el primer deposito de hasta 2200 MXN",
         "bonus_code": "No se requiere código",
         "register_link": "http://refpa.top/L?tag=d_47346m_2778c_&site=47346&ad=2778",
@@ -19217,7 +19218,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
         "review_link": "https://www.betarena.com/22bet-resena-de-la-casa-de-apuestas/",
         "stars": "4",
-        "bonus": "+ $2.5K",
+        "bonus": "+$2.5K",
         "bonus_description": "Bono de bienvenida con el primer deposito de hasta 2500 MXN",
         "bonus_code": "No se requiere código",
         "register_link": "https://qg9t2.app.goo.gl/22betdefault",
@@ -19228,7 +19229,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/07/rivalo_logo.svg",
         "review_link": "https://www.betarena.com/rivalo-revision-de-la-casa-de-apuestas/",
         "stars": "4",
-        "bonus": "+ $2K",
+        "bonus": "+$2K",
         "bonus_description": "100% Bonus - 2.000 MXN",
         "bonus_code": "No se requiere código",
         "register_link": "https://qg9t2.app.goo.gl/rivalo_mexico",
@@ -19239,7 +19240,7 @@ var app = (function () {
         "image": "https://www.betarena.com/wp-content/uploads/2021/08/betway.svg",
         "review_link": "https://www.betarena.com/",
         "stars": "4",
-        "bonus": "+ $3.5K",
+        "bonus": "+$3.5K",
         "bonus_description": "$500 gratis y hasta $3,000 con tu 1er depósito",
         "bonus_code": "No se requiere código",
         "register_link": "https://qg9t2.app.goo.gl/betway_default",
@@ -19253,7 +19254,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/1xbet_Apostas.png",
         "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
         "stars": "5",
-        "bonus": "+ $100",
+        "bonus": "+$100",
         "bonus_description": "Bónus de 100% no primeiro depósito até $100",
         "bonus_code": "Sem código",
         "register_link": "https://refpa.top/L?tag=d_47346m_97c_BlogBR&site=47346&ad=97&r=bonus/rules/1st/",
@@ -19264,7 +19265,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/22bet_Apostas.svg",
         "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
         "stars": "5",
-        "bonus": "+ $100",
+        "bonus": "+$100",
         "bonus_description": "100% de bônus em depósitos até $100",
         "bonus_code": "Sem código",
         "register_link": "https://refpa.top/L?tag=d_47346m_97c_BlogBR&site=47346&ad=97&r=bonus/rules/1st/",
@@ -19275,7 +19276,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betboro_Apostas.svg",
         "review_link": "https://apostas.betarena.com/betboro-revisao-da-casa-de-apostas/",
         "stars": "4",
-        "bonus": "+ €100",
+        "bonus": "+€100",
         "bonus_description": "100% de bônus no primeiro depósito até €100",
         "bonus_code": "Sem código",
         "register_link": "https://promotions.bboro.com/pt/exclusivo-betarena?btag=37980",
@@ -19286,7 +19287,7 @@ var app = (function () {
         "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/megapari.svg",
         "review_link": "https://apostas.betarena.com/",
         "stars": "4",
-        "bonus": "+ $100",
+        "bonus": "+$100",
         "bonus_description": "100% de bônus no primeiro depósito até $100",
         "bonus_code": "Sem código",
         "register_link": "https://qg9t2.app.goo.gl/megapari",
@@ -19295,192 +19296,239 @@ var app = (function () {
     });
 
     const generateDataAo = () => bettingSitesDataAo.update({
-        "1 1xBet": {
-            "title": "1xBet",
-            "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/1xbet_Apostas.png",
-            "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
-            "stars": "5",
-            "bonus": "+ $100",
-            "bonus_description": "Bónus de 100% no primeiro depósito até $100",
-            "bonus_code": "Sem código",
-            "register_link": "https://refpa.top/L?tag=d_47346m_97c_BlogBR&site=47346&ad=97&r=bonus/rules/1st/",
-            "information": "Com sua ampla gama de jogos e eventos para apostas, a 1xBet promete conquistar um espaço cada vez mais proeminente. Abra uma conta!",
-        },
-        "2 22Bet": {
-            "title": "22Bet",
-            "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/22bet_Apostas.svg",
-            "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
-            "stars": "5",
-            "bonus": "+ $100",
-            "bonus_description": "100% de bônus em depósitos até $100",
-            "bonus_code": "Sem código",
-            "register_link": "https://refpa.top/L?tag=d_47346m_97c_BlogBR&site=47346&ad=97&r=bonus/rules/1st/",
-            "information": "Com algumas características emocionantes, a 22bet é mais uma casa de apostas com uma boa reputação no mercado de apostas esportivas. Cadastre-se agora!",
-        },
-        "3 Betboro": {
-            "title": "Betboro",
-            "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betboro_Apostas.svg",
-            "review_link": "https://apostas.betarena.com/betboro-revisao-da-casa-de-apostas/",
-            "stars": "4",
-            "bonus": "+ €100",
-            "bonus_description": "100% de bônus no primeiro depósito até €100",
-            "bonus_code": "Sem código",
-            "register_link": "https://promotions.bboro.com/pt/exclusivo-betarena?btag=37980",
-            "information": "Embora ainda seja pouco conhecido pelo público em geral, a Betboro é uma das casas de apostas que mais crescem no mundo. Abra uma conta agora!",
-        },
-        "4 Megapari": {
-            "title": "Megapari",
-            "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/megapari.svg",
-            "review_link": "https://apostas.betarena.com/",
-            "stars": "4",
-            "bonus": "+ $100",
-            "bonus_description": "100% de bônus no primeiro depósito até $100",
-            "bonus_code": "Sem código",
-            "register_link": "https://qg9t2.app.goo.gl/megapari",
-            "information": "A principal vantagem da nossa empresa de apostas é oferecer uma oportunidade única de colocar apostas AO VIVO.",
-        }
-        });
+    "1 1xBet": {
+        "title": "1xBet",
+        "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/1xbet_Apostas.png",
+        "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
+        "stars": "5",
+        "bonus": "+$100",
+        "bonus_description": "Bónus de 100% no primeiro depósito até $100",
+        "bonus_code": "Sem código",
+        "register_link": "https://refpa.top/L?tag=d_47346m_97c_BlogBR&site=47346&ad=97&r=bonus/rules/1st/",
+        "information": "Com sua ampla gama de jogos e eventos para apostas, a 1xBet promete conquistar um espaço cada vez mais proeminente. Abra uma conta!",
+    },
+    "2 22Bet": {
+        "title": "22Bet",
+        "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/22bet_Apostas.svg",
+        "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
+        "stars": "5",
+        "bonus": "+$100",
+        "bonus_description": "100% de bônus em depósitos até $100",
+        "bonus_code": "Sem código",
+        "register_link": "https://refpa.top/L?tag=d_47346m_97c_BlogBR&site=47346&ad=97&r=bonus/rules/1st/",
+        "information": "Com algumas características emocionantes, a 22bet é mais uma casa de apostas com uma boa reputação no mercado de apostas esportivas. Cadastre-se agora!",
+    },
+    "3 Betboro": {
+        "title": "Betboro",
+        "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betboro_Apostas.svg",
+        "review_link": "https://apostas.betarena.com/betboro-revisao-da-casa-de-apostas/",
+        "stars": "4",
+        "bonus": "+€100",
+        "bonus_description": "100% de bônus no primeiro depósito até €100",
+        "bonus_code": "Sem código",
+        "register_link": "https://promotions.bboro.com/pt/exclusivo-betarena?btag=37980",
+        "information": "Embora ainda seja pouco conhecido pelo público em geral, a Betboro é uma das casas de apostas que mais crescem no mundo. Abra uma conta agora!",
+    },
+    "4 Megapari": {
+        "title": "Megapari",
+        "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/megapari.svg",
+        "review_link": "https://apostas.betarena.com/",
+        "stars": "4",
+        "bonus": "+$100",
+        "bonus_description": "100% de bônus no primeiro depósito até $100",
+        "bonus_code": "Sem código",
+        "register_link": "https://qg9t2.app.goo.gl/megapari",
+        "information": "A principal vantagem da nossa empresa de apostas é oferecer uma oportunidade única de colocar apostas AO VIVO.",
+    }
+    });
 
-        const generateDataUs = () => bettingSitesDataUs.update({
-            "1 Bovada": {
-                "title": "Bovada",
-                "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/1xbet_Apostas.png",
-                "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
-                "stars": "5",
-                "bonus": "+ $750",
-                "bonus_description": "Bônus de 100% no primeiro depósito até $100",
-                "bonus_code": "Sem código",
-                "register_link": "https://qg9t2.app.goo.gl/bovadageneral",
-                "information": "Com sua ampla gama de jogos e eventos para apostas, a 1xBet promete conquistar um espaço cada vez mais proeminente. Abra uma conta!",
-            },
-            "2 GT Bets": {
-                "title": "GT Bets",
-                "image": "https://www.betarena.com/wp-content/uploads/2021/08/gtbets.svg",
-                "review_link": "https://www.betarena.com",
-                "stars": "5",
-                "bonus": "+ $750",
-                "bonus_description": "1st Dep 100% up to $500 - 2nd Dep 100% up to $250",
-                "bonus_code": "Sem código",
-                "register_link": "https://qg9t2.app.goo.gl/getbets_default",
-                "information": "Sports betting with GTbets.ag the nets premier destination for online sports betting, football betting, NFL betting, basketball betting!",
-            },
-            "3 BetUS": {
-                "title": "BetUS",
-                "image": "https://www.betarena.com/wp-content/uploads/2021/08/betus.svg",
-                "review_link": "https://www.betarena.com",
-                "stars": "5",
-                "bonus": "+ $3000",
-                "bonus_description": "125% Sign-Up Bonus up to $3,125 on your first deposit.",
-                "bonus_code": "Sem código",
-                "register_link": "https://qg9t2.app.goo.gl/betus",
-                "information": "America´s favorite sportsbook",
-            },
-            "4 Fanduel": {
-                "title": "Fanduel",
-                "image": "https://www.betarena.com/wp-content/uploads/2021/08/fanduel.svg",
-                "review_link": "https://www.betarena.com",
-                "stars": "4",
-                "bonus": "+ $1000",
-                "bonus_description": "If your first bet loses, you will receive a refund in site credit, up to $1000",
-                "bonus_code": "Sem código",
-                "register_link": "https://qg9t2.app.goo.gl/bovadageneral",
-                "information": "The #1 regulated online betting platform in the United States",
-            }
-            });
+    const generateDataUs = () => bettingSitesDataUs.update({
+    "1 Bovada": {
+        "title": "Bovada",
+        "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/1xbet_Apostas.png",
+        "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
+        "stars": "5",
+        "bonus": "+$750",
+        "bonus_description": "Bônus de 100% no primeiro depósito até $100",
+        "bonus_code": "Sem código",
+        "register_link": "https://qg9t2.app.goo.gl/bovadageneral",
+        "information": "Com sua ampla gama de jogos e eventos para apostas, a 1xBet promete conquistar um espaço cada vez mais proeminente. Abra uma conta!",
+    },
+    "2 GT Bets": {
+        "title": "GT Bets",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/08/gtbets.svg",
+        "review_link": "https://www.betarena.com",
+        "stars": "5",
+        "bonus": "+$750",
+        "bonus_description": "1st Dep 100% up to $500 - 2nd Dep 100% up to $250",
+        "bonus_code": "Sem código",
+        "register_link": "https://qg9t2.app.goo.gl/getbets_default",
+        "information": "Sports betting with GTbets.ag the nets premier destination for online sports betting, football betting, NFL betting, basketball betting!",
+    },
+    "3 BetUS": {
+        "title": "BetUS",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/08/betus.svg",
+        "review_link": "https://www.betarena.com",
+        "stars": "5",
+        "bonus": "+$3000",
+        "bonus_description": "125% Sign-Up Bonus up to $3,125 on your first deposit.",
+        "bonus_code": "Sem código",
+        "register_link": "https://qg9t2.app.goo.gl/betus",
+        "information": "America´s favorite sportsbook",
+    },
+    "4 Fanduel": {
+        "title": "Fanduel",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/08/fanduel.svg",
+        "review_link": "https://www.betarena.com",
+        "stars": "4",
+        "bonus": "+$1000",
+        "bonus_description": "If your first bet loses, you will receive a refund in site credit, up to $1000",
+        "bonus_code": "Sem código",
+        "register_link": "https://qg9t2.app.goo.gl/bovadageneral",
+        "information": "The #1 regulated online betting platform in the United States",
+    }
+    });
 
-            const generateDataUk = () => bettingSitesDataUk.update({
-                "1 Bet365": {
-                    "title": "Bet365",
-                    "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
-                    "review_link": "https://www.betarena.com/bet365/",
-                    "stars": "5",
-                    "bonus": "+£100",
-                    "bonus_description": "Up to £100 in Bet Credits",
-                    "bonus_code": "No code required",
-                    "register_link": "https://qg9t2.app.goo.gl/bet365_general",
-                    "information": "Open an account with bet365 today and bet on a huge range of markets with the world’s favourite online sports betting company.",
-                },
-                "2 Betfair": {
-                    "title": "Betfair",
-                    "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
-                    "review_link": "https://www.betarena.com/betfair-bookmaker-review/",
-                    "stars": "5",
-                    "bonus": "£100",
-                    "bonus_description": "Get up to £100 in free bets",
-                    "bonus_code": "No code required",
-                    "register_link": "https://qg9t2.app.goo.gl/betfair_uk",
-                    "information": "Register on Betfair! With more than 20 years in the business, the sportsbook is already more than established.",
-                },
-                "3 10bet": {
-                    "title": "10bet",
-                    "image": "https://www.betarena.com/wp-content/uploads/2021/09/10bet_carrousel.svg",
-                    "review_link": "https://www.betarena.com/10bet-bookmaker-review/",
-                    "stars": "4",
-                    "bonus": "£50",
-                    "bonus_description": "£50 on your first deposit with a £15 min.",
-                    "bonus_code": "No code required",
-                    "register_link": "https://qg9t2.app.goo.gl/10bet_bonus",
-                    "information": "10bet bookmaker offers thousands of live betting markets, with in-play betting available as the action takes place on major sports like football, tennis, golf, darts and American sports.",
-                },
-                "4 Betway": {
-                    "title": "Betway",
-                    "image": "https://www.betarena.com/wp-content/uploads/2021/08/betway.svg",
-                    "review_link": "https://www.betarena.com/",
-                    "stars": "4",
-                    "bonus": "£10",
-                    "bonus_description": "Get £10 in Free Bets",
-                    "bonus_code": "No code required",
-                    "register_link": "https://qg9t2.app.goo.gl/betway_default",
-                    "information": "Betway Football Betting a simple but extensive and competitive range of football markets on the Betway online betting website",
-                }
-                });
+    const generateDataUk = () => bettingSitesDataUk.update({
+    "1 Bet365": {
+        "title": "Bet365",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
+        "review_link": "https://www.betarena.com/bet365/",
+        "stars": "5",
+        "bonus": "+£100",
+        "bonus_description": "Up to £100 in Bet Credits",
+        "bonus_code": "No code required",
+        "register_link": "https://qg9t2.app.goo.gl/bet365_general",
+        "information": "Open an account with bet365 today and bet on a huge range of markets with the world’s favourite online sports betting company.",
+    },
+    "2 Betfair": {
+        "title": "Betfair",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
+        "review_link": "https://www.betarena.com/betfair-bookmaker-review/",
+        "stars": "5",
+        "bonus": "£100",
+        "bonus_description": "Get up to £100 in free bets",
+        "bonus_code": "No code required",
+        "register_link": "https://qg9t2.app.goo.gl/betfair_uk",
+        "information": "Register on Betfair! With more than 20 years in the business, the sportsbook is already more than established.",
+    },
+    "3 10bet": {
+        "title": "10bet",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/09/10bet_carrousel.svg",
+        "review_link": "https://www.betarena.com/10bet-bookmaker-review/",
+        "stars": "4",
+        "bonus": "£50",
+        "bonus_description": "£50 on your first deposit with a £15 min.",
+        "bonus_code": "No code required",
+        "register_link": "https://qg9t2.app.goo.gl/10bet_bonus",
+        "information": "10bet bookmaker offers thousands of live betting markets, with in-play betting available as the action takes place on major sports like football, tennis, golf, darts and American sports.",
+    },
+    "4 Betway": {
+        "title": "Betway",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/08/betway.svg",
+        "review_link": "https://www.betarena.com/",
+        "stars": "4",
+        "bonus": "£10",
+        "bonus_description": "Get £10 in Free Bets",
+        "bonus_code": "No code required",
+        "register_link": "https://qg9t2.app.goo.gl/betway_default",
+        "information": "Betway Football Betting a simple but extensive and competitive range of football markets on the Betway online betting website",
+    }
+    });
 
-                const generateDataIn = () => bettingSitesDataIn.update({
-                    "1 Bet365": {
-                        "title": "Bet365",
-                        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
-                        "review_link": "https://www.betarena.com/bet365/",
-                        "stars": "5",
-                        "bonus": "+₹4k",
-                        "bonus_description": "Up To ₹4,000 in Bet Credits",
-                        "bonus_code": "No code required",
-                        "register_link": "https://qg9t2.app.goo.gl/bet365_general",
-                        "information": "Open an account with bet365 today and bet on a huge range of markets with the world’s favourite online sports betting company.",
-                    },
-                    "2 1xbet": {
-                        "title": "1xBet",
-                        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
-                        "review_link": "https://www.betarena.com/1xbet-bookmaker-review/",
-                        "stars": "5",
-                        "bonus": "+₹10k",
-                        "bonus_description": "100% Up To ₹10,000",
-                        "bonus_code": "No code required",
-                        "register_link": "http://refpa.top/L?tag=d_47346m_2778c_&site=47346&ad=2778",
-                        "information": "With its wide range of matches and events for betting, the 1xBet promises to conquer an increasingly more prominent space in the sports betting market. Open an account and start winning!",
-                    },
-                    "4 22Bet": {
-                        "title": "22Bet",
-                        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
-                        "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
-                        "stars": "5",
-                        "bonus": "+₹10k",
-                        "bonus_description": "100% Up To ₹10,000",
-                        "bonus_code": "No code required",
-                        "register_link": "https://qg9t2.app.goo.gl/22betdefault",
-                        "information": "With some exciting features, 22bet is one more bookmaker with a great reputation in the sports betting market. Register now!",
-                    },
-                    "4 Betway": {
-                        "title": "Betway",
-                        "image": "https://www.betarena.com/wp-content/uploads/2021/08/betway.svg",
-                        "review_link": "https://www.betarena.com/",
-                        "stars": "4",
-                        "bonus": "+₹2.5k",
-                        "bonus_description": "100% Up To ₹2,500",
-                        "bonus_code": "No code required",
-                        "register_link": "https://qg9t2.app.goo.gl/betway_default",
-                        "information": "Betway Football Betting a simple but extensive and competitive range of football markets on the Betway online betting website",
-                    }
-                    });
+    const generateDataIn = () => bettingSitesDataIn.update({
+    "1 Bet365": {
+        "title": "Bet365",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
+        "review_link": "https://www.betarena.com/bet365/",
+        "stars": "5",
+        "bonus": "+₹4k",
+        "bonus_description": "Up To ₹4,000 in Bet Credits",
+        "bonus_code": "No code required",
+        "register_link": "https://qg9t2.app.goo.gl/bet365_general",
+        "information": "Open an account with bet365 today and bet on a huge range of markets with the world’s favourite online sports betting company.",
+    },
+    "2 1xbet": {
+        "title": "1xBet",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
+        "review_link": "https://www.betarena.com/1xbet-bookmaker-review/",
+        "stars": "5",
+        "bonus": "+₹10k",
+        "bonus_description": "100% Up To ₹10,000",
+        "bonus_code": "No code required",
+        "register_link": "http://refpa.top/L?tag=d_47346m_2778c_&site=47346&ad=2778",
+        "information": "With its wide range of matches and events for betting, the 1xBet promises to conquer an increasingly more prominent space in the sports betting market. Open an account and start winning!",
+    },
+    "4 22Bet": {
+        "title": "22Bet",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
+        "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
+        "stars": "5",
+        "bonus": "+₹10k",
+        "bonus_description": "100% Up To ₹10,000",
+        "bonus_code": "No code required",
+        "register_link": "https://qg9t2.app.goo.gl/22betdefault",
+        "information": "With some exciting features, 22bet is one more bookmaker with a great reputation in the sports betting market. Register now!",
+    },
+    "4 Betway": {
+        "title": "Betway",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/08/betway.svg",
+        "review_link": "https://www.betarena.com/",
+        "stars": "4",
+        "bonus": "+₹2.5k",
+        "bonus_description": "100% Up To ₹2,500",
+        "bonus_code": "No code required",
+        "register_link": "https://qg9t2.app.goo.gl/betway_default",
+        "information": "Betway Football Betting a simple but extensive and competitive range of football markets on the Betway online betting website",
+    }
+    });
+
+    const generateDataSg = () => bettingSitesDataSg.update({
+    "1 22Bet": {
+        "title": "22Bet",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
+        "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
+        "stars": "5",
+        "bonus": "+₹10k",
+        "bonus_description": "100% Up To ₹10,000",
+        "bonus_code": "No code required",
+        "register_link": "https://qg9t2.app.goo.gl/22betdefault",
+        "information": "With some exciting features, 22bet is one more bookmaker with a great reputation in the sports betting market. Register now!",
+    },                    
+    "2 Betboro": {
+        "title": "Betboro",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Betboro_logo_2.svg",
+        "review_link": "https://www.betarena.com/betboro-bookmaker-review/",
+        "stars": "4",
+        "bonus": "+ €100",
+        "bonus_description": "100% Bonus up to €100",
+        "bonus_code": "No code required",
+        "register_link": "https://promotions.bboro.com/pt/exclusivo-betarena-100?btag=37980",
+        "information": "Although it is still little known by the general public, Betboro is a growing bookmaker globally. Open an account now!",
+    },
+    "3 Megapari": {
+        "title": "Megapari",
+        "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/megapari.svg",
+        "review_link": "https://www.betarena.com",
+        "stars": "4",
+        "bonus": "+ $100",
+        "bonus_description": "100% bonus on first deposit up to $100",
+        "bonus_code": "No code required",
+        "register_link": "https://qg9t2.app.goo.gl/megapari",
+        "information": "The main advantage of our betting company is that it offers a unique opportunity to place LIVE bets.",
+    },
+    "4 Bet365": {
+        "title": "Bet365",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
+        "review_link": "https://www.betarena.com/bet365/",
+        "stars": "4",
+        "bonus": "+₹4k",
+        "bonus_description": "Up To ₹4,000 in Bet Credits",
+        "bonus_code": "No code required",
+        "register_link": "https://qg9t2.app.goo.gl/22betdefault",
+        "information": "Open an account with bet365 today and bet on a huge range of markets with the world’s favourite online sports betting company.",
+    }                    
+    });                
 
         /*    const generateExtaData = () => extraData.update({
                 "ch": {
@@ -19500,6 +19548,7 @@ var app = (function () {
     generateDataUs();
     generateDataUk();
     generateDataIn();
+    generateDataSg();
 
     // generateExtaData();
     };
@@ -19526,6 +19575,12 @@ var app = (function () {
         else if (country === "BR") {
           country = "BR";
         }
+        else if (country === "CO") {
+          country = "CO";
+        }
+        else if (country === "SG") {
+          country = "SG";
+        }
         else {
           country = "ES";
         } 
@@ -19533,12 +19588,12 @@ var app = (function () {
 
     checkCountry();
 
-    country = "PT";
+    // country = "PT";
 
 
     console.log(`country = ${country}`);
 
-      const sportsBooksPath = `sportsbooks_carrousel/`;
+      const sportsBooksPath = `sportsbook_details/`;
 
       const dbRef = firebase$1.database().ref(sportsBooksPath);
 
@@ -22218,7 +22273,7 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			set_style(p, "color", "red");
-    			add_location(p, file, 100, 4, 3268);
+    			add_location(p, file, 100, 4, 3300);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -22451,13 +22506,14 @@ var app = (function () {
     			attr_dev(div2, "class", "bonusCode svelte-17syt5t");
     			add_location(div2, file, 61, 16, 1934);
     			attr_dev(button, "class", "btnWebRegister svelte-17syt5t");
-    			add_location(button, file, 64, 20, 2086);
+    			add_location(button, file, 64, 20, 2102);
     			attr_dev(a1, "href", /*item*/ ctx[3].register_link);
+    			attr_dev(a1, "target", "_blank");
     			add_location(a1, file, 63, 18, 2036);
     			attr_dev(div3, "class", "btnDiv svelte-17syt5t");
     			add_location(div3, file, 62, 16, 1997);
     			attr_dev(div4, "class", "bonusInfo svelte-17syt5t");
-    			add_location(div4, file, 67, 16, 2197);
+    			add_location(div4, file, 67, 16, 2213);
     			attr_dev(div5, "slot", "dropdown");
     			attr_dev(div5, "class", "content svelte-17syt5t");
     			add_location(div5, file, 50, 14, 1494);
@@ -22578,26 +22634,27 @@ var app = (function () {
     			attr_dev(img, "class", "imgMain svelte-17syt5t");
     			if (img.src !== (img_src_value = /*item*/ ctx[3].image)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Betting site Logo");
-    			add_location(img, file, 74, 16, 2468);
+    			add_location(img, file, 74, 16, 2500);
     			attr_dev(div2, "class", "titleDivGroup svelte-17syt5t");
-    			add_location(div2, file, 73, 14, 2424);
+    			add_location(div2, file, 73, 14, 2456);
     			attr_dev(h3, "class", "titleSports svelte-17syt5t");
-    			add_location(h3, file, 77, 16, 2612);
+    			add_location(h3, file, 77, 16, 2644);
     			attr_dev(div3, "class", "titleDivGroup svelte-17syt5t");
-    			add_location(div3, file, 76, 14, 2568);
+    			add_location(div3, file, 76, 14, 2600);
     			attr_dev(div4, "class", "starStyle svelte-17syt5t");
-    			add_location(div4, file, 79, 14, 2689);
+    			add_location(div4, file, 79, 14, 2721);
     			attr_dev(div5, "class", "boxContentGroup svelte-17syt5t");
-    			add_location(div5, file, 72, 12, 2380);
+    			add_location(div5, file, 72, 12, 2412);
     			attr_dev(h5, "class", "reviewStyle svelte-17syt5t");
-    			add_location(h5, file, 89, 16, 3008);
+    			add_location(h5, file, 89, 16, 3040);
     			attr_dev(a0, "class", "reviewStyleLink svelte-17syt5t");
     			attr_dev(a0, "href", /*item*/ ctx[3].review_link);
-    			add_location(a0, file, 88, 14, 2940);
-    			add_location(div6, file, 87, 12, 2920);
+    			add_location(a0, file, 88, 14, 2972);
+    			add_location(div6, file, 87, 12, 2952);
     			attr_dev(a1, "class", "registerLink svelte-17syt5t");
     			attr_dev(a1, "href", /*item*/ ctx[3].register_link);
-    			add_location(a1, file, 71, 10, 2317);
+    			attr_dev(a1, "target", "_blank");
+    			add_location(a1, file, 71, 10, 2333);
     			attr_dev(div7, "class", "mainDivStyle svelte-17syt5t");
     			add_location(div7, file, 45, 8, 1286);
     		},
@@ -22819,7 +22876,7 @@ var app = (function () {
     			create_component(chevronrighticon.$$.fragment);
     			attr_dev(span, "class", "control svelte-17syt5t");
     			attr_dev(span, "slot", "right-control");
-    			add_location(span, file, 95, 6, 3144);
+    			add_location(span, file, 95, 6, 3176);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -22914,9 +22971,9 @@ var app = (function () {
     			attr_dev(div0, "class", "mainDivCarousel svelte-17syt5t");
     			add_location(div0, file, 32, 0, 943);
     			attr_dev(button, "class", "btnWeb svelte-17syt5t");
-    			add_location(button, file, 106, 2, 3409);
+    			add_location(button, file, 106, 2, 3441);
     			attr_dev(div1, "class", "btnDiv svelte-17syt5t");
-    			add_location(div1, file, 105, 0, 3386);
+    			add_location(div1, file, 105, 0, 3418);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

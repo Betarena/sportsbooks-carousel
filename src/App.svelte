@@ -61,7 +61,7 @@
                 <div class="bonusDescription">{item.bonus_description}</div>
                 <div class="bonusCode">{item.bonus_code}</div>
                 <div class="btnDiv">
-                  <a href={item.register_link}>
+                  <a href={item.register_link} target="_blank">
                     <button class="btnWebRegister">Register</button>
                   </a>
                 </div>
@@ -69,7 +69,7 @@
               </div>
             </Dropdown>
           </div>
-          <a class="registerLink" href={item.register_link}>
+          <a class="registerLink" href={item.register_link} target="_blank">
             <div class="boxContentGroup">
               <div class="titleDivGroup">
                 <img class="imgMain" src={item.image} alt="Betting site Logo" />

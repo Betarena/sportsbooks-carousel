@@ -26,22 +26,28 @@ const mainDataSports = async () => {
     else if (country === "BR") {
       country = "BR";
     }
-    else if (country === "PE", "ES") {
+    else if (country === "CO") {
+      country = "CO";
+    }
+    else if (country === "SG") {
+      country = "SG";
+    }
+    else if (country === "PE", "ES", "AR", "BO", "CL", "EC", "PY", "UY", "VE", "HN") {
       country = "ES";
     }
-    else if (country != "US", "BR", "PT", "CO", "PE", "ES") {
+    else if (country != "US", "BR", "PT", "CO", "PE", "ES", "SG") {
       country = "EN";
     } 
   }
 
 checkCountry();
 
-country = "PT";
+// country = "PT";
 
 
 console.log(`country = ${country}`);
 
-  const sportsBooksPath = `sportsbooks_carrousel/`;
+  const sportsBooksPath = `sportsbook_details/`;
 
   const dbRef = firebase.database().ref(sportsBooksPath);
 
