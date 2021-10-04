@@ -31,6 +31,7 @@ let bettingSitesDataSg = myFirebase.child("sportsbook_details/sg/");
 const generateDataDefault = () => bettingSitesData.update({
     "1 bet365": {
     "title": "Bet365",
+    "position": "1",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
     "review_link": "https://www.betarena.com/bet365/",
     "stars": "5",
@@ -42,6 +43,7 @@ const generateDataDefault = () => bettingSitesData.update({
 },
     "2 1xbet": {
     "title": "1xBet",
+    "position": "2",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
     "review_link": "https://www.betarena.com/1xbet-bookmaker-review/",
     "stars": "4",
@@ -53,6 +55,7 @@ const generateDataDefault = () => bettingSitesData.update({
 },
 "3 Betfair": {
     "title": "Betfair",
+    "position": "3",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
     "review_link": "https://www.betarena.com/betfair-bookmaker-review/",
     "stars": "4",
@@ -64,6 +67,7 @@ const generateDataDefault = () => bettingSitesData.update({
 },
 "4 22Bet": {
     "title": "22Bet",
+    "position": "4",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
     "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
     "stars": "4",
@@ -75,6 +79,7 @@ const generateDataDefault = () => bettingSitesData.update({
 },
 "5 Betboro": {
     "title": "Betboro",
+    "position": "5",    
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Betboro_logo_2.svg",
     "review_link": "https://www.betarena.com/betboro-bookmaker-review/",
     "stars": "4",
@@ -89,6 +94,7 @@ const generateDataDefault = () => bettingSitesData.update({
 const generateDataPt = () => bettingSitesDataPt.update({
 "1 betano": {
     "title": "Betano",
+    "position": "1",
     "image": "https://www.betarena.com/wp-content/uploads/2021/06/betano_icon2.svg",
     "review_link": "https://apostas.betarena.com/betano/",
     "stars": "5",
@@ -100,6 +106,7 @@ const generateDataPt = () => bettingSitesDataPt.update({
 },
 "2 betclic": {
     "title": "Betclic",
+    "position": "2",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/betclic.svg",
     "review_link": "https://apostas.betarena.com/betclic-apostas-desportivas/",
     "stars": "4",
@@ -111,6 +118,7 @@ const generateDataPt = () => bettingSitesDataPt.update({
 },
 "3 Betway": {
     "title": "Betway",
+    "position": "3",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/betway_icon.svg",
     "review_link": "https://apostas.betarena.com/betway-apostas-desportivas/",
     "stars": "3",
@@ -122,8 +130,9 @@ const generateDataPt = () => bettingSitesDataPt.update({
 },
 "4 ESC": {
     "title": "ESC",
+    "position": "4",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/esc.svg",
-    "review_link": "https://apostas.betarena.com",
+    "review_link": "https://apostas.betarena.com/esc-online-apostas-desportivas/",
     "stars": "2",
     "bonus": "+€10",
     "bonus_description": "Freebet de 10€ + Bónus 250€",
@@ -136,6 +145,7 @@ const generateDataPt = () => bettingSitesDataPt.update({
 const generateDataBr = () => bettingSitesDataBr.update({
     "1 Bet365": {
     "title": "Bet365",
+    "position": "1",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/Bet365_Apostas.png",
     "review_link": "https://apostas.betarena.com/bet365-apostas-esportivas/",
     "stars": "5",
@@ -147,6 +157,7 @@ const generateDataBr = () => bettingSitesDataBr.update({
 },
 "3 188bet": {
     "title": "188bet",
+    "position": "2",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/07/188bet_logo.svg",
     "review_link": "https://apostas.betarena.com/188bet-revisao-da-casa-de-apostas/",
     "stars": "4",
@@ -158,6 +169,7 @@ const generateDataBr = () => bettingSitesDataBr.update({
 },
 "4 Betfair": {
     "title": "Betfair",
+    "position": "3",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betfair_Apostas.svg",
     "review_link": "https://apostas.betarena.com/betfair-revisao-da-casa-de-apostas/",
     "stars": "4",
@@ -169,17 +181,19 @@ const generateDataBr = () => bettingSitesDataBr.update({
 },
 "5 Rivalo": {
     "title": "Rivalo",
+    "position": "4",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/07/rivalo_logo.svg",
     "review_link": "https://apostas.betarena.com/rivalo-revisao-da-casa-de-apostas/",
     "stars": "4",
     "bonus": "+R$300",
     "bonus_description": "Até 300 reais em bônus de apostas",
     "bonus_code": "Sem código",
-    "register_link": "http://ads.betfair.com/redirect.aspx?pid=2828099&bid=10183",
+    "register_link": "https://qg9t2.app.goo.gl/rivalo_br_bonus",
     "information": "Abra uma conta na Rivalo hoje e aposte em uma grande variedade de mercados.",
 },
 "2 1xBet": {
     "title": "1xBet",
+    "position": "5",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/1xbet_Apostas.png",
     "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
     "stars": "4",
@@ -191,6 +205,7 @@ const generateDataBr = () => bettingSitesDataBr.update({
 },
 "6 22Bet": {
     "title": "22Bet",
+    "position": "6",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/22bet_Apostas.svg",
     "review_link": "https://apostas.betarena.com/22bet-revisao-da-casa-de-apostas/",
     "stars": "4",
@@ -202,6 +217,7 @@ const generateDataBr = () => bettingSitesDataBr.update({
 },
 "7 Betboro": {
     "title": "Betboro",
+    "position": "7",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betboro_Apostas.svg",
     "review_link": "https://apostas.betarena.com/betboro-revisao-da-casa-de-apostas/",
     "stars": "4",
@@ -216,6 +232,7 @@ const generateDataBr = () => bettingSitesDataBr.update({
 const generateDataEs = () => bettingSitesDataEs.update({
     "1 bet365": {
     "title": "Bet365",
+    "position": "1",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
     "review_link": "https://www.betarena.com/apuestas-deportivas-bet-365-review-2020/",
     "stars": "5",
@@ -227,6 +244,7 @@ const generateDataEs = () => bettingSitesDataEs.update({
 },
     "2 1xbet": {
     "title": "1xBet",
+    "position": "2",    
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
     "review_link": "https://www.betarena.com/1xbet-resena-de-la-casa-de-apuestas/",
     "stars": "4",
@@ -238,6 +256,7 @@ const generateDataEs = () => bettingSitesDataEs.update({
 },
 "3 Betfair": {
     "title": "Betfair",
+    "position": "3",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
     "review_link": "https://www.betarena.com/betfair-resena-de-la-casa-de-apuesta/",
     "stars": "4",
@@ -249,6 +268,7 @@ const generateDataEs = () => bettingSitesDataEs.update({
 },
 "4 22Bet": {
     "title": "22Bet",
+    "position": "4",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
     "review_link": "https://www.betarena.com/22bet-resena-de-la-casa-de-apuestas/",
     "stars": "4",
@@ -263,6 +283,7 @@ const generateDataEs = () => bettingSitesDataEs.update({
 const generateDataCo = () => bettingSitesDataCo.update({
 "1 Rivalo": {
     "title": "Rivalo",
+    "position": "1",
     "image": "https://www.betarena.com/wp-content/uploads/2021/07/rivalo_logo.svg",
     "review_link": "https://www.betarena.com/rivalo-revision-de-la-casa-de-apuestas/",
     "stars": "5",
@@ -275,6 +296,7 @@ const generateDataCo = () => bettingSitesDataCo.update({
 
 "3 1xbet": {
     "title": "1xBet",
+    "position": "2",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
     "review_link": "https://www.betarena.com/1xbet-resena-de-la-casa-de-apuestas/",
     "stars": "4",
@@ -286,6 +308,7 @@ const generateDataCo = () => bettingSitesDataCo.update({
 },
 "2 Betfair": {
     "title": "Betfair",
+    "position": "3",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
     "review_link": "https://www.betarena.com/betfair-resena-de-la-casa-de-apuesta/",
     "stars": "5",
@@ -297,6 +320,7 @@ const generateDataCo = () => bettingSitesDataCo.update({
 },
 "4 22Bet": {
     "title": "22Bet",
+    "position": "4",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
     "review_link": "https://www.betarena.com/22bet-resena-de-la-casa-de-apuestas/",
     "stars": "4",
@@ -311,6 +335,7 @@ const generateDataCo = () => bettingSitesDataCo.update({
 const generateDataKe = () => bettingSitesDataKe.update({
     "3 bet365": {
     "title": "Bet365",
+    "position": "1",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
     "review_link": "https://www.betarena.com/bet365/",
     "stars": "5",
@@ -322,6 +347,7 @@ const generateDataKe = () => bettingSitesDataKe.update({
 },
     "4 1xbet": {
     "title": "1xBet",
+    "position": "2",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
     "review_link": "https://www.betarena.com/1xbet-bookmaker-review/",
     "stars": "4",
@@ -333,6 +359,7 @@ const generateDataKe = () => bettingSitesDataKe.update({
 },
 "2 Betfair": {
     "title": "Betfair",
+    "position": "3",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
     "review_link": "https://www.betarena.com/betfair-bookmaker-review/",
     "stars": "4",
@@ -344,6 +371,7 @@ const generateDataKe = () => bettingSitesDataKe.update({
 },
 "1 22Bet": {
     "title": "22Bet",
+    "position": "4",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
     "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
     "stars": "5",
@@ -358,6 +386,7 @@ const generateDataKe = () => bettingSitesDataKe.update({
 const generateDataMx = () => bettingSitesDataMx.update({
     "1 bet365": {
     "title": "Bet365",
+    "position": "1",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
     "review_link": "https://www.betarena.com/bet365/",
     "stars": "5",
@@ -369,8 +398,9 @@ const generateDataMx = () => bettingSitesDataMx.update({
 },
 "2 Caliente": {
     "title": "Caliente",
+    "position": "2",
     "image": "https://www.betarena.com/wp-content/uploads/2021/08/caliente.svg",
-    "review_link": "https://www.betarena.com/",
+    "review_link": "https://www.betarena.com/caliente-mx-revision-de-la-casa-de-apuestas/",
     "stars": "4",
     "bonus": "+$3K",
     "bonus_description": "$3000MXN + $400MXN por registro",
@@ -380,6 +410,7 @@ const generateDataMx = () => bettingSitesDataMx.update({
 },
 "3 Betfair": {
     "title": "Betfair",
+    "position": "3",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
     "review_link": "https://www.betarena.com/betfair-resena-de-la-casa-de-apuesta/",
     "stars": "4",
@@ -391,6 +422,7 @@ const generateDataMx = () => bettingSitesDataMx.update({
 },
     "4 1xbet": {
     "title": "1xBet",
+    "position": "4",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
     "review_link": "https://www.betarena.com/1xbet-resena-de-la-casa-de-apuestas/",
     "stars": "4",
@@ -402,6 +434,7 @@ const generateDataMx = () => bettingSitesDataMx.update({
 },
 "5 22Bet": {
     "title": "22Bet",
+    "position": "5",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
     "review_link": "https://www.betarena.com/22bet-resena-de-la-casa-de-apuestas/",
     "stars": "4",
@@ -413,6 +446,7 @@ const generateDataMx = () => bettingSitesDataMx.update({
 },
 "6 Rivalo": {
     "title": "Rivalo",
+    "position": "6",
     "image": "https://www.betarena.com/wp-content/uploads/2021/07/rivalo_logo.svg",
     "review_link": "https://www.betarena.com/rivalo-revision-de-la-casa-de-apuestas/",
     "stars": "4",
@@ -424,8 +458,9 @@ const generateDataMx = () => bettingSitesDataMx.update({
 },
 "7 Betway": {
     "title": "Betway",
+    "position": "7",
     "image": "https://www.betarena.com/wp-content/uploads/2021/08/betway.svg",
-    "review_link": "https://www.betarena.com/",
+    "review_link": "https://www.betarena.com/betway-revision-de-la-casa-de-apuestas/",
     "stars": "4",
     "bonus": "+$3.5K",
     "bonus_description": "$500 gratis y hasta $3,000 con tu 1er depósito",
@@ -438,6 +473,7 @@ const generateDataMx = () => bettingSitesDataMx.update({
 const generateDataMz = () => bettingSitesDataMz.update({
 "1 1xBet": {
     "title": "1xBet",
+    "position": "1",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/1xbet_Apostas.png",
     "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
     "stars": "5",
@@ -449,6 +485,7 @@ const generateDataMz = () => bettingSitesDataMz.update({
 },
 "2 22Bet": {
     "title": "22Bet",
+    "position": "2",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/22bet_Apostas.svg",
     "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
     "stars": "5",
@@ -460,6 +497,7 @@ const generateDataMz = () => bettingSitesDataMz.update({
 },
 "3 Betboro": {
     "title": "Betboro",
+    "position": "3",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betboro_Apostas.svg",
     "review_link": "https://apostas.betarena.com/betboro-revisao-da-casa-de-apostas/",
     "stars": "4",
@@ -471,8 +509,9 @@ const generateDataMz = () => bettingSitesDataMz.update({
 },
 "4 Megapari": {
     "title": "Megapari",
+    "position": "4",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/megapari.svg",
-    "review_link": "https://apostas.betarena.com/",
+    "review_link": "https://apostas.betarena.com/megapari-revisao-da-casa-de-apostas/",
     "stars": "4",
     "bonus": "+$100",
     "bonus_description": "100% de bônus no primeiro depósito até $100",
@@ -485,6 +524,7 @@ const generateDataMz = () => bettingSitesDataMz.update({
 const generateDataAo = () => bettingSitesDataAo.update({
 "1 1xBet": {
     "title": "1xBet",
+    "position": "1",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/1xbet_Apostas.png",
     "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
     "stars": "5",
@@ -496,6 +536,7 @@ const generateDataAo = () => bettingSitesDataAo.update({
 },
 "2 22Bet": {
     "title": "22Bet",
+    "position": "2",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/22bet_Apostas.svg",
     "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
     "stars": "5",
@@ -507,6 +548,7 @@ const generateDataAo = () => bettingSitesDataAo.update({
 },
 "3 Betboro": {
     "title": "Betboro",
+    "position": "3",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/betboro_Apostas.svg",
     "review_link": "https://apostas.betarena.com/betboro-revisao-da-casa-de-apostas/",
     "stars": "4",
@@ -518,8 +560,9 @@ const generateDataAo = () => bettingSitesDataAo.update({
 },
 "4 Megapari": {
     "title": "Megapari",
+    "position": "4",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/megapari.svg",
-    "review_link": "https://apostas.betarena.com/",
+    "review_link": "https://apostas.betarena.com/megapari-revisao-da-casa-de-apostas/",
     "stars": "4",
     "bonus": "+$100",
     "bonus_description": "100% de bônus no primeiro depósito até $100",
@@ -532,45 +575,49 @@ const generateDataAo = () => bettingSitesDataAo.update({
 const generateDataUs = () => bettingSitesDataUs.update({
 "1 Bovada": {
     "title": "Bovada",
-    "image": "https://apostas.betarena.com/wp-content/uploads/2021/06/1xbet_Apostas.png",
+    "position": "1",
+    "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-1bovada.svg",
     "review_link": "https://apostas.betarena.com/1xbet-revisao-da-casa-de-apostas/",
     "stars": "5",
     "bonus": "+$750",
-    "bonus_description": "Bônus de 100% no primeiro depósito até $100",
-    "bonus_code": "Sem código",
+    "bonus_description": "Bovada members can now score a 75% Bitcoin Match bonus up to $750 to bet on sports.",
+    "bonus_code": "No code required",
     "register_link": "https://qg9t2.app.goo.gl/bovadageneral",
-    "information": "Com sua ampla gama de jogos e eventos para apostas, a 1xBet promete conquistar um espaço cada vez mais proeminente. Abra uma conta!",
+    "information": "Since December 2011, Bovada has been offering an online betting experience like no other.",
 },
 "2 GT Bets": {
-    "title": "GT Bets",
+    "title": "GTBets",
+    "position": "2",
     "image": "https://www.betarena.com/wp-content/uploads/2021/08/gtbets.svg",
     "review_link": "https://www.betarena.com",
     "stars": "5",
     "bonus": "+$750",
     "bonus_description": "1st Dep 100% up to $500 - 2nd Dep 100% up to $250",
-    "bonus_code": "Sem código",
+    "bonus_code": "No code required",
     "register_link": "https://qg9t2.app.goo.gl/getbets_default",
     "information": "Sports betting with GTbets.ag the nets premier destination for online sports betting, football betting, NFL betting, basketball betting!",
 },
 "3 BetUS": {
     "title": "BetUS",
+    "position": "3",
     "image": "https://www.betarena.com/wp-content/uploads/2021/08/betus.svg",
     "review_link": "https://www.betarena.com",
     "stars": "5",
     "bonus": "+$3000",
     "bonus_description": "125% Sign-Up Bonus up to $3,125 on your first deposit.",
-    "bonus_code": "Sem código",
+    "bonus_code": "No code required",
     "register_link": "https://qg9t2.app.goo.gl/betus",
     "information": "America´s favorite sportsbook",
 },
 "4 Fanduel": {
     "title": "Fanduel",
+    "position": "4",
     "image": "https://www.betarena.com/wp-content/uploads/2021/08/fanduel.svg",
     "review_link": "https://www.betarena.com",
     "stars": "4",
     "bonus": "+$1000",
     "bonus_description": "If your first bet loses, you will receive a refund in site credit, up to $1000",
-    "bonus_code": "Sem código",
+    "bonus_code": "No code required",
     "register_link": "https://qg9t2.app.goo.gl/bovadageneral",
     "information": "The #1 regulated online betting platform in the United States",
 }
@@ -579,6 +626,7 @@ const generateDataUs = () => bettingSitesDataUs.update({
 const generateDataUk = () => bettingSitesDataUk.update({
 "1 Bet365": {
     "title": "Bet365",
+    "position": "1",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
     "review_link": "https://www.betarena.com/bet365/",
     "stars": "5",
@@ -590,6 +638,7 @@ const generateDataUk = () => bettingSitesDataUk.update({
 },
 "2 Betfair": {
     "title": "Betfair",
+    "position": "2",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/betfair-svg.svg",
     "review_link": "https://www.betarena.com/betfair-bookmaker-review/",
     "stars": "5",
@@ -601,6 +650,7 @@ const generateDataUk = () => bettingSitesDataUk.update({
 },
 "3 10bet": {
     "title": "10bet",
+    "position": "3",
     "image": "https://www.betarena.com/wp-content/uploads/2021/09/10bet_carrousel.svg",
     "review_link": "https://www.betarena.com/10bet-bookmaker-review/",
     "stars": "4",
@@ -612,8 +662,9 @@ const generateDataUk = () => bettingSitesDataUk.update({
 },
 "4 Betway": {
     "title": "Betway",
+    "position": "4",
     "image": "https://www.betarena.com/wp-content/uploads/2021/08/betway.svg",
-    "review_link": "https://www.betarena.com/",
+    "review_link": "https://www.betarena.com/betway-sports-betting-bookmaker-review/",
     "stars": "4",
     "bonus": "£10",
     "bonus_description": "Get £10 in Free Bets",
@@ -626,6 +677,7 @@ const generateDataUk = () => bettingSitesDataUk.update({
 const generateDataIn = () => bettingSitesDataIn.update({
 "1 Bet365": {
     "title": "Bet365",
+    "position": "1",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
     "review_link": "https://www.betarena.com/bet365/",
     "stars": "5",
@@ -637,6 +689,7 @@ const generateDataIn = () => bettingSitesDataIn.update({
 },
 "2 1xbet": {
     "title": "1xBet",
+    "position": "2",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96-1.png.webp",
     "review_link": "https://www.betarena.com/1xbet-bookmaker-review/",
     "stars": "5",
@@ -648,6 +701,7 @@ const generateDataIn = () => bettingSitesDataIn.update({
 },
 "4 22Bet": {
     "title": "22Bet",
+    "position": "3",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
     "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
     "stars": "5",
@@ -659,8 +713,9 @@ const generateDataIn = () => bettingSitesDataIn.update({
 },
 "4 Betway": {
     "title": "Betway",
+    "position": "4",
     "image": "https://www.betarena.com/wp-content/uploads/2021/08/betway.svg",
-    "review_link": "https://www.betarena.com/",
+    "review_link": "https://www.betarena.com/betway-sports-betting-bookmaker-review/",
     "stars": "4",
     "bonus": "+₹2.5k",
     "bonus_description": "100% Up To ₹2,500",
@@ -673,6 +728,7 @@ const generateDataIn = () => bettingSitesDataIn.update({
 const generateDataSg = () => bettingSitesDataSg.update({
 "1 22Bet": {
     "title": "22Bet",
+    "position": "1",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Property-122-bet.svg",
     "review_link": "https://www.betarena.com/22bet-bookmaker-review/",
     "stars": "5",
@@ -684,6 +740,7 @@ const generateDataSg = () => bettingSitesDataSg.update({
 },                    
 "2 Betboro": {
     "title": "Betboro",
+    "position": "2",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Betboro_logo_2.svg",
     "review_link": "https://www.betarena.com/betboro-bookmaker-review/",
     "stars": "4",
@@ -695,8 +752,9 @@ const generateDataSg = () => bettingSitesDataSg.update({
 },
 "3 Megapari": {
     "title": "Megapari",
+    "position": "3",
     "image": "https://apostas.betarena.com/wp-content/uploads/2021/08/megapari.svg",
-    "review_link": "https://www.betarena.com",
+    "review_link": "https://www.betarena.com/megapari-bookmaker-review/",
     "stars": "4",
     "bonus": "+ $100",
     "bonus_description": "100% bonus on first deposit up to $100",
@@ -706,6 +764,7 @@ const generateDataSg = () => bettingSitesDataSg.update({
 },
 "4 Bet365": {
     "title": "Bet365",
+    "position": "4",
     "image": "https://www.betarena.com/wp-content/uploads/2021/05/Frame-96.png",
     "review_link": "https://www.betarena.com/bet365/",
     "stars": "4",

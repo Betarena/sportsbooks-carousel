@@ -19,7 +19,7 @@ const mainDataSports = async () => {
 
   function checkCountry () {
     if (country === "US") {
-      country = "EN";
+      country = "US";
     } else if (country === "PT") {
       country = "PT";
     }
@@ -32,10 +32,31 @@ const mainDataSports = async () => {
     else if (country === "SG") {
       country = "SG";
     }
+    else if (country === "MX") {
+      country = "MX";
+    }
+    else if (country === "KE") {
+      country = "KE";
+    }
+    else if (country === "MZ") {
+      country = "MZ";
+    }
+    else if (country === "AO") {
+      country = "AO";
+    }
+    else if (country === "GB") {
+      country = "UK";
+    }
+    else if (country === "IN") {
+      country = "IN";
+    }
+    else if (country === "SG") {
+      country = "SG";
+    }
     else if (country === "PE", "ES", "AR", "BO", "CL", "EC", "PY", "UY", "VE", "HN") {
       country = "ES";
     }
-    else if (country != "US", "BR", "PT", "CO", "PE", "ES", "SG") {
+    else {
       country = "EN";
     } 
   }

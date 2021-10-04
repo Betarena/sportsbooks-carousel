@@ -390,4 +390,8 @@
     cursor: pointer !important;
     left: 0px !important;
   }
+
+  :global(.aa-button.svelte-1oruecm) {
+    justify-content: center !important;
+  }
 </style>
