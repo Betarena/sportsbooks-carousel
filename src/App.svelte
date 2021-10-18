@@ -14,10 +14,14 @@
   import Dropdown from "./custom_modules/svelte-atoms/Dropdown.svelte";
   import Button from "./custom_modules/svelte-atoms/Button.svelte";
   import Geoip from "./geoip.svelte";
+  import mainLangTranslate from "./translations";
 
   fireStart;
 
   let sportsBooksResult = mainDataSports();
+  let translations = mainLangTranslate();
+
+  console.log(translations);
 
   function changed(event) {
     console.log(event.detail.currentSlide);
@@ -62,7 +66,7 @@
                 <div class="bonusCode">{item.bonus_code}</div>
                 <div class="btnDiv">
                   <a href={item.register_link} target="_blank">
-                    <button class="btnWebRegister">Register</button>
+                    <button class="btnWebRegister">Registo</button>
                   </a>
                 </div>
                 <div class="bonusInfo">{item.information}</div>
@@ -87,7 +91,7 @@
             </div>
             <div>
               <a class="reviewStyleLink" href={item.review_link}>
-                <h5 class="reviewStyle">Read Full Review ></h5>
+                <h5 class="reviewStyle">{translations}</h5>
               </a>
             </div>
           </a>
