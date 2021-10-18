@@ -18890,9 +18890,21 @@ var app = (function () {
         "register_link": "https://qg9t2.app.goo.gl/22betdefault",
         "information": "With some exciting features, 22bet is one more bookmaker with a great reputation in the sports betting market. Register now!",
     },
-    "5 Betboro": {
+    "5 Rivalo": {
+        "title": "Rivalo",
+        "position": "5",
+        "image": "https://www.betarena.com/wp-content/uploads/2021/07/rivalo_logo.svg",
+        "review_link": "https://www.betarena.com",
+        "stars": "4",
+        "bonus": "+€90",
+        "bonus_description": "Welcome bonus up to €90/$100",
+        "bonus_code": "Sem código",
+        "register_link": "https://qg9t2.app.goo.gl/rivalo_international",
+        "information": "Rivalo launched its gaming platform in 2013.",
+    },
+    "6 Betboro": {
         "title": "Betboro",
-        "position": "5",    
+        "position": "6",    
         "image": "https://www.betarena.com/wp-content/uploads/2021/05/Betboro_logo_2.svg",
         "review_link": "https://www.betarena.com/betboro-bookmaker-review/",
         "stars": "4",
@@ -19661,14 +19673,17 @@ var app = (function () {
         else if (country === "SG") {
           country = "SG";
         }
-        else {
+        else if (country === 'PE' || country === 'ES' || country === 'AR' || country === 'BO' || country === 'CL' || country === 'EC' || country === 'PY' || country === 'UY' || country === 'VE' || country === 'HN') {
           country = "ES";
+        }
+        else {
+          country = "EN";
         } 
       }
 
     checkCountry();
 
-    // country = "PT";
+    country = "EN";
 
 
     console.log(`country = ${country}`);
