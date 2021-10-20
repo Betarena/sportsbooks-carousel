@@ -26,7 +26,7 @@ let bettingSitesDataUk = myFirebase.child("sportsbook_details/uk/");
 let bettingSitesDataIn = myFirebase.child("sportsbook_details/in/");
 let bettingSitesDataSg = myFirebase.child("sportsbook_details/sg/");
 
-// let extraData = myFirebase.child("featured_betting_sites/ch/");
+// Betting sites data
 
 const generateDataDefault = () => bettingSitesData.update({
     "1 bet365": {
@@ -824,11 +824,7 @@ const generateDataSg = () => bettingSitesDataSg.update({
 }                    
 });                
 
-    /*    const generateExtaData = () => extraData.update({
-            "ch": {
-                "title": "ch",
-            }
-            }); */
+// Generate betting sites data
 
 generateDataDefault();
 generateDataPt();
@@ -844,7 +840,6 @@ generateDataUk();
 generateDataIn();
 generateDataSg();
 
-// generateExtaData();
 }
 
     export default fullDataGeneration;

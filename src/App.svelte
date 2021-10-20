@@ -2,7 +2,6 @@
   import firebase from "firebase/app";
   import "firebase/firebase-auth";
   import { fireStart } from "./lib/init-firebase";
-  // import Carousel from "svelte-carousel";
   import Carousel from "@beyonk/svelte-carousel";
   import {
     ChevronLeftIcon,
@@ -19,12 +18,21 @@
   fireStart;
 
   let sportsBooksResult = mainDataSports();
-  let translations = mainLangTranslate();
+  let translations;
 
-  console.log(translations);
+  async function getTranslationsData() {
+    translations = await mainLangTranslate().then((result) => {
+      // console.log(result);
+      // since there is no return value here,
+      // the promise chain's resolved value becomes undefined
+      return result;
+    });
+  }
+
+  getTranslationsData();
 
   function changed(event) {
-    console.log(event.detail.currentSlide);
+    // console.log(event.detail.currentSlide);
   }
 
   let style = {
@@ -66,7 +74,9 @@
                 <div class="bonusCode">{item.bonus_code}</div>
                 <div class="btnDiv">
                   <a href={item.register_link} target="_blank">
-                    <button class="btnWebRegister">Registo</button>
+                    <button class="btnWebRegister"
+                      >{translations.register}</button
+                    >
                   </a>
                 </div>
                 <div class="bonusInfo">{item.information}</div>
@@ -91,7 +101,7 @@
             </div>
             <div>
               <a class="reviewStyleLink" href={item.review_link}>
-                <h5 class="reviewStyle">{translations}</h5>
+                <h5 class="reviewStyle">{translations.review}</h5>
               </a>
             </div>
           </a>
@@ -106,12 +116,12 @@
   {/await}
 </div>
 
-<!-- Button to generate betting site data to Firebase-->
-<div class="btnDiv">
+<!-- Button to generate betting site data to Firebase, hidden when not needed-->
+<!--  <div class="btnDiv">
   <button class="btnWeb" on:click={fullDataGeneration}
     >Generate Sportsbooks</button
   >
-</div>
+</div> -->
 
 <Geoip />
 

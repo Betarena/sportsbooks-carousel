@@ -5,17 +5,23 @@ import { fireStart } from "./lib/init-firebase";
 fireStart;
 
 const mainLangTranslate = async () => {
+// extract the user location data country code;
+let platformCountry = "en";
 
-    let platformCountry = "en";
+// return translation data from the DB;
+return firebase.database().ref(`translations/sportsbook_details/${platformCountry}`).get().then((snapshot) => {
+    // check if the data exists (should exist at all times);
+    if (snapshot.exists()) {
 
-    let TranslationPath = `translations/sportsbook_details/${platformCountry}`;
+        // snap result
+        let resultSnap = snapshot.val();
 
-        let ref = firebase.database().ref(TranslationPath);
-        ref.on("value", (snap) => {
-          let translationResult = snap.val();
-          console.log(translationResult);
-          return translationResult;
-        });
+        // return the response as an Array;
+        return resultSnap
+    } else {
+        throw new Error('Data from DB is incorrect');
+    }
+})
 }
 
 export default mainLangTranslate;

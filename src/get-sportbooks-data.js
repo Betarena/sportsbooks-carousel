@@ -17,6 +17,8 @@ const mainDataSports = async () => {
 
   let country = await ipInfo(); 
 
+// Check country to load the correct betting sites
+
   function checkCountry () {
     if (country === "US") {
       country = "US";
@@ -63,6 +65,7 @@ const mainDataSports = async () => {
 
 checkCountry();
 
+// Force country for testing
 // country = "EN";
 
 
