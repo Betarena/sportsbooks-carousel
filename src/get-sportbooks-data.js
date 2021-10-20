@@ -69,7 +69,7 @@ checkCountry();
 // country = "EN";
 
 
-console.log(`country = ${country}`);
+// console.log(`country = ${country}`);
 
   const sportsBooksPath = `sportsbook_details/`;
 
@@ -81,7 +81,7 @@ console.log(`country = ${country}`);
       if (snapshot.exists()) {
           let infoSportsResult = snapshot.val();
           let infoSportsResultArr = Object.values(infoSportsResult);
-          console.log(infoSportsResultArr);
+       //   console.log(infoSportsResultArr);
 
           return infoSportsResultArr;
       } else {

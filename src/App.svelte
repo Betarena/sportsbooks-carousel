@@ -123,8 +123,9 @@
   >
 </div> -->
 
-<Geoip />
+<!-- Option to check the Geo IP localtion -->
 
+<!-- <Geoip /> -->
 <style>
   :global(body) {
     background-color: #292929;

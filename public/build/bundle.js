@@ -19720,7 +19720,7 @@ var app = (function () {
     // country = "EN";
 
 
-    console.log(`country = ${country}`);
+    // console.log(`country = ${country}`);
 
       const sportsBooksPath = `sportsbook_details/`;
 
@@ -19732,7 +19732,7 @@ var app = (function () {
           if (snapshot.exists()) {
               let infoSportsResult = snapshot.val();
               let infoSportsResultArr = Object.values(infoSportsResult);
-              console.log(infoSportsResultArr);
+           //   console.log(infoSportsResultArr);
 
               return infoSportsResultArr;
           } else {
@@ -23089,8 +23089,6 @@ var app = (function () {
 
     function create_fragment(ctx) {
     	let div;
-    	let t;
-    	let geoip;
     	let current;
 
     	let info = {
@@ -23107,14 +23105,11 @@ var app = (function () {
     	};
 
     	handle_promise(/*sportsBooksResult*/ ctx[1], info);
-    	geoip = new Geoip({ $$inline: true });
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			info.block.c();
-    			t = space();
-    			create_component(geoip.$$.fragment);
     			attr_dev(div, "class", "mainDivCarousel svelte-1xxy9w3");
     			add_location(div, file, 44, 0, 1274);
     		},
@@ -23126,8 +23121,6 @@ var app = (function () {
     			info.block.m(div, info.anchor = null);
     			info.mount = () => div;
     			info.anchor = null;
-    			insert_dev(target, t, anchor);
-    			mount_component(geoip, target, anchor);
     			current = true;
     		},
     		p: function update(new_ctx, [dirty]) {
@@ -23137,7 +23130,6 @@ var app = (function () {
     		i: function intro(local) {
     			if (current) return;
     			transition_in(info.block);
-    			transition_in(geoip.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -23146,7 +23138,6 @@ var app = (function () {
     				transition_out(block);
     			}
 
-    			transition_out(geoip.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -23154,8 +23145,6 @@ var app = (function () {
     			info.block.d();
     			info.token = null;
     			info = null;
-    			if (detaching) detach_dev(t);
-    			destroy_component(geoip, detaching);
     		}
     	};
 
