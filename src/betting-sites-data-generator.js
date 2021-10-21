@@ -22,7 +22,7 @@ let bettingSitesDataMx = myFirebase.child("sportsbook_details/mx/");
 let bettingSitesDataMz = myFirebase.child("sportsbook_details/mz/");
 let bettingSitesDataAo = myFirebase.child("sportsbook_details/ao/");
 let bettingSitesDataUs = myFirebase.child("sportsbook_details/us/");
-let bettingSitesDataUk = myFirebase.child("sportsbook_details/uk/");
+let bettingSitesDataUk = myFirebase.child("sportsbook_details/gb/");
 let bettingSitesDataIn = myFirebase.child("sportsbook_details/in/");
 let bettingSitesDataSg = myFirebase.child("sportsbook_details/sg/");
 

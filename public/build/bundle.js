@@ -18835,7 +18835,7 @@ var app = (function () {
     let bettingSitesDataMz = myFirebase.child("sportsbook_details/mz/");
     let bettingSitesDataAo = myFirebase.child("sportsbook_details/ao/");
     let bettingSitesDataUs = myFirebase.child("sportsbook_details/us/");
-    let bettingSitesDataUk = myFirebase.child("sportsbook_details/uk/");
+    let bettingSitesDataUk = myFirebase.child("sportsbook_details/gb/");
     let bettingSitesDataIn = myFirebase.child("sportsbook_details/in/");
     let bettingSitesDataSg = myFirebase.child("sportsbook_details/sg/");
 
@@ -19698,7 +19698,7 @@ var app = (function () {
           country = "AO";
         }
         else if (country === "GB") {
-          country = "UK";
+          country = "GB";
         }
         else if (country === "IN") {
           country = "IN";
