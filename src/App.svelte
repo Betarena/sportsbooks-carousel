@@ -189,9 +189,14 @@
   }
 
   .titleSports {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
     position: relative;
     font-weight: 500;
-    margin-top: -53px;
+    margin-top: -59px;
     width: 20px;
     height: 27px;
     left: 108px;
@@ -200,13 +205,18 @@
   }
 
   .starStyle {
-    margin-top: -18px;
+    margin-top: 4px;
     margin-left: 108px;
     height: 15px;
-    margin-bottom: -125px;
+    margin-bottom: -126px;
   }
 
   .reviewStyleLink {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px !important;
+    line-height: 150%;
     text-decoration: none;
     color: #f5620f;
     height: 10px;
@@ -222,6 +232,11 @@
   }
 
   .reviewStyle {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px !important;
+    line-height: 150%;
     position: relative;
     margin-top: 130px;
     width: 126px;
@@ -249,6 +264,7 @@
   .btnWebRegister {
     width: 260px;
     height: 44px;
+    margin-left: 13px;
 
     /* Property 1=web */
     left: calc(50% - 151px / 2 - 167px);
@@ -358,7 +374,7 @@
 
   .mainDivCarousel {
     margin: 0 auto;
-    height: 800px;
+    height: 125px;
     width: 1380px;
   }
 
@@ -388,6 +404,9 @@
     border-radius: 50px !important;
     cursor: pointer !important;
     left: 0px !important;
+    padding: 0px !important;
+    box-shadow: none !important;
+    color: #000000;
   }
 
   :global(.carousel .right) {
@@ -404,9 +423,58 @@
     border-radius: 50px !important;
     cursor: pointer !important;
     left: 0px !important;
+    padding: 0px !important;
+    box-shadow: none !important;
+    color: #000000;
   }
 
   :global(.aa-button.svelte-1oruecm) {
     justify-content: center !important;
+    border-radius: 0px 8px !important;
+  }
+
+  /*Mobile CSS 768px*/
+
+  @media only screen and (max-width: 768px) {
+    :global(.carousel .right) {
+      margin-left: 23.6% !important;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .mainDivStyle {
+        margin-left: 2px;
+        max-width: 100%;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      :global(.carousel .left) {
+        margin-left: -0.2% !important;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .starStyle {
+        margin-top: -12px;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .mainDivCarousel {
+        width: 103%;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .boxStyle {
+        width: 97%;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      :global(.carousel) {
+        width: 97%;
+      }
+    }
   }
 </style>
