@@ -437,7 +437,8 @@
 
   @media only screen and (max-width: 768px) {
     :global(.carousel .right) {
-      margin-left: 23.6% !important;
+      margin-top: -15px !important;
+      margin-left: 94.6% !important;
     }
 
     @media only screen and (max-width: 768px) {
@@ -448,26 +449,39 @@
     }
 
     @media only screen and (max-width: 768px) {
+      .titleSports {
+        margin-top: -58px !important;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .dropStyle {
+        margin-left: 193px;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
       :global(.carousel .left) {
-        margin-left: -0.2% !important;
+        margin-top: -15px !important;
+        left: -10px !important;
       }
     }
 
     @media only screen and (max-width: 768px) {
       .starStyle {
-        margin-top: -12px;
+        margin-top: 6px;
       }
     }
 
     @media only screen and (max-width: 768px) {
       .mainDivCarousel {
-        width: 103%;
+        width: 100%;
       }
     }
 
     @media only screen and (max-width: 768px) {
       .boxStyle {
-        width: 97%;
+        width: 100%;
       }
     }
 
@@ -475,6 +489,41 @@
       :global(.carousel) {
         width: 97%;
       }
+    }
+  }
+
+  /*Mobile CSS 320px*/
+
+  @media only screen and (max-width: 320px) {
+    .dropStyle {
+      margin-left: 123px;
+    }
+  }
+
+  /*Tablet CSS 320px*/
+
+  @media only screen and (min-width: 694px) and (max-width: 768px) {
+    .mainDivStyle {
+      margin-left: 0px;
+      max-width: 100%;
+    }
+    .boxStyle {
+      width: 99% !important;
+    }
+    :global(.carousel .left) {
+      margin-left: -0.2% !important;
+    }
+    :global(.carousel .right) {
+      margin-left: 96.6% !important;
+    }
+    .dropStyle {
+      margin-left: 157px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 768px) {
+    :global(.carousel .right) {
+      width: 100%;
     }
   }
 </style>
