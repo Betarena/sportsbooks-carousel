@@ -47,8 +47,9 @@
     <Carousel
       dots={false}
       draggable={false}
-      perPage={{ 1378: 4, 500: 2 }}
+      perPage={{ 1378: 4, 500: 2, 960: 3, 1366: 3 }}
       startIndex={0}
+      swiping={true}
       on:change={changed}
     >
       <span class="control" slot="left-control">
@@ -144,7 +145,7 @@
   }
 
   .boxStyle {
-    width: 328px;
+    width: 96%;
     height: 112px;
     background: rgba(255, 255, 255, 0.16);
     backdrop-filter: blur(50px);
@@ -305,7 +306,7 @@
 
   .dropStyle {
     margin-top: -120px;
-    margin-left: 190px;
+    margin-left: 184px;
     border: none;
     z-index: 10;
   }
@@ -375,7 +376,7 @@
   .mainDivCarousel {
     margin: 0 auto;
     height: 125px;
-    width: 1380px;
+    width: 100%;
   }
 
   .control :global(svg) {
@@ -524,6 +525,34 @@
   @media only screen and (min-width: 1024px) and (max-width: 768px) {
     :global(.carousel .right) {
       width: 100%;
+    }
+  }
+
+  /*Screens 1366 specific*/
+
+  @media screen and (width: 1366px) {
+    .dropStyle {
+      margin-left: 268px;
+    }
+  }
+
+  /*Desktop Variations*/
+
+  @media only screen and (min-width: 960px) and (max-width: 1094px) {
+    .dropStyle {
+      margin-left: 157px;
+    }
+  }
+
+  @media only screen and (min-width: 574px) and (max-width: 690px) {
+    .dropStyle {
+      margin-left: 109px;
+    }
+  }
+
+  @media only screen and (width: 960px) {
+    .dropStyle {
+      margin-left: 138px;
     }
   }
 </style>
