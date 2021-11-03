@@ -6,7 +6,17 @@ fireStart;
 
 const mainLangTranslate = async () => {
 // extract the user location data country code;
-let platformCountry = "en";
+
+  let contentDivClass = document.querySelector(".main_lang").textContent;
+
+  contentDivClass = JSON.stringify(contentDivClass);
+  contentDivClass = contentDivClass.substring(11, 13);
+
+  // console.log(contentDivClass);
+
+let platformCountry = contentDivClass.toLowerCase();
+
+console.log(platformCountry);
 
 // return translation data from the DB;
 return firebase.database().ref(`translations/sportsbook_details/${platformCountry}`).get().then((snapshot) => {

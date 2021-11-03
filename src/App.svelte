@@ -40,6 +40,22 @@
     styleEmptyStarColor: "#fffff",
     styleFullStarColor: "#FFB904",
   };
+
+  /* const targetDiv = document.getElementsByClassName("main_lang");
+
+  const data = [].map.call(targetDiv, (target) => target.textContent);
+
+  const dataFirst = data[0];
+
+  const stringData = JSON.stringify(dataFirst); */
+
+  let contentDivClass = document.querySelector(".main_lang").textContent;
+  //  content = content.split("<ul>");
+  contentDivClass = JSON.stringify(contentDivClass);
+  contentDivClass = contentDivClass.substring(11, 13);
+  // contentDivClass = contentDivClass[9,10];
+
+  console.log(contentDivClass);
 </script>
 
 <div class="mainDivCarousel">
