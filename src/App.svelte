@@ -15,7 +15,7 @@
   import Geoip from "./geoip.svelte";
   import mainLangTranslate from "./translations";
 
-  fireStart;
+  // fireStart;
 
   let sportsBooksResult = mainDataSports();
   let translations;
@@ -40,22 +40,6 @@
     styleEmptyStarColor: "#fffff",
     styleFullStarColor: "#FFB904",
   };
-
-  /* const targetDiv = document.getElementsByClassName("main_lang");
-
-  const data = [].map.call(targetDiv, (target) => target.textContent);
-
-  const dataFirst = data[0];
-
-  const stringData = JSON.stringify(dataFirst); */
-
-  let contentDivClass = document.querySelector(".main_lang").textContent;
-  //  content = content.split("<ul>");
-  contentDivClass = JSON.stringify(contentDivClass);
-  contentDivClass = contentDivClass.substring(11, 13);
-  // contentDivClass = contentDivClass[9,10];
-
-  console.log(contentDivClass);
 </script>
 
 <div class="mainDivCarousel">
@@ -448,6 +432,10 @@
   :global(.aa-button.svelte-1oruecm) {
     justify-content: center !important;
     border-radius: 0px 8px !important;
+  }
+
+  :global(.slides) {
+    overflow: -webkit-paged-x;
   }
 
   /*Mobile CSS 768px*/
