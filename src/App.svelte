@@ -1,7 +1,7 @@
 <script>
-  import firebase from "firebase/app";
-  import "firebase/firebase-auth";
-  import { fireStart } from "./lib/init-firebase";
+  // import firebase from "firebase/app";
+  // import "firebase/firebase-auth";
+  //import { fireStart } from "./lib/init-firebase";
   import Carousel from "@beyonk/svelte-carousel";
   import {
     ChevronLeftIcon,

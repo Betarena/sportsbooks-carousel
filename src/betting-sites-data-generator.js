@@ -1,8 +1,8 @@
-import firebase from "firebase/app";
-import "firebase/firebase-auth";
-import { fireStart } from "./lib/init-firebase";
+// import firebase from "firebase/app";
+// import "firebase/firebase-auth";
+// import { fireStart } from "./lib/init-firebase";
 
-fireStart;
+// fireStart;
 
 let myFirebase = firebase.database().ref();
 

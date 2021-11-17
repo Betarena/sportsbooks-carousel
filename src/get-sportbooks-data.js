@@ -1,6 +1,6 @@
-import firebase from "firebase/app";
-import "firebase/firebase-auth";
-import { fireStart } from "./lib/init-firebase";
+// import firebase from "firebase/app";
+// import "firebase/firebase-auth";
+// import { fireStart } from "./lib/init-firebase";
 
 const mainDataSports = async () => {
 
@@ -13,7 +13,7 @@ const mainDataSports = async () => {
         return json["country"];
   };
 
-  fireStart;
+ // fireStart;
 
   let country = await ipInfo(); 
 
