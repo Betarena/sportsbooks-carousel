@@ -1,3 +1,5 @@
+// Firebase is disabled for prod purposes, if working independently should be enabled
+
 // import firebase from "firebase/app";
 // import "firebase/firebase-auth";
 // import { fireStart } from "./lib/init-firebase";
