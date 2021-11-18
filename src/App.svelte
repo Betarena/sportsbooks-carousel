@@ -211,6 +211,7 @@
     margin-left: 108px;
     height: 15px;
     margin-bottom: -126px;
+    width: 76px;
   }
 
   .reviewStyleLink {
@@ -257,11 +258,13 @@
     color: #f5620f;
   }
 
+  /*
   .btnWeb {
     width: 200px;
     margin-top: 20px;
     margin-left: 40px;
   }
+*/
 
   .btnWebRegister {
     width: 260px;
