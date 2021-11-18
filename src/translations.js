@@ -18,7 +18,7 @@ const mainLangTranslate = async () => {
 
 let platformCountry = contentDivClass.toLowerCase();
 
-console.log(platformCountry);
+// console.log(platformCountry);
 
 // return translation data from the DB;
 return firebase.database().ref(`translations/sportsbook_details/${platformCountry}`).get().then((snapshot) => {
