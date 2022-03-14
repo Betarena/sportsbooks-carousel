@@ -203,6 +203,7 @@
     height: 27px;
     left: 108px;
     color: #fff;
+    overflow-wrap: normal;
     z-index: -1;
   }
 
