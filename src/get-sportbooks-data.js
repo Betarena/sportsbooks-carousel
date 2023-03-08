@@ -69,6 +69,9 @@ const mainDataSports = async () => {
     else if (country === "SE") {
       country = "SE";
     }
+    else if (country === "FR") {
+      country = "FR";
+    }
     else if (country === 'ES' || country === 'AR' || country === 'BO' || country === 'CL' || country === 'EC' || country === 'PY' || country === 'UY' || country === 'VE' || country === 'HN') {
       country = "ES";
     }
